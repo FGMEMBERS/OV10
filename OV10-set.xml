@@ -14,11 +14,6 @@ David Culp,  davidculp2@comcast.net
  
   <flight-model>jsb</flight-model>
   <aero>OV10</aero>
-
-  <presets>
-   <airport-id type="string">KSFO</airport-id>
-   <runway type="string">28R</runway>
-  </presets>
  
   <systems>
    <electrical>
@@ -42,16 +37,7 @@ David Culp,  davidculp2@comcast.net
   <chase-distance-m>-20</chase-distance-m>
 
   <ai>
-   <!-- puts a thunderstorm overhead OSI (Woodside VOR) -->
-   <entry>
-    <type>storm</type>
-    <path>Models/Geometry/thunderstorm.xml</path>
-    <speed-KTAS type="double">20.0</speed-KTAS>
-    <altitude-ft type="double">4000.0</altitude-ft>
-    <latitude type="double">37.3917</latitude>
-    <longitude type="double">-122.2817</longitude>
-    <heading type="double">90</heading>
-   </entry>
+   <scenario>thunderstorm_demo</scenario>
   </ai>
 
   <!-- turns off GA tower communications -->
@@ -114,12 +100,12 @@ David Culp,  davidculp2@comcast.net
   </config>
  </environment>
 
-<instrumentation>
- <radar>
-  <range type="int" archive="y">40</range>
-  <minimized type="bool" archive="y">false</minimized>
- </radar>
-</instrumentation>
+ <instrumentation>
+  <radar>
+   <range type="int" archive="y">40</range>
+   <minimized type="bool" archive="y">false</minimized>
+  </radar>
+ </instrumentation>
 
 
 </PropertyList>
