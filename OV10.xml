@@ -1,4 +1,4 @@
-<FDM_CONFIG NAME="OV10" VERSION="1.60">
+<FDM_CONFIG NAME="OV10" VERSION="1.61">
 <!--
   File:     OV10.xml
   Author:   Aero-Matic v 0.7
@@ -43,6 +43,7 @@
    AC_CGLOC     249.6  0.0 -12.5
    AC_AERORP    249.6  0.0  0.0
    AC_EYEPTLOC  84.9 -18.0 45.0
+   AC_VRP       249.6  0.0 -12.5
  </METRICS>
  <UNDERCARRIAGE>
   AC_GEAR NOSE_LG   64.9  0.0 -59.9 20160.0 1440.0  0.5  0.8  0.0 STEERABLE NONE  5.0 RETRACT
@@ -129,10 +130,9 @@
       OUTPUT  fcs/left-aileron-pos-rad
    </COMPONENT>
    <COMPONENT NAME="Right Aileron Control" TYPE="AEROSURFACE_SCALE">
-      INPUT   fcs/roll-trim-sum
+      INPUT   -fcs/roll-trim-sum
       MIN    -0.35
       MAX     0.35
-      INVERT
       OUTPUT  fcs/right-aileron-pos-rad
    </COMPONENT>
    <COMPONENT NAME="Rudder Command Sum" TYPE="SUMMER">
