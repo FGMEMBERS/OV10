@@ -27,7 +27,6 @@ David Culp,  davidculp2@comcast.net
   </systems> 
  
   <sound>
-   <audible>true</audible>
    <path>Aircraft/OV10/Sounds/OV10-sound.xml</path>
   </sound>
 
