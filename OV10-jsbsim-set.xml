@@ -14,10 +14,15 @@ David Culp,  davidculp2@comcast.net
  
   <flight-model>jsb</flight-model>
   <aero>OV10</aero>
+
+  <presets>
+   <airport-id type="string">KSFO</airport-id>
+   <runway type="string">28R</runway>
+  </presets>
  
   <systems>
    <electrical>
-    <path>Aircraft/T38/T38-electrical.xml</path>
+    <path>Aircraft/c172/c172-electrical.xml</path>
    </electrical>
   </systems> 
  
@@ -27,7 +32,7 @@ David Culp,  davidculp2@comcast.net
   </sound>
 
   <panel>
-   <path>Aircraft/T38/Panels/T38-panel.xml</path>
+   <path>Aircraft/OV10/Panels/T38-panel-with-wxradar.xml</path>
    <visibility archive="y">true</visibility>
   </panel>
 
@@ -36,6 +41,29 @@ David Culp,  davidculp2@comcast.net
   </model>
 
   <chase-distance-m>-20</chase-distance-m>
+
+  <ai>
+   <!-- puts a thunderstorm overhead OSI (Woodside VOR) -->
+   <entry>
+    <type>storm</type>
+    <path>Models/Geometry/thunderstorm.xml</path>
+    <speed-KTAS type="double">20.0</speed-KTAS>
+    <altitude-ft type="double">4000.0</altitude-ft>
+    <latitude type="double">37.3917</latitude>
+    <longitude type="double">-122.2817</longitude>
+    <heading type="double">90</heading>
+   </entry>
+  </ai>
+
+  <!-- turns off GA tower communications -->
+  <ATC>
+   <enabled type="bool">false</enabled>
+  </ATC>
+
+  <!-- turns off GA traffic -->
+  <ai-traffic>
+   <enabled type="bool">false</enabled>
+  </ai-traffic>
 
  </sim>
 
@@ -67,5 +95,31 @@ David Culp,  davidculp2@comcast.net
    <running>true</running>
   </engine>
  </engines>
+
+ <environment n="0">
+  <clouds>
+   <layer n="0">
+    <coverage type="string">clear</coverage>
+   </layer>
+  </clouds>
+ </environment>
+
+ <!-- sets wind speed on runway -->
+ <environment n="0">
+  <config>
+   <boundary>
+    <entry n="0">
+     <wind-speed-kt type="double">0.0</wind-speed-kt>
+    </entry>
+   </boundary>
+  </config>
+ </environment>
+
+<instrumentation>
+ <radar>
+  <range type="int" archive="y">40</range>
+ </radar>
+</instrumentation>
+
 
 </PropertyList>
