@@ -11,7 +11,7 @@ MATERIAL "NoName" rgb 1 0 0  amb 1 0 0  emis 0 0 0  spec 1 1 1  shi 50  trans 0
 MATERIAL "NoName" rgb 0.34902 0.34902 0.34902  amb 0.34902 0.34902 0.34902  emis 0 0 0  spec 1 1 1  shi 50  trans 0
 MATERIAL "NoName" rgb 1 1 1  amb 1 1 1  emis 0 0 0  spec 1 1 1  shi 50  trans 0.8
 OBJECT world
-kids 83
+kids 82
 OBJECT poly
 name "Hstab"
 loc 7.01367 2.02832 0
@@ -12321,7 +12321,7 @@ refs 4
 0 0.360784 0.760784
 1 0.443137 0.760784
 2 0.443137 0.850989
-kids0
+kids 0
 OBJECT poly
 name "NacelleCowlLeft"
 loc 0.137696 0.533203 2.13477
@@ -16338,7 +16338,7 @@ refs 4
 2 0.443137 0.850989
 1 0.443137 0.760784
 0 0.360784 0.760784
-kids0
+kids 0
 OBJECT group
 name "group"
 loc -1.78784 0.172363 0
