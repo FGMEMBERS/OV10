@@ -6,6 +6,11 @@
 
  <path>OV10.ac</path>
 
+ <offsets>
+   <z-m>0.90</z-m>
+   <pitch-deg>-1.0</pitch-deg>
+ </offsets>  
+
 <!--
  <animation>
   <type>select</type>

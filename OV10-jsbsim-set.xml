@@ -2,7 +2,7 @@
 <!--
 ************************************************************************
 OV-10 JSBSim config file
-David Culp,  davidculp2@attbi.com
+David Culp,  davidculp2@comcast.net
 ************************************************************************
 -->
 
@@ -35,13 +35,9 @@ David Culp,  davidculp2@attbi.com
    <path>Aircraft/OV10/Models/ov10.xml</path>
   </model>
 
- </sim>
+  <chase-distance-m>-20</chase-distance-m>
 
- <engines>
-  <engine n="0">
-   <running>true</running>
-  </engine>
- </engines>
+ </sim>
 
  <consumables>
   <fuel>
@@ -56,5 +52,20 @@ David Culp,  davidculp2@attbi.com
    </tank>
   </fuel>
  </consumables>
+
+ <controls>
+  <flight>
+   <flaps>0.5</flaps>
+  </flight>
+ </controls>
+
+ <engines>
+  <engine n="0">
+   <running>true</running>
+  </engine>
+  <engine n="1">
+   <running>true</running>
+  </engine>
+ </engines>
 
 </PropertyList>

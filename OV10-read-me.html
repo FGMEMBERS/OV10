@@ -7,8 +7,8 @@ Version 1.0, released 14 May 2003
 
 Configuration files for the FlightGear flight simulator 
 <A HREF="http://www.flightgear.org/">www.flightgear.org</A>.<BR>
-By David Culp, May 2003,  <A HREF="mailto:davidculp2@attbi.com">
-davidculp2@attbi.com</A><BR>
+By David Culp, May 2003,  <A HREF="mailto:davidculp2@comcast.net">
+davidculp2@comcast.net</A><BR>
 License:  GPL  (see <A HREF="http://www.gnu.org/licenses/gpl.html">
 http://www.gnu.org/licenses/gpl.html<A/>)<BR>
 <BR>
@@ -16,7 +16,7 @@ http://www.gnu.org/licenses/gpl.html<A/>)<BR>
 <H3>Overview</H3>
 This is an attempt at using a single archive to distribute all the
 files needed to model an aircraft in FlightGear. This archive should be
-extracted into directory $FGROOT/Aircraft/OV10.  Some files will then need to be moved
+extracted into directory $FGROOT/Aircraft.  Some files will then need to be moved
 to other directories.  I've attempted to keep as many of the files in 
 directory $FGROOT/Aircraft/OV10 as possible.  Ideally I'd like to keep <i>all</i>
 the files in one directory, but currently FlightGear requires some of them
@@ -44,7 +44,7 @@ which each file or directory should reside, is listed below.
 <TR>
  <TD>OV10-set.xml</TD>
  <TD>The main configuration file</TD>
- <TD>$FGROOT/Aircraft</TD>
+ <TD>$FGROOT/Aircraft/OV10</TD>
 </TR>
 <TR>
  <TD>OV10-sound.xml</TD>
@@ -63,7 +63,7 @@ which each file or directory should reside, is listed below.
 </TR>
 <TR>
  <TD>ov10</TD>
- <TD>A shell script wrapper for fgfs</TD>
+ <TD>A bash shell script wrapper for fgfs</TD>
  <TD>~</TD>
 </TR>
 </TABLE>
@@ -102,14 +102,12 @@ be features :)
 <TR>
  <TD>3D model has some bugs</TD>
  <TD>The model is a from the Captain Slug OV-10A.
-  The side of the cockpit flickers.  The model
-  position has not been adjusted for FlightGear, so its wheels don't
-  contact the ground properly.  The gear and control surfaces don't move. 
+     The gear and control surfaces don't move. 
 </TD>
 </TR>
 <TR>
- <TD>There is something wrong with the instrument panel</TD> 
- <TD>It's using the T-38 panel.  See the T-38 read-me.</TD>
+ <TD>It's still using the T-38 panel.</TD>
+ <TD>See the T-38 read-me.</TD>
 </TR>
 </TABLE>
 <BR><HR>
@@ -131,6 +129,6 @@ condition-lever inputs to the engine code.<BR><BR>
  
 
 <BR><BR><HR>
-15 May 2003
+5 Nov 2003
 </BODY>
 </HTML>
