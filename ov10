@@ -10,11 +10,11 @@ cmdline="
 --prop:/consumables/fuel/tank[2]/level-gal_us=220
 --prop:/engines/engine[0]/running=true
 --prop:/engines/engine[1]/running=true
---prop:/radios/marker-beacon/audio-btn[0]=false
---prop:/radios/nav/frequencies/selected-mhz[0]=111.7
---prop:/radios/nav/radials/selected-deg[0]=283.0
---prop:/radios/nav[1]/frequencies/selected-mhz[0]=115.8
---prop:/radios/dme/switch-position=1
+--prop:/instrumentation/marker-beacon/audio-btn[0]=false
+--prop:/instrumentation/nav/frequencies/selected-mhz[0]=111.7
+--prop:/instrumentation/nav/radials/selected-deg[0]=283.0
+--prop:/instrumentation/nav[1]/frequencies/selected-mhz[0]=115.8
+--prop:/instrumentation/dme/switch-position=1
 --prop:/instrumentation/attitude-indicator/config/tumble-flag=false
 --visibility-miles=4.0
 --enable-sound
