@@ -37,6 +37,12 @@ David Culp,  davidculp2@attbi.com
 
  </sim>
 
+ <engines>
+  <engine n="0">
+   <running>true</running>
+  </engine>
+ </engines>
+
  <consumables>
   <fuel>
    <tank n="0">
