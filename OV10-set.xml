@@ -11,6 +11,7 @@ David Culp,  davidculp2@comcast.net
  <sim>
 
   <description>North American OV-10A Bronco</description>
+  <author>David Culp</author>
  
   <flight-model>jsb</flight-model>
   <aero>OV10</aero>
