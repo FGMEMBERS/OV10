@@ -11,7 +11,7 @@ David Culp,  davidculp2@comcast.net
  <sim>
 
   <description>North American OV-10A Bronco</description>
-  <author>David Culp, Jens Thoms Toerring</author>
+  <author>David Culp (FDM), Jens Thoms Toerring/Capt. Slug (3D)</author>
   <status>beta</status>
  
   <flight-model>jsb</flight-model>
