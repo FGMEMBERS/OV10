@@ -17,12 +17,6 @@ David Culp,  davidculp2@comcast.net
   <flight-model>jsb</flight-model>
   <aero>OV10</aero>
  
-  <systems>
-   <electrical>
-    <path>Aircraft/Generic/generic-electrical.xml</path>
-   </electrical>
-  </systems> 
- 
   <sound>
    <path>Aircraft/OV10/Sounds/OV10-sound.xml</path>
   </sound>
