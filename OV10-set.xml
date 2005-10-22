@@ -46,8 +46,14 @@ David Culp,  davidculp2@comcast.net
    <enabled type="bool">false</enabled>
   </ai-traffic>
 
-  <help>
+  <help><!-- incomplete, copied info from OV10-read-me.html -->
    <title>OV-10A</title>
+   <line>Vr 100 KIAS</line>
+   <line>Vy 130 KIAS</line>
+   <line>________________________Procedures_________________________</line>
+   <line>Takeoff: no flaps, full throttle</line>
+   <line>Normal landing: gear down, 100KIAS w/full flaps.</line>
+   <line>Short-field landing: gear down, 75KIAS w/full flaps.</line>
   </help>
 
  </sim>
