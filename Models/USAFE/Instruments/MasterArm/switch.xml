@@ -1,0 +1,45 @@
+<?xml version="1.0"?>
+
+<!-- OV-10 gunsight on/off switch, by Dave Culp -->
+
+<PropertyList>
+
+ <path>switch.ac</path>
+
+ <animation>
+  <type>material</type>
+  <object-name>switchbox</object-name>
+   <emission>
+     <red>0.6</red>
+     <green>0.3</green>
+     <blue>0.3</blue>
+    <factor-prop>controls/lighting/instruments-norm</factor-prop>
+   </emission> 
+ </animation>
+
+ <animation> 
+   <type>select</type>
+    <object-name>switch-on</object-name>
+    <condition>
+     <property>controls/armament/master-arm</property>
+    </condition>
+ </animation>
+
+ <animation> 
+   <type>select</type>
+    <object-name>switch-off</object-name>
+    <condition>
+     <not>
+      <property>controls/armament/master-arm</property>
+     </not>
+    </condition>
+ </animation>
+
+ <!-- *** LoD *** -->
+ <animation>
+  <type>range</type>
+  <min-m>0</min-m>
+  <max-m>50</max-m>
+ </animation>
+
+</PropertyList>

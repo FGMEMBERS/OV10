@@ -1,0 +1,16 @@
+<?xml version="1.0"?>
+
+<!-- OV-10 Idiot Lights (ten individual lights), by Dave Culp -->
+
+<PropertyList>
+
+ <path>IdiotPack.ac</path>
+
+ <!-- *** LoD *** -->
+ <animation>
+  <type>range</type>
+  <min-m>0</min-m>
+  <max-m>5</max-m>
+ </animation>
+
+</PropertyList>

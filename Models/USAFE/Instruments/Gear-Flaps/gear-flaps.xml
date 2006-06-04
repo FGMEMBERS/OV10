@@ -1,0 +1,90 @@
+<?xml version="1.0"?>
+
+<!-- OV-10 flap position indicator, by Dave Culp -->
+
+<PropertyList>
+
+ <path>gear-flaps.ac</path>
+
+  <animation>
+  <type>rotate</type>
+  <object-name>pointer</object-name>
+  <property>surface-positions/flap-pos-norm</property>
+  <factor>58</factor>
+  <center>
+   <x-m>-0.02</x-m>
+   <y-m>-0.01</y-m>
+   <z-m>0.03</z-m>
+  </center>
+  <axis>
+   <x>-1</x>
+   <y>0</y>
+   <z>0</z>
+  </axis>
+ </animation>  
+
+ <animation>
+  <type>material</type>
+  <object-name>face</object-name>
+   <emission>
+     <red>0.6</red>
+     <green>0.3</green>
+     <blue>0.3</blue>
+    <factor-prop>controls/lighting/instruments-norm</factor-prop>
+   </emission> 
+ </animation>  
+
+ <animation>
+  <type>material</type>
+  <object-name>pointer</object-name>
+   <emission>
+     <red>0.6</red>
+     <green>0.3</green>
+     <blue>0.3</blue>
+    <factor-prop>controls/lighting/instruments-norm</factor-prop>
+   </emission> 
+ </animation>
+
+ <animation>
+  <type>select</type>
+  <object-name>nosegear_indicator</object-name>
+  <condition>
+   <equals>
+    <property>gear/gear[0]/position-norm</property>
+    <value>1</value>
+   </equals>
+  </condition>
+ </animation>  
+
+ <animation>
+  <type>select</type>
+  <object-name>leftgear_indicator</object-name>
+  <condition>
+   <equals>
+    <property>gear/gear[1]/position-norm</property>
+    <value>1</value>
+   </equals>
+  </condition>
+ </animation>  
+
+ <animation>
+  <type>select</type>
+  <object-name>rightgear_indicator</object-name>
+  <condition>
+   <equals>
+    <property>gear/gear[2]/position-norm</property>
+    <value>1</value>
+   </equals>
+  </condition>
+ </animation>  
+  
+
+
+ <!-- *** LoD *** -->
+ <animation>
+  <type>range</type>
+  <min-m>0</min-m>
+  <max-m>5</max-m>
+ </animation>
+
+</PropertyList>

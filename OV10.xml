@@ -60,7 +60,7 @@
             <rolling_friction> 0.02 </rolling_friction>
             <spring_coeff unit="LBS/FT"> 20160 </spring_coeff>
             <damping_coeff unit="LBS/FT/SEC"> 1440 </damping_coeff>
-            <max_steer unit="DEG"> 5 </max_steer>
+            <max_steer unit="DEG"> 35 </max_steer>
             <brake_group> NONE </brake_group>
             <retractable>1</retractable>
         </contact>
@@ -132,7 +132,7 @@
                 <pitch> 0 </pitch>
                 <yaw> 0 </yaw>
             </orient>
-            <feed>1</feed>
+            <feed>0</feed>
             <thruster file="direct">
                 <location unit="IN">
                     <x> 230 </x>
@@ -146,23 +146,63 @@
                 </orient>
             </thruster>
         </engine>
-        <tank type="FUEL">    <!-- Internal -->
+	<!-- Internal Tank -->
+        <tank type="FUEL">    
             <location unit="IN">
                 <x> 249.6 </x>
                 <y> 0 </y>
                 <z> 12 </z>
             </location>
-            <capacity unit="LBS"> 1554 </capacity>
+            <capacity unit="LBS"> 1554 </capacity> <!-- must account for the external tank (3004) -->
             <contents unit="LBS"> 1500 </contents>
         </tank>
-        <tank type="FUEL">    <!-- External Tank -->
+	<!-- External Tank -->
+        <tank type="FUEL">    
             <location unit="IN">
                 <x> 249.6 </x>
                 <y> 0 </y>
-                <z> -20 </z>
+                <z> -40 </z>
             </location>
-            <capacity unit="LBS"> 1450 </capacity>
-            <contents unit="LBS"> 1400 </contents>
+            <capacity unit="LBS"> 1554 </capacity>
+            <contents unit="LBS"> 1500 </contents>
+        </tank>
+	<!-- Mk 82 weight -->
+        <tank type="FUEL">    
+            <location unit="IN">
+                <x> 249.6 </x>
+                <y> 15 </y>
+                <z> -35 </z>
+            </location>
+            <capacity unit="LBS"> 500 </capacity>
+            <contents unit="LBS"> 500 </contents>
+        </tank>
+        <tank type="FUEL">    
+            <location unit="IN">
+                <x> 249.6 </x>
+                <y> -15 </y>
+                <z> -35 </z>
+            </location>
+            <capacity unit="LBS"> 500 </capacity>
+            <contents unit="LBS"> 500 </contents>
+        </tank>
+	<!-- LAU 68 weight -->
+        <tank type="FUEL">    
+            <location unit="IN">
+                <x> 249.6 </x>
+                <y> 15 </y>
+                <z> -30 </z>
+            </location>
+            <capacity unit="LBS"> 140 </capacity>
+            <contents unit="LBS"> 140 </contents>
+        </tank>
+        <tank type="FUEL">    
+            <location unit="IN">
+                <x> 249.6 </x>
+                <y> -15 </y>
+                <z> -30 </z>
+            </location>
+            <capacity unit="LBS"> 140 </capacity>
+            <contents unit="LBS"> 140 </contents>
         </tank>
     </propulsion>
     <flight_control name="FCS: OV10">
