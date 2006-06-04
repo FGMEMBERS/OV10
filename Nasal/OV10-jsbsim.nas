@@ -81,13 +81,13 @@ init = func {
 #   initautopilot();
 
    # schedule the 1st call
-#   settimer(flashinglightcron,0);
-   settimer(sec1cron,0);
-#   settimer(sec3cron,0);
-#   settimer(sec5cron,0);
-#   settimer(sec15cron,0);
-#   settimer(sec30cron,0);
-#   settimer(sec60cron,0);
+#   settimer(flashinglightcron,1);
+   settimer(sec1cron,1);
+#   settimer(sec3cron,1);
+#   settimer(sec5cron,1);
+#   settimer(sec15cron,1);
+#   settimer(sec30cron,1);
+#   settimer(sec60cron,1);
 }
 
 init();
