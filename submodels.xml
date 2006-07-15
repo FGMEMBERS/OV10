@@ -79,37 +79,78 @@
     <buoyancy>33</buoyancy>
     <life>1</life>
   </submodel>
-<!--
+
   <submodel>
     <name>fire rocket - station 0</name>
-    <model>Aircraft/OV10/Models/Stores/williepete.ac</model>
-    <trigger>controls/armament/station[0]/fire</trigger>
-    <trigger-once>true</trigger-once>
+    <model>Aircraft/OV10/Models/USAFE/Stores/WP/williepete.ac</model>
+    <trigger>controls/armament/trigger1</trigger>
+    <trigger-once>false</trigger-once>
     <speed>1000.0</speed>
-    <count>100</count>
+    <repeat>false</repeat>
+    <count>7</count>
     <x-offset>3.0</x-offset>
     <y-offset>-3.0</y-offset>
     <z-offset>-2.8</z-offset>
     <yaw-offset>0.0</yaw-offset>
-    <pitch-offset>2.0</pitch-offset>
+    <pitch-offset>0.0</pitch-offset>
     <eda>0.0001</eda>
+  </submodel>
+
+  <submodel> 
+    <name>rocket-smoke</name>
+    <model>Aircraft/OV10/Models/USAFE/Stores/M60C/smoke.xml</model>
+    <trigger>controls/armament/trigger1</trigger>
+    <speed>10</speed>
+    <repeat>false</repeat>
+    <delay>0.05</delay>
+    <count>-1</count>
+    <x-offset>3.0</x-offset>
+    <y-offset>-3.0</y-offset>
+    <z-offset>-2.8</z-offset>
+    <yaw-offset>0.0</yaw-offset>
+    <pitch-offset>0.0</pitch-offset>
+    <eda>10</eda>
+    <wind>true</wind>
+    <buoyancy>33</buoyancy>
+    <life>1</life>
   </submodel>
 
   <submodel>
     <name>fire rocket - station 4</name>
-    <model>Aircraft/OV10/Models/Stores/williepete.ac</model>
-    <trigger>controls/armament/station[4]/fire</trigger>
-    <trigger-once>true</trigger-once>
+    <model>Aircraft/OV10/Models/USAFE/Stores/WP/williepete.ac</model>
+    <trigger>controls/armament/trigger5</trigger>
+    <trigger-once>false</trigger-once>
     <speed>1000.0</speed>
-    <count>100</count>
+    <repeat>true</repeat>
+    <delay>0.10</delay>
+    <count>7</count>
     <x-offset>3.0</x-offset>
     <y-offset>3.0</y-offset>
     <z-offset>-2.8</z-offset>
     <yaw-offset>0.0</yaw-offset>
-    <pitch-offset>2.0</pitch-offset>
+    <pitch-offset>0.0</pitch-offset>
     <eda>0.0001</eda>
   </submodel>
--->
+
+  <submodel> 
+    <name>rocket-smoke2</name>
+    <model>Aircraft/OV10/Models/USAFE/Stores/M60C/smoke.xml</model>
+    <trigger>controls/armament/trigger5</trigger>
+    <speed>10</speed>
+    <repeat>true</repeat>
+    <delay>0.05</delay>
+    <count>15</count>
+    <x-offset>3.0</x-offset>
+    <y-offset>3.0</y-offset>
+    <z-offset>-2.8</z-offset>
+    <yaw-offset>0.0</yaw-offset>
+    <pitch-offset>0.0</pitch-offset>
+    <eda>10</eda>
+    <wind>true</wind>
+    <buoyancy>33</buoyancy>
+    <life>1</life>
+  </submodel>
+
 <!--
   <submodel>
     <name>smoke generator</name>
@@ -233,6 +274,46 @@
     <wind>true</wind>
     <buoyancy>33</buoyancy>
     <life>10</life>
+  </submodel>
+
+  <submodel> 
+    <name>parachutist</name>
+    <model>Models/Geometry/parachuter.xml</model>
+    <trigger>controls/jump-signal</trigger>
+    <speed>0</speed>
+    <repeat>true</repeat>
+    <delay>1</delay>
+    <count>5</count>
+    <x-offset>-5</x-offset>
+    <y-offset>0</y-offset>
+    <z-offset>-2</z-offset>
+    <yaw-offset>0.0</yaw-offset>
+    <pitch-offset>0.0</pitch-offset>
+    <cd>1.2</cd>
+    <eda>100</eda>
+    <weight>200</weight>
+    <wind>true</wind>
+    <buoyancy>20</buoyancy>
+    <life>600</life>
+  </submodel>
+
+  <submodel> 
+    <name>eject-front</name>
+    <model>Models/Geometry/ejector.xml</model>
+    <trigger>controls/eject</trigger>
+    <speed>300</speed>
+    <repeat>false</repeat>
+    <x-offset>3</x-offset>
+    <y-offset>0</y-offset>
+    <z-offset>0</z-offset>
+    <yaw-offset>0.0</yaw-offset>
+    <pitch-offset>90.0</pitch-offset>
+    <cd>1.2</cd>
+    <eda>100</eda>
+    <weight>200</weight>
+    <wind>true</wind>
+    <buoyancy>20</buoyancy>
+    <life>600</life>
   </submodel>
 
 </PropertyList>

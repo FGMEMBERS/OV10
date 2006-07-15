@@ -47,7 +47,7 @@
    <name>Course Bug Decrease</name>
    <button>0</button>
    <x>-74</x>
-   <y>-400</y>
+   <y>-444</y>
    <w>20</w>
    <h>30</h>
    <binding>
@@ -63,7 +63,7 @@
    <name>Course Bug Large Decrease</name>
    <button>1</button>
    <x>-74</x>
-   <y>-400</y>
+   <y>-444</y>
    <w>20</w>
    <h>30</h>
    <binding>
@@ -80,7 +80,7 @@
    <name>Course Bug Increase</name>
    <button>0</button>
    <x>-54</x>
-   <y>-400</y>
+   <y>-444</y>
    <w>20</w>
    <h>30</h>
    <binding>
@@ -96,7 +96,7 @@
    <name>Course Bug Large Increase</name>
    <button>1</button>
    <x>-54</x>
-   <y>-400</y>
+   <y>-444</y>
    <w>20</w>
    <h>30</h>
    <binding>
@@ -114,7 +114,7 @@
    <name>Heading Bug Decrease</name>
    <button>0</button>
    <x> 54</x>
-   <y>-400</y>
+   <y>-444</y>
    <w>20</w>
    <h>30</h>
    <binding>
@@ -130,7 +130,7 @@
    <name>Heading Bug Large Decrease</name>
    <button>1</button>
    <x> 54</x>
-   <y>-400</y>
+   <y>-444</y>
    <w>20</w>
    <h>30</h>
    <binding>
@@ -147,7 +147,7 @@
    <name>Heading Bug Increase</name>
    <button>0</button>
    <x> 32</x>
-   <y>-400</y>
+   <y>-444</y>
    <w>20</w>
    <h>30</h>
    <binding>
@@ -163,7 +163,7 @@
    <name>Heading Bug Large Increase</name>
    <button>1</button>
    <x> 32</x>
-   <y>-400</y>
+   <y>-444</y>
    <w>20</w>
    <h>30</h>
    <binding>
@@ -180,7 +180,7 @@
    <name>Bearing Switch Decrease</name>
    <button>0</button>
    <x> -40</x>
-   <y>-470</y>
+   <y>-514</y>
    <w>20</w>
    <h>60</h>
    <binding>
@@ -197,7 +197,7 @@
    <name>Bearing Switch Increase</name>
    <button>0</button>
    <x> -19</x>
-   <y>-470</y>
+   <y>-514</y>
    <w>20</w>
    <h>60</h>
    <binding>
@@ -214,7 +214,7 @@
    <name>Mode Switch Decrease</name>
    <button>0</button>
    <x>   2</x>
-   <y>-470</y>
+   <y>-514</y>
    <w>20</w>
    <h>60</h>
    <binding>
@@ -231,7 +231,7 @@
    <name>Mode Switch Increase</name>
    <button>0</button>
    <x>  23</x>
-   <y>-470</y>
+   <y>-514</y>
    <w>20</w>
    <h>60</h>
    <binding>
@@ -279,6 +279,19 @@
    </binding>
   </action>
 
+  <action>
+   <name>g-meter reset</name>
+   <button>0</button>
+   <x>-266</x>
+   <y>-322</y>
+   <w>40</w>
+   <h>40</h>
+   <binding>
+    <command>property-assign</command>
+    <property>/controls/gmeter/reset</property>
+    <value>0</value>
+   </binding>
+  </action>
 
   <action>
    <name>gunsight on</name>
@@ -304,34 +317,6 @@
    <binding>
     <command>property-assign</command>
     <property>controls/armament/gunsight/power-on</property>
-    <value>false</value>
-   </binding>
-  </action>
-
-  <action>
-   <name>master arm on</name>
-   <button>0</button>
-   <x>-163</x>
-   <y>-59</y>
-   <w>30</w>
-   <h>30</h>
-   <binding>
-    <command>property-assign</command>
-    <property>controls/armament/master-arm</property>
-    <value>true</value>
-   </binding>
-  </action>
-
-  <action>
-   <name>master arm off</name>
-   <button>0</button>
-   <x>-163</x>
-   <y>-90</y>
-   <w>30</w>
-   <h>30</h>
-   <binding>
-    <command>property-assign</command>
-    <property>controls/armament/master-arm</property>
     <value>false</value>
    </binding>
   </action>
@@ -384,7 +369,7 @@
   <action>
    <name>fire1</name>
    <button>0</button>
-   <x>133</x>
+   <x>148</x>
    <y>-45</y>
    <w>30</w>
    <h>20</h>
@@ -408,7 +393,7 @@
   <action>
    <name>off1</name>
    <button>0</button>
-   <x>133</x>
+   <x>148</x>
    <y>-65</y>
    <w>30</w>
    <h>20</h>
@@ -432,7 +417,7 @@
   <action>
    <name>drop1</name>
    <button>0</button>
-   <x>133</x>
+   <x>148</x>
    <y>-85</y>
    <w>30</w>
    <h>20</h>
@@ -456,7 +441,7 @@
   <action>
    <name>fire2</name>
    <button>0</button>
-   <x>170</x>
+   <x>182</x>
    <y>-45</y>
    <w>30</w>
    <h>20</h>
@@ -480,7 +465,7 @@
   <action>
    <name>off2</name>
    <button>0</button>
-   <x>170</x>
+   <x>182</x>
    <y>-65</y>
    <w>30</w>
    <h>20</h>
@@ -504,7 +489,7 @@
   <action>
    <name>drop2</name>
    <button>0</button>
-   <x>170</x>
+   <x>182</x>
    <y>-85</y>
    <w>30</w>
    <h>20</h>
@@ -528,7 +513,7 @@
   <action>
    <name>fire3</name>
    <button>0</button>
-   <x>240</x>
+   <x>250</x>
    <y>-45</y>
    <w>30</w>
    <h>20</h>
@@ -552,7 +537,7 @@
   <action>
    <name>off3</name>
    <button>0</button>
-   <x>240</x>
+   <x>250</x>
    <y>-65</y>
    <w>30</w>
    <h>20</h>
@@ -576,7 +561,7 @@
   <action>
    <name>drop3</name>
    <button>0</button>
-   <x>240</x>
+   <x>250</x>
    <y>-85</y>
    <w>30</w>
    <h>20</h>
@@ -600,7 +585,7 @@
   <action>
    <name>fire4</name>
    <button>0</button>
-   <x>280</x>
+   <x>288</x>
    <y>-45</y>
    <w>30</w>
    <h>20</h>
@@ -624,7 +609,7 @@
   <action>
    <name>off4</name>
    <button>0</button>
-   <x>280</x>
+   <x>288</x>
    <y>-65</y>
    <w>30</w>
    <h>20</h>
@@ -648,7 +633,7 @@
   <action>
    <name>drop4</name>
    <button>0</button>
-   <x>280</x>
+   <x>288</x>
    <y>-85</y>
    <w>30</w>
    <h>20</h>
@@ -672,7 +657,7 @@
   <action>
    <name>fire5</name>
    <button>0</button>
-   <x>320</x>
+   <x>325</x>
    <y>-45</y>
    <w>30</w>
    <h>20</h>
@@ -696,7 +681,7 @@
   <action>
    <name>off5</name>
    <button>0</button>
-   <x>320</x>
+   <x>325</x>
    <y>-65</y>
    <w>30</w>
    <h>20</h>
@@ -720,7 +705,7 @@
   <action>
    <name>drop5</name>
    <button>0</button>
-   <x>320</x>
+   <x>325</x>
    <y>-85</y>
    <w>30</w>
    <h>20</h>
@@ -738,6 +723,119 @@
     <command>property-assign</command>
     <property>controls/armament/drop5</property>
     <value>true</value>
+   </binding>
+  </action>
+ 
+  <!-- Weapons arm station -->
+  <action>
+   <name>master arm on</name>
+   <button>0</button>
+   <x>-182</x>
+   <y>-50</y>
+   <w>30</w>
+   <h>30</h>
+   <binding>
+    <command>property-assign</command>
+    <property>controls/armament/master-arm</property>
+    <value>true</value>
+   </binding>
+  </action>
+
+  <action>
+   <name>master arm off</name>
+   <button>0</button>
+   <x>-182</x>
+   <y>-80</y>
+   <w>30</w>
+   <h>30</h>
+   <binding>
+    <command>property-assign</command>
+    <property>controls/armament/master-arm</property>
+    <value>false</value>
+   </binding>
+  </action>
+
+  <action>
+   <name>arm nose</name>
+   <button>0</button>
+   <x>-216</x>
+   <y>-50</y>
+   <w>30</w>
+   <h>30</h>
+   <binding>
+    <command>property-assign</command>
+    <property>controls/armament/arm_nose</property>
+    <value>true</value>
+   </binding>
+  </action>
+
+  <action>
+   <name>arm tail</name>
+   <button>0</button>
+   <x>-216</x>
+   <y>-80</y>
+   <w>30</w>
+   <h>30</h>
+   <binding>
+    <command>property-assign</command>
+    <property>controls/armament/arm_nose</property>
+    <value>false</value>
+   </binding>
+  </action>
+
+  <action>
+   <name>mk4 ready</name>
+   <button>0</button>
+   <x>-284</x>
+   <y>-50</y>
+   <w>30</w>
+   <h>30</h>
+   <binding>
+    <command>property-assign</command>
+    <property>controls/armament/mk4_ready</property>
+    <value>true</value>
+   </binding>
+  </action>
+
+  <action>
+   <name>mk4 clear</name>
+   <button>0</button>
+   <x>-284</x>
+   <y>-80</y>
+   <w>30</w>
+   <h>30</h>
+   <binding>
+    <command>property-assign</command>
+    <property>controls/armament/mk4_ready</property>
+    <value>false</value>
+   </binding>
+  </action>
+
+  <action>
+   <name>g ready</name>
+   <button>0</button>
+   <x>-350</x>
+   <y>-50</y>
+   <w>60</w>
+   <h>30</h>
+   <binding>
+    <command>property-assign</command>
+    <property>controls/armament/g_ready</property>
+    <value>true</value>
+   </binding>
+  </action>
+
+  <action>
+   <name>g clear</name>
+   <button>0</button>
+   <x>-350</x>
+   <y>-80</y>
+   <w>60</w>
+   <h>30</h>
+   <binding>
+    <command>property-assign</command>
+    <property>controls/armament/g_ready</property>
+    <value>false</value>
    </binding>
   </action>
 
@@ -789,7 +887,7 @@
    <h>30</h>
    <binding>
     <command>property-assign</command>
-    <property>controls/engines/engine[0]/cutoff[0]</property>
+    <property>controls/fuel-cutoff1</property>
     <value>true</value>
    </binding>
   </action>
@@ -803,7 +901,7 @@
    <h>30</h>
    <binding>
     <command>property-assign</command>
-    <property>controls/engines/engine[0]/cutoff[0]</property>
+    <property>controls/fuel-cutoff1</property>
     <value>false</value>
    </binding>
   </action>
@@ -817,7 +915,7 @@
    <h>30</h>
    <binding>
     <command>property-assign</command>
-    <property>controls/engines/engine[1]/cutoff[0]</property>
+    <property>controls/fuel-cutoff2</property>
     <value>true</value>
    </binding>
   </action>
@@ -831,7 +929,7 @@
    <h>30</h>
    <binding>
     <command>property-assign</command>
-    <property>controls/engines/engine[1]/cutoff[0]</property>
+    <property>controls/fuel-cutoff2</property>
     <value>false</value>
    </binding>
   </action>

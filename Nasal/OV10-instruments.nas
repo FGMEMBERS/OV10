@@ -87,9 +87,21 @@ trigger = props.globals.getNode("controls/armament/trigger", 1);
 
 set_gun_trigger = func() {
 	trigger2 = getprop("controls/armament/trigger");
+	gun_charged = getprop("controls/armament/gun-charged");
+	g_ready = getprop("controls/armament/g_ready");
 	masterarm = getprop("controls/armament/master-arm");
+	easy = getprop("controls/level/easy");
 
-	if ( trigger2 and masterarm) { 
+	if ( trigger2 and masterarm and !gun_charged and g_ready) { 
+		setprop("controls/armament/gun-charged", 1);
+		setprop("controls/armament/charging", 1);
+	}
+	if ( trigger2 and masterarm and gun_charged and g_ready and !easy) { 
+		setprop("controls/armament/charging", 0);
+		setprop("controls/armament/gun-trigger", 1);
+	}
+	if ( trigger2 and masterarm and easy) { 
+		setprop("controls/armament/charging", 0);
 		setprop("controls/armament/gun-trigger", 1);
 	}
 	if ( !trigger2 and masterarm) { 
@@ -103,15 +115,34 @@ setlistener( trigger , set_gun_trigger );
 release = props.globals.getNode("/controls/armament/release", 1);
 jettisonall = props.globals.getNode("controls/armament/station[0]/jettison-all", 1);
 
+nstation1 = props.globals.getNode("/controls/armament/nstation1", 1);
+nstation2 = props.globals.getNode("/controls/armament/nstation2", 1);
+nstation3 = props.globals.getNode("/controls/armament/nstation3", 1);
+nstation4 = props.globals.getNode("/controls/armament/nstation4", 1);
+nstation5 = props.globals.getNode("/controls/armament/nstation5", 1);
+
 set_station_status = func() {
 
 	masterarm = getprop("controls/armament/master-arm");
 	jettisonall = getprop("controls/armament/station[0]/jettison-all");
+	release = getprop("/controls/armament/release");
+
 	drop1 = getprop("controls/armament/drop1");
 	drop2 = getprop("controls/armament/drop2");
 	drop3 = getprop("controls/armament/drop3");
 	drop4 = getprop("controls/armament/drop4");
 	drop5 = getprop("controls/armament/drop5");
+
+	fire1 = getprop("controls/armament/fire1");
+	fire2 = getprop("controls/armament/fire2");
+	fire3 = getprop("controls/armament/fire3");
+	fire4 = getprop("controls/armament/fire4");
+	fire5 = getprop("controls/armament/fire5");
+
+	station1 = getprop("controls/armament/station1");
+	station5 = getprop("controls/armament/station5");
+     	count1 = getprop("ai/submodels/submodel[4]/count");
+     	count5 = getprop("ai/submodels/submodel[6]/count");
 	
 	if (masterarm and drop1)
 	{
@@ -153,7 +184,254 @@ set_station_status = func() {
 		setprop("controls/armament/station5",1);
 		setprop("consumables/fuel/tank[4]/level-gal_us",0);
 	}
+	if (masterarm and fire1 and !station1 and count1>0)
+	{
+		setprop("controls/armament/trigger1",1);
+	}
+	if (masterarm and fire5 and !station5 and count5>0)
+	{
+		setprop("controls/armament/trigger5",1);
+	}
+	if (masterarm and fire1 and !release)
+	{
+		setprop("controls/armament/trigger1",0);
+	}
+	if (masterarm and fire5 and count5<0)
+	{
+		setprop("controls/armament/trigger5",0);
+	}
 }
 
 setlistener( release , set_station_status );
 setlistener( jettisonall , set_station_status );
+
+set_station1 = func() {
+	nstation1 = getprop("/controls/armament/nstation1");
+
+	if ( nstation1 )
+	{
+		setprop("controls/armament/station1",0);
+		setprop("consumables/fuel/tank[5]/level-gal_us",1000);
+	}
+	if ( !nstation1 )
+	{
+		setprop("controls/armament/station1",1);
+		setprop("consumables/fuel/tank[5]/level-gal_us",0);
+	}
+}
+
+set_station2 = func() {
+	nstation2 = getprop("/controls/armament/nstation2");
+
+	if ( nstation2 )
+	{
+		setprop("controls/armament/station2",0);
+		setprop("consumables/fuel/tank[3]/level-gal_us",1000);
+	}
+	if ( !nstation2 )
+	{
+		setprop("controls/armament/station2",1);
+		setprop("consumables/fuel/tank[3]/level-gal_us",0);
+	}
+}
+
+set_station3 = func() {
+	nstation3 = getprop("/controls/armament/nstation3");
+
+	if ( nstation3 )
+	{
+		setprop("controls/armament/station3",0);
+		setprop("consumables/fuel/tank[1]/level-gal_us",1000);
+		setprop("controls/external-tank/is-attached[0]",1);
+	}
+	if ( !nstation3 )
+	{
+		setprop("controls/armament/station3",1);
+		setprop("consumables/fuel/tank[1]/level-gal_us",0);
+		setprop("controls/external-tank/is-attached[0]",0);
+	}
+}
+
+set_station4 = func() {
+	nstation4 = getprop("/controls/armament/nstation4");
+
+	if ( nstation4 )
+	{
+		setprop("controls/armament/station4",0);
+		setprop("consumables/fuel/tank[2]/level-gal_us",1000);
+	}
+	if ( !nstation4 )
+	{
+		setprop("controls/armament/station4",1);
+		setprop("consumables/fuel/tank[2]/level-gal_us",0);
+	}
+}
+
+set_station5 = func() {
+	nstation5 = getprop("/controls/armament/nstation5");
+
+	if ( nstation5 )
+	{
+		setprop("controls/armament/station5",0);
+		setprop("consumables/fuel/tank[4]/level-gal_us",1000);
+	}
+	if ( !nstation5 )
+	{
+		setprop("controls/armament/station5",1);
+		setprop("consumables/fuel/tank[4]/level-gal_us",0);
+	}
+}
+
+setlistener( nstation1 , set_station1 );
+setlistener( nstation2 , set_station2 );
+setlistener( nstation3 , set_station3 );
+setlistener( nstation4 , set_station4 );
+setlistener( nstation5 , set_station5 );
+
+# warning panel
+pbrakes = props.globals.getNode("/controls/gear/brake-parking", 1);
+
+matlist2 = { # MATERIALS
+#       fuselage   diffuse            ambient            emission           specular           shi trans
+	"on":    [1.0, 1.0, 1.0,    1.0, 1.0, 1.0,    1.0, 1.0, 1.0,     0.2, 0.2, 0.2,     0,  0],
+	"off":   [0.0, 0.0, 0.0,    0.0, 0.0, 0.0,    0.0, 0.0, 0.0,     0.2, 0.2, 0.2,     10, 0],
+};
+
+set_pbrakes_warnings = func() {
+	i = 0;
+	pbrakes = getprop("/controls/gear/brake-parking");	
+
+	if (pbrakes)
+	{
+		mat = matlist2 ["on"];
+	}
+	else
+	{	
+		mat = matlist2 ["off"];
+	}
+
+	base = "sim/model/ov10/material/pbrakes/";
+	foreach (t; ["diffuse", "ambient", "emission", "specular"]) {
+		foreach (c; ["red", "green", "blue"]) {
+			setprop(base ~ t ~ "/" ~ c, mat[i]);
+			i += 1;
+		}
+	}
+	setprop(base ~ "shininess", mat[i]);
+	setprop(base ~ "transparency/alpha", 1.0 - mat[i + 1]);
+}
+
+#setlistener(pbrakes, set_pbrakes_warnings );
+
+set_fuel_warning = func() {
+        i = 0;
+	current = getprop("/consumables/fuel/tank[0]/level-gal_us[0]");
+
+	if (current < 38.0)
+	{
+		mat = matlist2 ["on"];
+	}
+	else
+	{	
+		mat = matlist2 ["off"];
+	}
+
+	base = "sim/model/ov10/material/lowfuel/";
+	foreach (t; ["diffuse", "ambient", "emission", "specular"]) {
+		foreach (c; ["red", "green", "blue"]) {
+			setprop(base ~ t ~ "/" ~ c, mat[i]);
+			i += 1;
+		}
+	}
+	setprop(base ~ "shininess", mat[i]);
+	setprop(base ~ "transparency/alpha", 1.0 - mat[i + 1]);
+}
+
+set_G_warning = func() {
+        i = 0;
+	current = getprop("/accelerations/pilot/z-accel-fps_sec");
+	current = current/(-32);
+
+	if (current > 4.0)
+	{
+		mat = matlist2 ["on"];
+		base = "sim/model/ov10/material/maxG/";
+		foreach (t; ["diffuse", "ambient", "emission", "specular"]) {
+			foreach (c; ["red", "green", "blue"]) {
+				setprop(base ~ t ~ "/" ~ c, mat[i]);
+				i += 1;
+			}
+		}
+		setprop(base ~ "shininess", mat[i]);
+		setprop(base ~ "transparency/alpha", 1.0 - mat[i + 1]);
+	}
+	elsif (current < -1.2)
+	{
+		mat = matlist2 ["on"];
+		base = "sim/model/ov10/material/minG/";
+		foreach (t; ["diffuse", "ambient", "emission", "specular"]) {
+			foreach (c; ["red", "green", "blue"]) {
+				setprop(base ~ t ~ "/" ~ c, mat[i]);
+				i += 1;
+			}
+		}
+		setprop(base ~ "shininess", mat[i]);
+		setprop(base ~ "transparency/alpha", 1.0 - mat[i + 1]);
+	}
+	else
+	{	
+		mat = matlist2 ["off"];
+
+		i = 0;
+		base = "sim/model/ov10/material/maxG/";
+		foreach (t; ["diffuse", "ambient", "emission", "specular"]) {
+			foreach (c; ["red", "green", "blue"]) {
+				setprop(base ~ t ~ "/" ~ c, mat[i]);
+				i += 1;
+			}
+		}
+		setprop(base ~ "shininess", mat[i]);
+		setprop(base ~ "transparency/alpha", 1.0 - mat[i + 1]);
+		i = 0;
+		base = "sim/model/ov10/material/minG/";
+		foreach (t; ["diffuse", "ambient", "emission", "specular"]) {
+			foreach (c; ["red", "green", "blue"]) {
+				setprop(base ~ t ~ "/" ~ c, mat[i]);
+				i += 1;
+			}
+		}
+		setprop(base ~ "shininess", mat[i]);
+		setprop(base ~ "transparency/alpha", 1.0 - mat[i + 1]);
+	}
+
+}
+
+beacon = func() {
+	#turn off tail beacon
+	base = "sim/model/ov10/material/tailBeacon/";
+	setprop(base ~ "diffuse/red", 0.4);
+	setprop(base ~ "ambient/red", 0.4);
+	setprop(base ~ "emission/red", 0);
+
+	settimer(bellyBeacon,0.5);
+	settimer(tailBeacon,1);
+}
+
+bellyBeacon = func() {
+	base = "sim/model/ov10/material/bellyBeacon/";
+	setprop(base ~ "diffuse/red", 1);
+	setprop(base ~ "ambient/red", 1);
+	setprop(base ~ "emission/red", 1);
+}
+
+tailBeacon = func() {
+	base = "sim/model/ov10/material/bellyBeacon/";
+	setprop(base ~ "diffuse/red", 0.4);
+	setprop(base ~ "ambient/red", 0.4);
+	setprop(base ~ "emission/red", 0);
+
+	base = "sim/model/ov10/material/tailBeacon/";
+	setprop(base ~ "diffuse/red", 1);
+	setprop(base ~ "ambient/red", 1);
+	setprop(base ~ "emission/red", 1);
+}

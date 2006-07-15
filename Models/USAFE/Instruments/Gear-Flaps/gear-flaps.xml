@@ -10,11 +10,11 @@
   <type>rotate</type>
   <object-name>pointer</object-name>
   <property>surface-positions/flap-pos-norm</property>
-  <factor>58</factor>
+  <factor>53</factor>
   <center>
    <x-m>-0.02</x-m>
-   <y-m>-0.01</y-m>
-   <z-m>0.03</z-m>
+   <y-m>-0.017</y-m>
+   <z-m>0.037</z-m>
   </center>
   <axis>
    <x>-1</x>
@@ -77,8 +77,39 @@
    </equals>
   </condition>
  </animation>  
-  
 
+ <animation>
+  <type>material</type>
+  <object-name>nosegear_indicator</object-name>
+   <emission>
+     <red>0.6</red>
+     <green>0.3</green>
+     <blue>0.3</blue>
+    <factor-prop>controls/lighting/instruments-norm</factor-prop>
+   </emission> 
+ </animation>         
+
+ <animation>
+  <type>material</type>
+  <object-name>leftgear_indicator</object-name>
+   <emission>
+     <red>0.6</red>
+     <green>0.3</green>
+     <blue>0.3</blue>
+    <factor-prop>controls/lighting/instruments-norm</factor-prop>
+   </emission> 
+ </animation>   
+
+ <animation>
+  <type>material</type>
+  <object-name>rightgear_indicator</object-name>
+   <emission>
+     <red>0.6</red>
+     <green>0.3</green>
+     <blue>0.3</blue>
+    <factor-prop>controls/lighting/instruments-norm</factor-prop>
+   </emission> 
+ </animation>   
 
  <!-- *** LoD *** -->
  <animation>

@@ -7,19 +7,10 @@ David Culp,  davidculp2@comcast.net
 -->
 
 <PropertyList>
-  <instrumentation>
-    <navcomputer>
-     <brg-switch-position>2</brg-switch-position>
-     <mode-switch-position>1</mode-switch-position>
-    </navcomputer>
-   <radar-altimeter>
-      <decision-height>300</decision-height>
-    </radar-altimeter>
-  </instrumentation>
 
  <sim>
 
-  <description>NASA North American OV-10A Bronco</description>
+  <description>US Air Force Europe North American OV-10A Bronco</description>
   <author>David Culp (FDM), Jens Thoms Toerring/Capt. Slug/David Culp (3D)</author>
   <status>beta</status>
  
@@ -27,8 +18,34 @@ David Culp,  davidculp2@comcast.net
   <aero>OV10</aero>
  
   <startup>
-   <splash-texture>Aircraft/OV10/OV10A.rgb</splash-texture>
+   <splash-texture>Aircraft/OV10/OV10A-NASA.rgb</splash-texture>
   </startup>
+
+  <gui>
+   <style>
+    <colors>
+     <splash-screen>
+      <red>0</red>
+      <green>0</green>
+      <blue>0.05</blue>
+     </splash-screen>
+     <splash-font>
+      <red>0.122</red>
+      <green>0.451</green>
+      <blue>0.824</blue>
+     </splash-font>
+    </colors>
+   </style>
+  </gui>
+
+  <systems>
+    <electrical>
+      <path>Aircraft/Generic/generic-electrical.xml</path>
+    </electrical>
+    <autopilot>
+      <path>Aircraft/OV10/Models/NASA/Instruments/digitrak/digitrak-autopilot.xml</path>
+    </autopilot>
+  </systems>
 
   <sound>
    <path>Aircraft/OV10/Sounds/OV10-sound.xml</path>
@@ -45,7 +62,7 @@ David Culp,  davidculp2@comcast.net
   </panel>
 
   <model>
-   <path>Aircraft/OV10/Models/USAFE/OV10.xml</path>
+   <path>Aircraft/OV10/Models/NASA/OV10.xml</path>
    <extfuelwarning>
     <material>
      <light-on>
@@ -112,8 +129,261 @@ David Culp,  davidculp2@comcast.net
      </light-off>
     </material>
    </extfuelwarning>
+   <ov10>
+    <material>
+      <fuelfeed>
+	  <diffuse>
+	   <red>0.0</red>
+	   <green>0.0</green>
+	   <blue>0.0</blue>
+	  </diffuse>
+
+	  <ambient>
+	   <red>0.0</red>
+	   <green>0.0</green>
+	   <blue>0.0</blue>
+	  </ambient>
+
+	  <specular>
+	   <red>0.063</red>
+	   <green>0.063</green>
+	   <blue>0.063</blue>
+	  </specular>
+
+	  <emission>
+	   <red>0.0</red>
+	   <green>0.0</green>
+	   <blue>0.0</blue>
+	  </emission>
+
+	  <transparency>
+	   <alpha>1.0</alpha>
+	  </transparency>
+
+	  <shininess>10</shininess>
+      </fuelfeed>
+      <lowfuel>
+	  <diffuse>
+	   <red>0.0</red>
+	   <green>0.0</green>
+	   <blue>0.0</blue>
+	  </diffuse>
+
+	  <ambient>
+	   <red>0.0</red>
+	   <green>0.0</green>
+	   <blue>0.0</blue>
+	  </ambient>
+
+	  <specular>
+	   <red>0.063</red>
+	   <green>0.063</green>
+	   <blue>0.063</blue>
+	  </specular>
+
+	  <emission>
+	   <red>0.0</red>
+	   <green>0.0</green>
+	   <blue>0.0</blue>
+	  </emission>
+
+	  <transparency>
+	   <alpha>1.0</alpha>
+	  </transparency>
+
+	  <shininess>10</shininess>
+      </lowfuel>
+      <lgen>
+	  <diffuse>
+	   <red>0.0</red>
+	   <green>0.0</green>
+	   <blue>0.0</blue>
+	  </diffuse>
+
+	  <ambient>
+	   <red>0.0</red>
+	   <green>0.0</green>
+	   <blue>0.0</blue>
+	  </ambient>
+
+	  <specular>
+	   <red>0.063</red>
+	   <green>0.063</green>
+	   <blue>0.063</blue>
+	  </specular>
+
+	  <emission>
+	   <red>0.0</red>
+	   <green>0.0</green>
+	   <blue>0.0</blue>
+	  </emission>
+
+	  <transparency>
+	   <alpha>1.0</alpha>
+	  </transparency>
+
+	  <shininess>10</shininess>
+      </lgen>
+      <rgen>
+	  <diffuse>
+	   <red>0.0</red>
+	   <green>0.0</green>
+	   <blue>0.0</blue>
+	  </diffuse>
+
+	  <ambient>
+	   <red>0.0</red>
+	   <green>0.0</green>
+	   <blue>0.0</blue>
+	  </ambient>
+
+	  <specular>
+	   <red>0.063</red>
+	   <green>0.063</green>
+	   <blue>0.063</blue>
+	  </specular>
+
+	  <emission>
+	   <red>0.0</red>
+	   <green>0.0</green>
+	   <blue>0.0</blue>
+	  </emission>
+
+	  <transparency>
+	   <alpha>1.0</alpha>
+	  </transparency>
+
+	  <shininess>10</shininess>
+      </rgen>
+      <start>
+	  <diffuse>
+	   <red>0.0</red>
+	   <green>0.0</green>
+	   <blue>0.0</blue>
+	  </diffuse>
+
+	  <ambient>
+	   <red>0.0</red>
+	   <green>0.0</green>
+	   <blue>0.0</blue>
+	  </ambient>
+
+	  <specular>
+	   <red>0.063</red>
+	   <green>0.063</green>
+	   <blue>0.063</blue>
+	  </specular>
+
+	  <emission>
+	   <red>0.0</red>
+	   <green>0.0</green>
+	   <blue>0.0</blue>
+	  </emission>
+
+	  <transparency>
+	   <alpha>1.0</alpha>
+	  </transparency>
+
+	  <shininess>10</shininess>
+      </start>
+      <black>
+	  <diffuse>
+	   <red>0.0</red>
+	   <green>0.0</green>
+	   <blue>0.0</blue>
+	  </diffuse>
+
+	  <ambient>
+	   <red>0.0</red>
+	   <green>0.0</green>
+	   <blue>0.0</blue>
+	  </ambient>
+
+	  <specular>
+	   <red>0.063</red>
+	   <green>0.063</green>
+	   <blue>0.063</blue>
+	  </specular>
+
+	  <emission>
+	   <red>0.0</red>
+	   <green>0.0</green>
+	   <blue>0.0</blue>
+	  </emission>
+
+	  <transparency>
+	   <alpha>1.0</alpha>
+	  </transparency>
+
+	  <shininess>10</shininess>
+      </black>
+      <tailBeacon>
+	  <diffuse>
+	   <red>0.8</red>
+	   <green>0.0</green>
+	   <blue>0.0</blue>
+	  </diffuse>
+
+	  <ambient>
+	   <red>0.8</red>
+	   <green>0.0</green>
+	   <blue>0.0</blue>
+	  </ambient>
+
+	  <specular>
+	   <red>0.063</red>
+	   <green>0.063</green>
+	   <blue>0.063</blue>
+	  </specular>
+
+	  <emission>
+	   <red>0.0</red>
+	   <green>0.0</green>
+	   <blue>0.0</blue>
+	  </emission>
+
+	  <transparency>
+	   <alpha>1.0</alpha>
+	  </transparency>
+
+	  <shininess>10</shininess>
+      </tailBeacon>
+      <bellyBeacon>
+	  <diffuse>
+	   <red>0.8</red>
+	   <green>0.0</green>
+	   <blue>0.0</blue>
+	  </diffuse>
+
+	  <ambient>
+	   <red>0.8</red>
+	   <green>0.0</green>
+	   <blue>0.0</blue>
+	  </ambient>
+
+	  <specular>
+	   <red>0.063</red>
+	   <green>0.063</green>
+	   <blue>0.063</blue>
+	  </specular>
+
+	  <emission>
+	   <red>0.0</red>
+	   <green>0.0</green>
+	   <blue>0.0</blue>
+	  </emission>
+
+	  <transparency>
+	   <alpha>1.0</alpha>
+	  </transparency>
+
+	  <shininess>10</shininess>
+      </bellyBeacon>
+    </material>
+   </ov10>
   </model>
 
+  <number-views type="int">10</number-views>
   <view n="0">
    <internal archive="y">true</internal>
    <config>
@@ -123,6 +393,117 @@ David Culp,  davidculp2@comcast.net
     <z-offset-m archive="y">-1.9</z-offset-m><!-- aft/fore -->
    </config>
   </view>
+
+  <view n="6">
+    <name>Tail Camera View</name>
+    <type>lookfrom</type>
+   <internal archive="y">true</internal>
+   <config>
+    <pitch-offset-deg>-15</pitch-offset-deg>
+    <x-offset-m archive="y">-2.15</x-offset-m><!-- right/left -->
+    <y-offset-m archive="y">2.9</y-offset-m><!-- up/down -->
+    <z-offset-m archive="y">6.7</z-offset-m><!-- aft/fore -->
+      <from-model type="bool">true</from-model>
+      <from-model-idx type="int">0</from-model-idx>
+      <ground-level-nearplane-m type="double">0.5f</ground-level-nearplane-m>
+      <default-field-of-view-deg type="double">70.0</default-field-of-view-deg>
+      <default-pitch-deg type="double">0</default-pitch-deg>
+      <default-heading-deg type="double">0</default-heading-deg>
+      <front-direction-deg type="double">0</front-direction-deg>
+      <front-left-direction-deg type="double">45</front-left-direction-deg>
+      <left-direction-deg type="double">90</left-direction-deg>
+      <back-left-direction-deg type="double">135</back-left-direction-deg>
+      <back-direction-deg type="double">180</back-direction-deg>
+      <back-right-direction-deg type="double">225</back-right-direction-deg>
+      <right-direction-deg type="double">270</right-direction-deg>
+      <front-right-direction-deg type="double">315</front-right-direction-deg>
+   </config>
+  </view>
+
+  <view n="7">
+    <name>Engine Start Panel View</name>
+    <type>lookfrom</type>
+   <internal archive="y">true</internal>
+   <config>
+    <pitch-offset-deg>-45</pitch-offset-deg>
+    <x-offset-m archive="y">0</x-offset-m><!-- right/left -->
+    <y-offset-m archive="y">0.82</y-offset-m><!-- up/down -->
+    <z-offset-m archive="y">-2.5</z-offset-m><!-- aft/fore -->
+      <from-model type="bool">true</from-model>
+      <from-model-idx type="int">0</from-model-idx>
+      <ground-level-nearplane-m type="double">0.5f</ground-level-nearplane-m>
+      <default-field-of-view-deg type="double">55.0</default-field-of-view-deg>
+      <default-pitch-deg type="double">0</default-pitch-deg>
+      <default-heading-deg type="double">0</default-heading-deg>
+      <front-direction-deg type="double">0</front-direction-deg>
+      <front-left-direction-deg type="double">45</front-left-direction-deg>
+      <left-direction-deg type="double">90</left-direction-deg>
+      <back-left-direction-deg type="double">135</back-left-direction-deg>
+      <back-direction-deg type="double">180</back-direction-deg>
+      <back-right-direction-deg type="double">225</back-right-direction-deg>
+      <right-direction-deg type="double">270</right-direction-deg>
+      <front-right-direction-deg type="double">315</front-right-direction-deg>
+   </config>
+  </view>
+
+  <view n="8">
+    <name>AP Panel View</name>
+    <type>lookfrom</type>
+   <internal archive="y">true</internal>
+   <config>
+    <pitch-offset-deg>-9</pitch-offset-deg>
+    <x-offset-m archive="y">-0.2</x-offset-m><!-- right/left -->
+    <y-offset-m archive="y">0.82</y-offset-m><!-- up/down -->
+    <z-offset-m archive="y">-2.5</z-offset-m><!-- aft/fore -->
+      <from-model type="bool">true</from-model>
+      <from-model-idx type="int">0</from-model-idx>
+      <ground-level-nearplane-m type="double">0.5f</ground-level-nearplane-m>
+      <default-field-of-view-deg type="double">55.0</default-field-of-view-deg>
+      <default-pitch-deg type="double">0</default-pitch-deg>
+      <default-heading-deg type="double">0</default-heading-deg>
+      <front-direction-deg type="double">0</front-direction-deg>
+      <front-left-direction-deg type="double">45</front-left-direction-deg>
+      <left-direction-deg type="double">90</left-direction-deg>
+      <back-left-direction-deg type="double">135</back-left-direction-deg>
+      <back-direction-deg type="double">180</back-direction-deg>
+      <back-right-direction-deg type="double">225</back-right-direction-deg>
+      <right-direction-deg type="double">270</right-direction-deg>
+      <front-right-direction-deg type="double">315</front-right-direction-deg>
+   </config>
+  </view>
+
+  <view n="9">
+    <name>GPS Panel View</name>
+    <type>lookfrom</type>
+   <internal archive="y">true</internal>
+   <config>
+    <pitch-offset-deg>-9</pitch-offset-deg>
+    <x-offset-m archive="y">0.2</x-offset-m><!-- right/left -->
+    <y-offset-m archive="y">0.82</y-offset-m><!-- up/down -->
+    <z-offset-m archive="y">-2.5</z-offset-m><!-- aft/fore -->
+      <from-model type="bool">true</from-model>
+      <from-model-idx type="int">0</from-model-idx>
+      <ground-level-nearplane-m type="double">0.5f</ground-level-nearplane-m>
+      <default-field-of-view-deg type="double">55.0</default-field-of-view-deg>
+      <default-pitch-deg type="double">0</default-pitch-deg>
+      <default-heading-deg type="double">0</default-heading-deg>
+      <front-direction-deg type="double">0</front-direction-deg>
+      <front-left-direction-deg type="double">45</front-left-direction-deg>
+      <left-direction-deg type="double">90</left-direction-deg>
+      <back-left-direction-deg type="double">135</back-left-direction-deg>
+      <back-direction-deg type="double">180</back-direction-deg>
+      <back-right-direction-deg type="double">225</back-right-direction-deg>
+      <right-direction-deg type="double">270</right-direction-deg>
+      <front-right-direction-deg type="double">315</front-right-direction-deg>
+   </config>
+  </view>
+
+  <current-view>
+   <field-of-view>60.0</field-of-view>
+   <config>
+    <default-field-of-view-deg archive="y">60.0</default-field-of-view-deg>
+   </config>
+  </current-view>
 
   <chase-distance-m>-19</chase-distance-m>
 
@@ -164,7 +545,24 @@ Some unusual features of the OV-10 are that the cockpit is entered from the righ
    </tank>
    <!-- External Tank -->
    <tank n="1">
-     <level-gal_us archive="y">220</level-gal_us>
+     <level-gal_us archive="y">0</level-gal_us>
+   </tank>
+   <!-- stores -->
+   <tank n="2">
+     <level-gal_us archive="y">0</level-gal_us>
+   </tank>
+   <tank n="3">
+     <level-gal_us archive="y">0</level-gal_us>
+   </tank>
+   <tank n="4">
+     <level-gal_us archive="y">0</level-gal_us>
+   </tank>
+   <tank n="5">
+     <level-gal_us archive="y">0</level-gal_us>
+   </tank>
+   <!-- no paratroopers by default -->
+   <tank n="9">
+     <level-gal_us archive="y">0</level-gal_us>
    </tank>
   </fuel>
  </consumables>
@@ -178,6 +576,8 @@ Some unusual features of the OV-10 are that the cockpit is entered from the righ
    <release type="bool">false</release>
    <master-arm type="bool">false</master-arm>
    <gun-trigger type="bool">false</gun-trigger>
+   <gun-charged type="bool">false</gun-charged>
+   <charging type="bool">false</charging>
    <trigger type="bool">false</trigger>
    <station1 type="bool">false</station1>
    <station2 type="bool">false</station2>
@@ -199,7 +599,16 @@ Some unusual features of the OV-10 are that the cockpit is entered from the righ
    <fire5 type="bool">false</fire5>
    <off5 type="bool">true</off5>
    <drop5 type="bool">false</drop5>
+   <g_ready type="bool">false</g_ready>
+   <mk4_ready type="bool">false</mk4_ready>
+   <arm_nose type="bool">true</arm_nose>
+   <trigger1 type="bool">false</trigger1>
+   <trigger5 type="bool">false</trigger5>
   </armament>
+  <level>
+   <easy type="bool">true</easy>
+  </level>
+  <isNASA type="bool">true</isNASA>
   <lighting>
    <instruments-norm>0.3</instruments-norm>
   </lighting>
@@ -218,27 +627,56 @@ Some unusual features of the OV-10 are that the cockpit is entered from the righ
   </external-tank>
   <smoke type="bool">true</smoke>
   <fuel-gage-test type="bool">false</fuel-gage-test>
+  <fuel-cutoff1 type="bool">false</fuel-cutoff1>
+  <fuel-cutoff2 type="bool">false</fuel-cutoff2>
   <internal-tank>
    <is-feeding type="bool">true</is-feeding>
   </internal-tank>
   <initial-fuel-gal_us type="float"></initial-fuel-gal_us>
   <negGtime type="int">0</negGtime>
+  <gmeter>
+    <reset type="int">1</reset>
+  </gmeter>
+  <engines>
+  <run1 type="bool">true</run1>
+  <run2 type="bool">true</run2>
+  <start1 type="bool">false</start1>
+  <start2 type="bool">false</start2>
+  <abort1 type="bool">false</abort1>
+  <abort2 type="bool">false</abort2>
+  </engines>
+  <instruments>
+   <inst-off type="bool">false</inst-off>
+   <inv-no1 type="bool">true</inv-no1>
+   <inv-no2 type="bool">false</inv-no2>
+  </instruments>
+  <power>
+   <lgen-reset type="bool">false</lgen-reset>
+   <lgen-on type="bool">true</lgen-on>
+   <lgen-off type="bool">false</lgen-off> 
+   <rgen-reset type="bool">false</rgen-reset>
+   <rgen-on type="bool">true</rgen-on>
+   <rgen-off type="bool">false</rgen-off>
+   <batt-emerg type="bool">false</batt-emerg>
+   <batt-on type="bool">true</batt-on>
+   <batt-off type="bool">false</batt-off>
+  </power>
  </controls>
+
+ <engines>
+  <engine n="0">
+    <running>false</running>
+  </engine>
+  <engine n="1">
+    <running>false</running>
+  </engine>
+ </engines>
 
  <ai>
   <submodels>
     <trigger type="bool">false</trigger>
   </submodels>
  </ai>
-
- <engines>
-  <engine n="0">
-   <running>true</running>
-  </engine>
-  <engine n="1">
-   <running>true</running>
-  </engine>
- </engines>
 
  <input>
   <keyboard>
@@ -276,9 +714,60 @@ Some unusual features of the OV-10 are that the cockpit is entered from the righ
      <value>false</value>
     </binding>
    </key>
+   <key n="9">
+    <name>Ctrl-I</name>
+    <desc>Show configuration dialog</desc>
+    <binding>
+     <command>nasal</command>
+     <script>digitrak.showDialog()</script>
+    </binding>
+   </key>
   </keyboard>
  </input>
 
+  <instrumentation>
+    <navcomputer>
+     <brg-switch-position>2</brg-switch-position>
+     <mode-switch-position>1</mode-switch-position>
+    </navcomputer>
+   <radar-altimeter>
+      <decision-height>300</decision-height>
+    </radar-altimeter>
+    <gps>
+     <serviceable>true</serviceable> 
+    </gps>
+    <radar>
+      <minimized type="bool" archive="y">false</minimized>
+      <switch type="string" archive="y">ON</switch>
+      <mode-control type="int" archive="y">2</mode-control>
+      <WXmode  type="string" archive="y">WX</WXmode>
+      <POSmode  type="string" archive="y">POS</POSmode>
+      <DATmode  type="string" archive="y">DAT</DATmode>
+      <display-controls> 
+        <WX type="bool" archive="y">true</WX>
+        <data type="bool" archive="y">false</data>
+        <pos type="bool" archive="y">false</pos>
+      </display-controls>
+      <serviceable type="bool">true</serviceable>
+      <range type="int" archive="y">8</range>
+      <display-mode type="string" archive="y">map</display-mode>
+    </radar>
+    <wxradar>
+      <range type="int" archive="y">8</range>
+      <minimized type="bool" archive="y">false</minimized>
+      <switch type="string" archive="y">ON</switch>
+      <mode type="string" archive="y">WX</mode>
+      <lightning type="bool" archive="y">false</lightning>
+      <display-mode type="string" archive="y">map</display-mode>
+      <serviceable type="bool" >true</serviceable>
+    </wxradar>
+  </instrumentation>
+
+<environment>
+  <turbulence>
+    <use-cloud-turbulence>true</use-cloud-turbulence>
+  </turbulence>
+</environment>
 
   <nasal>
     <OV10-instrument>
@@ -289,9 +778,26 @@ Some unusual features of the OV-10 are that the cockpit is entered from the righ
       <file>Aircraft/OV10/Nasal/OV10-fuel.nas</file>
       <module>OV10</module>
     </OV10-fuel>
+    <OV10-engine>
+      <file>Aircraft/OV10/Nasal/OV10-engine.nas</file>
+      <module>OV10</module>
+    </OV10-engine>
     <OV10>
       <file>Aircraft/OV10/Nasal/OV10-jsbsim.nas</file>
     </OV10>
+    <G-Meter>
+      <file>Aircraft/OV10/Nasal/gmeter.nas</file>
+    </G-Meter>
+    <systems>
+      <file>Aircraft/OV10/Nasal/systems.nas</file>
+    </systems>
+    <digitrak>
+      <file>Aircraft/OV10/Nasal/digitrak.nas</file>
+    </digitrak>
+    <radar>
+      <file>Aircraft/OV10/Nasal/radar.nas</file>
+      <module>OV10</module>
+    </radar>
   </nasal>
 
 

@@ -15,7 +15,7 @@
 
  <!-- Front Panel hotspots -->
  <panel>
-  <path>Aircraft/OV10_USAFE/Models/USAFE/panel-hotspots.xml</path>
+  <path>Aircraft/OV10/Models/NASA/panel-hotspots.xml</path>
   <bottom-left>
    <x-m>-3.04</x-m>
    <y-m>-0.53</y-m>
@@ -33,84 +33,101 @@
   </top-left>
  </panel>
 
+ <!-- ************* Pilot **************************** -->
+ <model>
+  <path>Aircraft/OV10/Models/NASA/Instruments/pilot/pilot.xml</path>
+  <offsets>
+   <x-m>0</x-m>
+   <y-m>0</y-m>
+   <z-m>0</z-m>
+  </offsets>
+ </model>
 
+ <model>
+  <path>Aircraft/OV10/Models/NASA/Instruments/pilot/pilot.xml</path>
+  <offsets>
+   <x-m>1.10</x-m>
+   <y-m>0</y-m>
+   <z-m>0.10</z-m>
+  </offsets>
+ </model>
 
  <!-- ************* Instruments **************************** -->
 
  <model>
-  <path>Aircraft/OV10_USAFE/Models/USAFE/Instruments/HSI/HSI.xml</path>
+  <path>Aircraft/OV10/Models/USAFE/Instruments/HSI/HSI.xml</path>
   <offsets>
    <x-m>-3.04</x-m>
    <y-m>0</y-m>
-   <z-m>-0.214</z-m>
+   <z-m>-0.264</z-m>
   </offsets>
  </model>
 
  <model>
-  <path>Aircraft/OV10_USAFE/Models/USAFE/Instruments/HSI/navpanel.xml</path>
+  <path>Aircraft/OV10/Models/USAFE/Instruments/HSI/navpanel.xml</path>
   <offsets>
    <x-m>-3.001</x-m>
    <y-m>0</y-m>
-   <z-m>-0.32</z-m>
+   <z-m>-0.35</z-m>
   </offsets>
  </model>
 
  <model>
-  <path>Aircraft/OV10_USAFE/Models/USAFE/Instruments/AI/AI.xml</path>
+  <path>Aircraft/OV10/Models/USAFE/Instruments/AI/AI.xml</path>
   <offsets>
-   <x-m>-3.04</x-m>
+   <x-m>-3.03</x-m>
    <y-m>0</y-m>
-   <z-m>-0.094</z-m>
+   <z-m>-0.12</z-m>
   </offsets>
  </model>
 
  <model>
-  <path>Aircraft/OV10_USAFE/Models/USAFE/Instruments/n2/n2_1.xml</path>
+  <path>Aircraft/OV10/Models/USAFE/Instruments/n2/n2_1.xml</path>
   <offsets>
    <x-m>-3.05</x-m>
-   <y-m>0.24</y-m>
-   <z-m>-0.165</z-m>
+   <y-m>0.21</y-m>
+   <z-m>-0.185</z-m>
   </offsets>
  </model>
 
  <model>
-  <path>Aircraft/OV10_USAFE/Models/USAFE/Instruments/n2/n2_2.xml</path>
+  <path>Aircraft/OV10/Models/USAFE/Instruments/n2/n2_2.xml</path>
   <offsets>
    <x-m>-3.05</x-m>
-   <y-m>0.32</y-m>
-   <z-m>-0.165</z-m>
+   <y-m>0.28</y-m>
+   <z-m>-0.185</z-m>
   </offsets>
  </model>
 
  <model>
-  <path>Aircraft/OV10_USAFE/Models/USAFE/Instruments/EGT/EGT_1.xml</path>
+  <path>Aircraft/OV10/Models/USAFE/Instruments/EGT/EGT_1.xml</path>
   <offsets>
    <x-m>-3.05</x-m>
-   <y-m>0.24</y-m>
-   <z-m>-0.24</z-m>
+   <y-m>0.21</y-m>
+   <z-m>-0.26</z-m>
   </offsets>
  </model>
 
  <model>
-  <path>Aircraft/OV10_USAFE/Models/USAFE/Instruments/EGT/EGT_2.xml</path>
+  <path>Aircraft/OV10/Models/USAFE/Instruments/EGT/EGT_2.xml</path>
   <offsets>
    <x-m>-3.05</x-m>
-   <y-m>0.32</y-m>
-   <z-m>-0.24</z-m>
+   <y-m>0.28</y-m>
+   <z-m>-0.26</z-m>
   </offsets>
  </model>
 
  <model>
-  <path>Aircraft/OV10_USAFE/Models/USAFE/Instruments/Fuel/fuel.xml</path>
+  <path>Aircraft/OV10/Models/USAFE/Instruments/Fuel/fuel.xml</path>
   <offsets>
    <x-m>-3.05</x-m>
-   <y-m>0.40</y-m>
-   <z-m>-0.22</z-m>
+   <y-m>0.36</y-m>
+   <z-m>-0.228</z-m>
   </offsets>
  </model>
 
  <model>
-  <path>Aircraft/OV10_USAFE/Models/USAFE/Instruments/Fuel/fuel_panel.xml</path>
+  <path>Aircraft/OV10/Models/USAFE/Instruments/Fuel/fuel_panel.xml</path>
   <offsets>
    <x-m>-3.05</x-m>
    <y-m>0.425</y-m>
@@ -119,7 +136,7 @@
  </model>
 
  <model>
-  <path>Aircraft/OV10_USAFE/Models/USAFE/Instruments/Fuel/top_right_panel.xml</path>
+  <path>Aircraft/OV10/Models/USAFE/Instruments/Fuel/top_right_panel.xml</path>
   <offsets>
    <x-m>-3.05</x-m>
    <y-m>0.42</y-m>
@@ -128,70 +145,97 @@
  </model>
 
  <model>
-  <path>Aircraft/OV10_USAFE/Models/USAFE/Instruments/Torque/Torque_1.xml</path>
+  <path>Aircraft/OV10/Models/USAFE/Instruments/Torque/Torque_1.xml</path>
   <offsets>
    <x-m>-3.05</x-m>
-   <y-m>0.24</y-m>
-   <z-m>-0.09</z-m>
+   <y-m>0.21</y-m>
+   <z-m>-0.11</z-m>
   </offsets>
  </model>
 
  <model>
-  <path>Aircraft/OV10_USAFE/Models/USAFE/Instruments/Torque/Torque_2.xml</path>
+  <path>Aircraft/OV10/Models/USAFE/Instruments/Torque/Torque_2.xml</path>
   <offsets>
    <x-m>-3.05</x-m>
-   <y-m>0.32</y-m>
-   <z-m>-0.09</z-m>
+   <y-m>0.28</y-m>
+   <z-m>-0.11</z-m>
   </offsets>
  </model>
 
  <model>
-  <path>Aircraft/OV10_USAFE/Models/USAFE/Instruments/GMeter/gmeter.xml</path>
+  <path>Aircraft/OV10/Models/USAFE/Instruments/SAI/sai.xml</path>
   <offsets>
-   <x-m>-3.05</x-m>
-   <y-m>-0.23</y-m>
-   <z-m>-0.165</z-m>
+   <x-m>-3.04</x-m>
+   <y-m>-0.225</y-m>
+   <z-m>-0.07</z-m>
   </offsets>
  </model>
 
  <model>
-  <path>Aircraft/OV10_USAFE/Models/USAFE/Instruments/AS/airspeed.xml</path>
+  <path>Aircraft/OV10/Models/USAFE/Instruments/GMeter/gmeter.xml</path>
   <offsets>
-   <x-m>-3.05</x-m>
-   <y-m>-0.12</y-m>
-   <z-m>-0.10</z-m>
+   <x-m>-3.04</x-m>
+   <y-m>-0.225</y-m>
+   <z-m>-0.17</z-m>
   </offsets>
  </model>
 
  <model>
-  <path>Aircraft/OV10_USAFE/Models/USAFE/Instruments/Alt/altimeter.xml</path>
+  <path>Aircraft/OV10/Models/USAFE/Instruments/Clock/clock.xml</path>
   <offsets>
-   <x-m>-3.05</x-m>
-   <y-m>-0.12</y-m>
-   <z-m>-0.214</z-m>
+   <x-m>-3.04</x-m>
+   <y-m>-0.225</y-m>
+   <z-m>-0.27</z-m>
   </offsets>
  </model>
 
  <model>
-  <path>Aircraft/OV10_USAFE/Models/USAFE/Instruments/IVSI/IVSI.xml</path>
+  <path>Aircraft/OV10/Models/USAFE/Instruments/AS/airspeed.xml</path>
   <offsets>
    <x-m>-3.05</x-m>
-   <y-m>0.12</y-m>
+   <y-m>-0.125</y-m>
    <z-m>-0.13</z-m>
   </offsets>
  </model>
 
  <model>
-  <path>Aircraft/OV10_USAFE/Models/USAFE/Instruments/Flaps/flaps.xml</path>
+  <path>Aircraft/OV10/Models/USAFE/Instruments/Alt/altimeter.xml</path>
   <offsets>
    <x-m>-3.05</x-m>
-   <y-m>-0.23</y-m>
-   <z-m>-0.225</z-m>
+   <y-m>-0.125</y-m>
+   <z-m>-0.25</z-m>
   </offsets>
  </model>
 
  <model>
-  <path>Aircraft/OV10_USAFE/Models/USAFE/Instruments/PanelLights/lights.xml</path>
+  <path>Aircraft/OV10/Models/USAFE/Instruments/IVSI/IVSI.xml</path>
+  <offsets>
+   <x-m>-3.05</x-m>
+   <y-m>0.11</y-m>
+   <z-m>-0.14</z-m>
+  </offsets>
+ </model>
+
+ <model>
+  <path>Aircraft/OV10/Models/USAFE/Instruments/Gear-Flaps/gear-flaps.xml</path>
+  <offsets>
+   <x-m>-3.06</x-m>
+   <y-m>-0.46</y-m>
+   <z-m>-0.31</z-m>
+  </offsets>
+ </model>
+
+ <model>
+  <path>Aircraft/OV10/Models/USAFE/Instruments/Trim/trim.xml</path>
+  <offsets>
+   <x-m>-3.06</x-m>
+   <y-m>-0.37</y-m>
+   <z-m>-0.305</z-m>
+  </offsets>
+ </model>
+
+ <model>
+  <path>Aircraft/OV10/Models/USAFE/Instruments/PanelLights/lights.xml</path>
   <offsets>
    <x-m>-3.05</x-m>
    <y-m>-0.3</y-m>
@@ -200,7 +244,7 @@
  </model>
 
  <model>
-  <path>Aircraft/OV10_USAFE/Models/USAFE/Instruments/Gunsight/gunsight.xml</path>
+  <path>Aircraft/OV10/Models/USAFE/Instruments/Gunsight/gunsight.xml</path>
   <offsets>
    <x-m>-2.88</x-m>
    <y-m>0</y-m>
@@ -208,8 +252,9 @@
   </offsets>
  </model>
 
+
  <model>
-  <path>Aircraft/OV10_USAFE/Models/USAFE/Instruments/Gunsight/switch.xml</path>
+  <path>Aircraft/OV10/Models/USAFE/Instruments/Gunsight/switch.xml</path>
   <offsets>
    <x-m>-2.846</x-m>
    <y-m>0.02</y-m>
@@ -217,30 +262,192 @@
   </offsets>
  </model>
 
- <model>
-  <path>Aircraft/OV10_USAFE/Models/USAFE/Instruments/MasterArm/switch.xml</path>
+ <!--model>
+  <path>Aircraft/OV10/Models/USAFE/Instruments/WeaponsArm/weapons.xml</path>
   <offsets>
-   <x-m>-2.89</x-m>
-   <y-m>-0.22</y-m>
-   <z-m>0.06</z-m>
-   <pitch-deg>-10</pitch-deg>
+   <x-m>-2.92</x-m>
+   <y-m>-0.23</y-m>
+   <z-m>0.057</z-m>
+  </offsets>
+ </model-->
+
+ <model>
+  <path>Aircraft/OV10/Models/NASA/Instruments/digitrak/digitrak.xml</path>
+  <offsets>
+   <x-m>-2.92</x-m>
+   <y-m>-0.17</y-m>
+   <z-m>0.057</z-m>
   </offsets>
  </model>
 
  <model>
-  <path>Aircraft/OV10_USAFE/Models/USAFE/Instruments/StationPanel/station.xml</path>
+  <path>Aircraft/OV10/Models/NASA/Instruments/EHSI/EHSI3D.xml</path>
   <offsets>
    <x-m>-2.92</x-m>
-   <y-m>0.22</y-m>
-   <z-m>0.06</z-m>
-   <!--pitch-deg>-10</pitch-deg-->
+   <y-m>0.0</y-m>
+   <z-m>0.05</z-m>
   </offsets>
  </model>
+
+ <model>
+  <path>Aircraft/OV10/Models/NASA/Instruments/KLN90/KLN90.xml</path>
+  <offsets>
+   <x-m>-2.92</x-m>
+   <y-m>0.23</y-m>
+   <z-m>0.057</z-m>
+  </offsets>
+ </model>
+
+
+ <!--model>
+  <path>Aircraft/OV10/Models/USAFE/Instruments/StationPanel/station.xml</path>
+  <offsets>
+   <x-m>-2.92</x-m>
+   <y-m>0.23</y-m>
+   <z-m>0.057</z-m>
+   <pitch-deg>-10</pitch-deg>
+  </offsets>
+ </model-->
+
+ <model>
+  <path>Aircraft/OV10/Models/USAFE/Instruments/Warning/firehandle1.xml</path>
+  <offsets>
+   <x-m>-2.95</x-m>
+   <y-m>0.192</y-m>
+   <z-m>-0.025</z-m>
+  </offsets>
+ </model>
+
+ <model>
+  <path>Aircraft/OV10/Models/USAFE/Instruments/Warning/firehandle2.xml</path>
+  <offsets>
+   <x-m>-2.95</x-m>
+   <y-m>0.285</y-m>
+   <z-m>-0.025</z-m>
+  </offsets>
+ </model>
+
+ <model>
+  <path>Aircraft/OV10/Models/USAFE/Instruments/Warning/IdiotPack.xml</path>
+  <offsets>
+   <x-m>-3.11</x-m>
+   <y-m>0.37</y-m>
+   <z-m>-0.125</z-m>
+  </offsets>
+ </model>
+
+ <model>
+  <path>Aircraft/OV10/Models/USAFE/Instruments/UHF/UHF.xml</path>
+  <offsets>
+   <x-m>-3.06</x-m>
+   <y-m>-0.38</y-m>
+   <z-m>-0.18</z-m>
+  </offsets>
+ </model>
+
+ <!-- Left Side Panel hotspots -->
+ <panel>
+  <path>Aircraft/OV10/Models/USAFE/LH_panel-hotspots.xml</path>
+  <bottom-left>
+   <x-m>-2.89</x-m>
+   <y-m>-0.54</y-m>
+   <z-m>-0.40</z-m>
+  </bottom-left>
+  <bottom-right>
+   <x-m>-2.89</x-m>
+   <y-m>-0.43</y-m>
+   <z-m>-0.40</z-m>
+  </bottom-right>
+  <top-left>
+   <x-m>-3.01</x-m>
+   <y-m>-0.54</y-m>
+   <z-m>-0.40</z-m>
+  </top-left>
+ </panel>
+
+ <model>
+  <path>Aircraft/OV10/Models/USAFE/Instruments/EnginePanel/engine_panel.xml</path>
+  <offsets>
+   <x-m>-2.95</x-m>
+   <y-m>-0.49</y-m>
+   <z-m>-0.395</z-m>
+  </offsets>
+ </model>
+
+ <model>
+  <path>Aircraft/OV10/Models/USAFE/Instruments/MagCompass/comp.xml</path>
+  <offsets>
+   <x-m>-2.85</x-m>
+   <y-m>-0.18</y-m>
+   <z-m>0.39</z-m>
+  </offsets>
+ </model>
+
+ <!-- GPS Panel hotspots -->
+ <panel>
+  <path>Aircraft/OV10/Models/NASA/Instruments/KLN90/GPS.xml</path>
+  <bottom-left>
+   <x-m>-2.92</x-m>
+   <y-m>0.215</y-m>
+   <z-m>0.056</z-m>
+  </bottom-left>
+  <bottom-right>
+   <x-m>-2.92</x-m>
+   <y-m>0.382</y-m>
+   <z-m>0.056</z-m>
+  </bottom-right>
+  <top-left>
+   <x-m>-2.92</x-m>
+   <y-m>0.215</y-m>
+   <z-m>0.11</z-m>
+  </top-left>
+ </panel>
+
+ <!-- digitrak Panel hotspots -->
+ <panel>
+  <path>Aircraft/OV10/Models/NASA/Instruments/digitrak/AP.xml</path>
+  <bottom-left>
+   <x-m>-2.90</x-m>
+   <y-m>-0.187</y-m>
+   <z-m>0.056</z-m>
+  </bottom-left>
+  <bottom-right>
+   <x-m>-2.90</x-m>
+   <y-m>-0.12</y-m>
+   <z-m>0.056</z-m>
+  </bottom-right>
+  <top-left>
+   <x-m>-2.90</x-m>
+   <y-m>-0.187</y-m>
+   <z-m>0.11</z-m>
+  </top-left>
+ </panel>
+
+ <!-- Weather Radar Panel hotspots -->
+ <panel>
+  <path>Aircraft/OV10/Models/NASA/Instruments/EHSI/radar.xml</path>
+  <bottom-left>
+   <x-m>-2.921</x-m>
+   <y-m>0.005</y-m>
+   <z-m>0.05</z-m>
+  </bottom-left>
+  <bottom-right>
+   <x-m>-2.921</x-m>
+   <y-m>0.188</y-m>
+   <z-m>0.05</z-m>
+  </bottom-right>
+  <top-left>
+   <x-m>-2.921</x-m>
+   <y-m>0.005</y-m>
+   <z-m>0.21</z-m>
+  </top-left>
+ </panel>
+
 
  <!-- ************* External Stores ******************* --> 
 
- <model>
-  <path>Aircraft/OV10_USAFE/Models/USAFE/Stores/LAU-68/lau68-left.xml</path>
+ <!--model>
+  <path>Aircraft/OV10/Models/USAFE/Stores/LAU-68/lau68-left.xml</path>
   <offsets>
    <x-m>0.51</x-m>
    <y-m>-1.05</y-m>
@@ -249,7 +456,7 @@
  </model>
 
  <model>
-  <path>Aircraft/OV10_USAFE/Models/USAFE/Stores/Mk82/mk82.xml</path>
+  <path>Aircraft/OV10/Models/USAFE/Stores/LAU-68/lau68-right.xml</path>
   <offsets>
    <x-m>0.51</x-m>
    <y-m>1.05</y-m>
@@ -258,13 +465,31 @@
  </model>
 
  <model>
-  <path>Aircraft/OV10_USAFE/Models/USAFE/Stores/Tank230gal/tank230gal.xml</path>
+  <path>Aircraft/OV10/Models/USAFE/Stores/Mk82/mk82-right.xml</path>
+  <offsets>
+   <x-m>0.51</x-m>
+   <y-m>0.6525</y-m>
+   <z-m>-1.37</z-m>
+  </offsets>
+ </model>
+
+ <model>
+  <path>Aircraft/OV10/Models/USAFE/Stores/Mk82/mk82-left.xml</path>
+  <offsets>
+   <x-m>0.51</x-m>
+   <y-m>-0.6525</y-m>
+   <z-m>-1.37</z-m>
+  </offsets>
+ </model>
+
+ <model>
+  <path>Aircraft/OV10/Models/USAFE/Stores/Tank230gal/tank230gal.xml</path>
   <offsets>
    <x-m>0.51</x-m>
    <y-m>0</y-m>
    <z-m>-1.5</z-m>
   </offsets>
- </model>
+ </model-->
 
  <!-- ************* Controls  ************************** -->
 
@@ -375,38 +600,6 @@
   </condition>
  </animation>  
 
- <animation>
-  <type>select</type>
-  <object-name>nosegear_indicator</object-name>
-  <condition>
-   <equals>
-    <property>gear/gear[0]/position-norm</property>
-    <value>1</value>
-   </equals>
-  </condition>
- </animation>  
-
- <animation>
-  <type>select</type>
-  <object-name>leftgear_indicator</object-name>
-  <condition>
-   <equals>
-    <property>gear/gear[1]/position-norm</property>
-    <value>1</value>
-   </equals>
-  </condition>
- </animation>  
-
- <animation>
-  <type>select</type>
-  <object-name>rightgear_indicator</object-name>
-  <condition>
-   <equals>
-    <property>gear/gear[2]/position-norm</property>
-    <value>1</value>
-   </equals>
-  </condition>
- </animation>  
 
 
  <!-- ************* Exterior Animations ******************* -->
@@ -1114,12 +1307,12 @@
   <type>rotate</type>
   <object-name>spoiler1</object-name>
   <property>/surface-positions/right-aileron-pos-norm</property>
-  <factor>90</factor> 
-  <offset-deg>-95</offset-deg>
-  <min-deg>-100</min-deg>
+  <factor>-90</factor> 
+  <offset-deg>95</offset-deg>
+  <max-deg>100</max-deg>
   <center>
    <x-m>1.24</x-m>
-   <y-m>-3.59</y-m>
+   <y-m>-3.4</y-m>
    <z-m>0.47</z-m>
   </center>
   <axis>
@@ -1133,12 +1326,12 @@
   <type>rotate</type>
   <object-name>spoiler2</object-name>
   <property>/surface-positions/right-aileron-pos-norm</property>
-  <factor>90</factor> 
-  <offset-deg>-95</offset-deg>
-  <min-deg>-100</min-deg>
+  <factor>-90</factor> 
+  <offset-deg>95</offset-deg>
+  <max-deg>100</max-deg>
   <center>
    <x-m>1.24</x-m>
-   <y-m>-3.3</y-m>
+   <y-m>-3.14</y-m>
    <z-m>0.47</z-m>
   </center>
   <axis>
@@ -1152,12 +1345,12 @@
   <type>rotate</type>
   <object-name>spoiler3</object-name>
   <property>/surface-positions/right-aileron-pos-norm</property>
-  <factor>90</factor> 
-  <offset-deg>-95</offset-deg>
-  <min-deg>-100</min-deg>
+  <factor>-90</factor> 
+  <offset-deg>95</offset-deg>
+  <max-deg>100</max-deg>
   <center>
    <x-m>1.24</x-m>
-   <y-m>-3.02</y-m>
+   <y-m>-2.87</y-m>
    <z-m>0.47</z-m>
   </center>
   <axis>
@@ -1171,12 +1364,12 @@
   <type>rotate</type>
   <object-name>spoiler4</object-name>
   <property>/surface-positions/right-aileron-pos-norm</property>
-  <factor>90</factor> 
-  <offset-deg>-95</offset-deg>
-  <min-deg>-100</min-deg>
+  <factor>-90</factor> 
+  <offset-deg>95</offset-deg>
+  <max-deg>100</max-deg>
   <center>
    <x-m>1.24</x-m>
-   <y-m>-2.73</y-m>
+   <y-m>-2.6</y-m>
    <z-m>0.47</z-m>
   </center>
   <axis>
@@ -1276,5 +1469,299 @@
   </condition>
  </animation>
 
+ <!-- Material Animation -->
+ <animation>
+  <type>material</type>
+  <object-name>FUEL_FEED</object-name>
+  <property-base>/sim/model/ov10/material/fuelfeed</property-base>
+		<diffuse>
+			<red-prop>diffuse/red</red-prop>
+			<green-prop>diffuse/green</green-prop>
+			<blue-prop>diffuse/blue</blue-prop>
+		</diffuse>
+		<ambient>
+			<red-prop>ambient/red</red-prop>
+			<green-prop>ambient/green</green-prop>
+			<blue-prop>ambient/blue</blue-prop>
+		</ambient>
+		<specular>
+			<red-prop>specular/red</red-prop>
+			<green-prop>specular/green</green-prop>
+			<blue-prop>specular/blue</blue-prop>
+		</specular>
+		<emission>
+			<red-prop>emission/red</red-prop>
+			<green-prop>emission/green</green-prop>
+			<blue-prop>emission/blue</blue-prop>
+		</emission>
+		<transparency>
+			<alpha-prop>transparency/alpha</alpha-prop>
+		</transparency>
+		<shininess-prop>shininess</shininess-prop>
+ </animation>
+
+ <animation>
+  <type>material</type>
+  <object-name>FUEL_LOW</object-name>
+  <property-base>/sim/model/ov10/material/lowfuel</property-base>
+		<diffuse>
+			<red-prop>diffuse/red</red-prop>
+			<green-prop>diffuse/green</green-prop>
+			<blue-prop>diffuse/blue</blue-prop>
+		</diffuse>
+		<ambient>
+			<red-prop>ambient/red</red-prop>
+			<green-prop>ambient/green</green-prop>
+			<blue-prop>ambient/blue</blue-prop>
+		</ambient>
+		<specular>
+			<red-prop>specular/red</red-prop>
+			<green-prop>specular/green</green-prop>
+			<blue-prop>specular/blue</blue-prop>
+		</specular>
+		<emission>
+			<red-prop>emission/red</red-prop>
+			<green-prop>emission/green</green-prop>
+			<blue-prop>emission/blue</blue-prop>
+		</emission>
+		<transparency>
+			<alpha-prop>transparency/alpha</alpha-prop>
+		</transparency>
+		<shininess-prop>shininess</shininess-prop>
+ </animation>
+
+ <animation>
+  <type>material</type>
+  <object-name>L_GEN</object-name>
+  <property-base>/sim/model/ov10/material/lgen</property-base>
+		<diffuse>
+			<red-prop>diffuse/red</red-prop>
+			<green-prop>diffuse/green</green-prop>
+			<blue-prop>diffuse/blue</blue-prop>
+		</diffuse>
+		<ambient>
+			<red-prop>ambient/red</red-prop>
+			<green-prop>ambient/green</green-prop>
+			<blue-prop>ambient/blue</blue-prop>
+		</ambient>
+		<specular>
+			<red-prop>specular/red</red-prop>
+			<green-prop>specular/green</green-prop>
+			<blue-prop>specular/blue</blue-prop>
+		</specular>
+		<emission>
+			<red-prop>emission/red</red-prop>
+			<green-prop>emission/green</green-prop>
+			<blue-prop>emission/blue</blue-prop>
+		</emission>
+		<transparency>
+			<alpha-prop>transparency/alpha</alpha-prop>
+		</transparency>
+		<shininess-prop>shininess</shininess-prop>
+ </animation>
+
+ <animation>
+  <type>material</type>
+  <object-name>START</object-name>
+  <property-base>/sim/model/ov10/material/start</property-base>
+		<diffuse>
+			<red-prop>diffuse/red</red-prop>
+			<green-prop>diffuse/green</green-prop>
+			<blue-prop>diffuse/blue</blue-prop>
+		</diffuse>
+		<ambient>
+			<red-prop>ambient/red</red-prop>
+			<green-prop>ambient/green</green-prop>
+			<blue-prop>ambient/blue</blue-prop>
+		</ambient>
+		<specular>
+			<red-prop>specular/red</red-prop>
+			<green-prop>specular/green</green-prop>
+			<blue-prop>specular/blue</blue-prop>
+		</specular>
+		<emission>
+			<red-prop>emission/red</red-prop>
+			<green-prop>emission/green</green-prop>
+			<blue-prop>emission/blue</blue-prop>
+		</emission>
+		<transparency>
+			<alpha-prop>transparency/alpha</alpha-prop>
+		</transparency>
+		<shininess-prop>shininess</shininess-prop>
+ </animation>
+
+ <animation>
+  <type>material</type>
+  <object-name>INST_PWR</object-name>
+  <property-base>/sim/model/ov10/material/black</property-base>
+		<diffuse>
+			<red-prop>diffuse/red</red-prop>
+			<green-prop>diffuse/green</green-prop>
+			<blue-prop>diffuse/blue</blue-prop>
+		</diffuse>
+		<ambient>
+			<red-prop>ambient/red</red-prop>
+			<green-prop>ambient/green</green-prop>
+			<blue-prop>ambient/blue</blue-prop>
+		</ambient>
+		<specular>
+			<red-prop>specular/red</red-prop>
+			<green-prop>specular/green</green-prop>
+			<blue-prop>specular/blue</blue-prop>
+		</specular>
+		<emission>
+			<red-prop>emission/red</red-prop>
+			<green-prop>emission/green</green-prop>
+			<blue-prop>emission/blue</blue-prop>
+		</emission>
+		<transparency>
+			<alpha-prop>transparency/alpha</alpha-prop>
+		</transparency>
+		<shininess-prop>shininess</shininess-prop>
+ </animation>
+
+ <animation>
+  <type>material</type>
+  <object-name>R_GEN</object-name>
+  <property-base>/sim/model/ov10/material/rgen</property-base>
+		<diffuse>
+			<red-prop>diffuse/red</red-prop>
+			<green-prop>diffuse/green</green-prop>
+			<blue-prop>diffuse/blue</blue-prop>
+		</diffuse>
+		<ambient>
+			<red-prop>ambient/red</red-prop>
+			<green-prop>ambient/green</green-prop>
+			<blue-prop>ambient/blue</blue-prop>
+		</ambient>
+		<specular>
+			<red-prop>specular/red</red-prop>
+			<green-prop>specular/green</green-prop>
+			<blue-prop>specular/blue</blue-prop>
+		</specular>
+		<emission>
+			<red-prop>emission/red</red-prop>
+			<green-prop>emission/green</green-prop>
+			<blue-prop>emission/blue</blue-prop>
+		</emission>
+		<transparency>
+			<alpha-prop>transparency/alpha</alpha-prop>
+		</transparency>
+		<shininess-prop>shininess</shininess-prop>
+ </animation>
+
+<animation>
+  <type>material</type>
+  <object-name>beacon</object-name>
+  <property-base>/sim/model/ov10/material/bellyBeacon</property-base>
+		<diffuse>
+			<red-prop>diffuse/red</red-prop>
+			<green-prop>diffuse/green</green-prop>
+			<blue-prop>diffuse/blue</blue-prop>
+		</diffuse>
+		<ambient>
+			<red-prop>ambient/red</red-prop>
+			<green-prop>ambient/green</green-prop>
+			<blue-prop>ambient/blue</blue-prop>
+		</ambient>
+		<specular>
+			<red-prop>specular/red</red-prop>
+			<green-prop>specular/green</green-prop>
+			<blue-prop>specular/blue</blue-prop>
+		</specular>
+		<emission>
+			<red-prop>emission/red</red-prop>
+			<green-prop>emission/green</green-prop>
+			<blue-prop>emission/blue</blue-prop>
+		</emission>
+		<transparency>
+			<alpha-prop>transparency/alpha</alpha-prop>
+		</transparency>
+		<shininess-prop>shininess</shininess-prop>
+ </animation>
+
+ <animation>
+  <type>material</type>
+  <object-name>TailBeacon</object-name>
+  <property-base>/sim/model/ov10/material/tailBeacon</property-base>
+		<diffuse>
+			<red-prop>diffuse/red</red-prop>
+			<green-prop>diffuse/green</green-prop>
+			<blue-prop>diffuse/blue</blue-prop>
+		</diffuse>
+		<ambient>
+			<red-prop>ambient/red</red-prop>
+			<green-prop>ambient/green</green-prop>
+			<blue-prop>ambient/blue</blue-prop>
+		</ambient>
+		<specular>
+			<red-prop>specular/red</red-prop>
+			<green-prop>specular/green</green-prop>
+			<blue-prop>specular/blue</blue-prop>
+		</specular>
+		<emission>
+			<red-prop>emission/red</red-prop>
+			<green-prop>emission/green</green-prop>
+			<blue-prop>emission/blue</blue-prop>
+		</emission>
+		<transparency>
+			<alpha-prop>transparency/alpha</alpha-prop>
+		</transparency>
+		<shininess-prop>shininess</shininess-prop>
+ </animation>
+
+ <!-- Remove USAFE components -->
+
+ <animation>
+  <type>select</type>
+  <object-name>station1</object-name>
+  <condition>
+   <not>
+   <equals>
+    <property>controls/isNASA</property>
+    <value>true</value>
+   </equals>
+   </not>
+  </condition>
+ </animation>
+
+ <animation>
+  <type>select</type>
+  <object-name>station2</object-name>
+  <condition>
+   <not>
+   <equals>
+    <property>controls/isNASA</property>
+    <value>true</value>
+   </equals>
+   </not>
+  </condition>
+ </animation>
+
+ <animation>
+  <type>select</type>
+  <object-name>station4</object-name>
+  <condition>
+   <not>
+   <equals>
+    <property>controls/isNASA</property>
+    <value>true</value>
+   </equals>
+   </not>
+  </condition>
+ </animation>
+
+ <animation>
+  <type>select</type>
+  <object-name>station5</object-name>
+  <condition>
+   <not>
+   <equals>
+    <property>controls/isNASA</property>
+    <value>true</value>
+   </equals>
+   </not>
+  </condition>
+ </animation>
 
 </PropertyList>

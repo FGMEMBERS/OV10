@@ -1,0 +1,454 @@
+<?xml version="1.0"?>
+<!DOCTYPE PropertyList SYSTEM "panel.dtd">
+
+<!-- This part should be the same for any 3D panel.  Customize the actions section -->
+<PropertyList>
+
+ <name>OV10 Panel Hotspots</name>
+ <background>Aircraft/OV10/Models/USAFE/transparent.rgb</background>
+ <w>1024</w>
+ <h>768</h>
+ <y-offset>10</y-offset>
+
+ <instruments>
+  <instrument>
+   <name>Hot Spot Map</name>
+   <x>512</x>
+   <y>384</y>
+   <w>1024</w>
+   <h>768</h>
+   <w-base>1024</w-base>
+   <h-base>1024</h-base>
+
+
+ <layers>
+  <layer>
+   <name>background</name>
+   <texture>
+
+<!--
+     <path>Aircraft/OV10/Models/USAFE/hotspotgrid.rgb</path>
+-->
+     <path>Aircraft/OV10/Models/USAFE/transparent.rgb</path>
+
+     <x1>0.0</x1>
+     <y1>0.0</y1>
+     <x2>1.0</x2>
+     <y2>1.0</y2>
+   </texture>
+  </layer>
+ </layers>
+
+<!-- define hotspot actions below -->
+
+ <actions>
+  <!--  HSI Course Bug -->
+  <action>
+   <name>Course Bug Decrease</name>
+   <button>0</button>
+   <x>-74</x>
+   <y>-444</y>
+   <w>20</w>
+   <h>30</h>
+   <binding>
+    <command>property-adjust</command>
+    <property>/instrumentation/nav/radials/selected-deg[0]</property>
+    <step>-1</step>
+    <min>0</min>
+    <max>359</max>
+    <wrap>1</wrap>
+   </binding>
+  </action>
+  <action>
+   <name>Course Bug Large Decrease</name>
+   <button>1</button>
+   <x>-74</x>
+   <y>-444</y>
+   <w>20</w>
+   <h>30</h>
+   <binding>
+    <command>property-adjust</command>
+    <property>/instrumentation/nav/radials/selected-deg[0]</property>
+    <step>-10</step>
+    <min>0</min>
+    <max>359</max>
+    <wrap>1</wrap>
+   </binding>
+  </action>
+
+  <action>
+   <name>Course Bug Increase</name>
+   <button>0</button>
+   <x>-54</x>
+   <y>-444</y>
+   <w>20</w>
+   <h>30</h>
+   <binding>
+    <command>property-adjust</command>
+    <property>/instrumentation/nav/radials/selected-deg[0]</property>
+    <step>1</step>
+    <min>0</min>
+    <max>359</max>
+    <wrap>1</wrap>
+   </binding>
+  </action>
+  <action>
+   <name>Course Bug Large Increase</name>
+   <button>1</button>
+   <x>-54</x>
+   <y>-444</y>
+   <w>20</w>
+   <h>30</h>
+   <binding>
+    <command>property-adjust</command>
+    <property>/instrumentation/nav/radials/selected-deg[0]</property>
+    <step>10</step>
+    <min>0</min>
+    <max>359</max>
+    <wrap>1</wrap>
+   </binding>
+  </action>
+
+  <!--  HSI Heading Bug -->
+  <action>
+   <name>Heading Bug Decrease</name>
+   <button>0</button>
+   <x> 54</x>
+   <y>-444</y>
+   <w>20</w>
+   <h>30</h>
+   <binding>
+    <command>property-adjust</command>
+    <property>/autopilot/settings/heading-bug-deg</property>
+    <step>1</step>
+    <min>0</min>
+    <max>359</max>
+    <wrap>1</wrap>
+   </binding>
+  </action>
+  <action>
+   <name>Heading Bug Large Decrease</name>
+   <button>1</button>
+   <x> 54</x>
+   <y>-444</y>
+   <w>20</w>
+   <h>30</h>
+   <binding>
+    <command>property-adjust</command>
+    <property>/autopilot/settings/heading-bug-deg</property>
+    <step>10</step>
+    <min>0</min>
+    <max>359</max>
+    <wrap>1</wrap>
+   </binding>
+  </action>
+
+  <action>
+   <name>Heading Bug Increase</name>
+   <button>0</button>
+   <x> 32</x>
+   <y>-444</y>
+   <w>20</w>
+   <h>30</h>
+   <binding>
+    <command>property-adjust</command>
+    <property>/autopilot/settings/heading-bug-deg</property>
+    <step>-1</step>
+    <min>0</min>
+    <max>359</max>
+    <wrap>1</wrap>
+   </binding>
+  </action>
+  <action>
+   <name>Heading Bug Large Increase</name>
+   <button>1</button>
+   <x> 32</x>
+   <y>-444</y>
+   <w>20</w>
+   <h>30</h>
+   <binding>
+    <command>property-adjust</command>
+    <property>/autopilot/settings/heading-bug-deg</property>
+    <step>-10</step>
+    <min>0</min>
+    <max>359</max>
+    <wrap>1</wrap>
+   </binding>
+  </action>
+
+  <action>
+   <name>Bearing Switch Decrease</name>
+   <button>0</button>
+   <x> -40</x>
+   <y>-514</y>
+   <w>20</w>
+   <h>60</h>
+   <binding>
+    <command>property-adjust</command>
+    <property>/instrumentation/navcomputer/brg-switch-position</property>
+    <step>-1</step>
+    <min>1</min>
+    <max>4</max>
+    <wrap>0</wrap>
+   </binding>
+  </action>
+
+  <action>
+   <name>Bearing Switch Increase</name>
+   <button>0</button>
+   <x> -19</x>
+   <y>-514</y>
+   <w>20</w>
+   <h>60</h>
+   <binding>
+    <command>property-adjust</command>
+    <property>/instrumentation/navcomputer/brg-switch-position</property>
+    <step>1</step>
+    <min>1</min>
+    <max>4</max>
+    <wrap>0</wrap>
+   </binding>
+  </action>
+
+  <action>
+   <name>Mode Switch Decrease</name>
+   <button>0</button>
+   <x>   2</x>
+   <y>-514</y>
+   <w>20</w>
+   <h>60</h>
+   <binding>
+    <command>property-adjust</command>
+    <property>/instrumentation/navcomputer/mode-switch-position</property>
+    <step>-1</step>
+    <min>1</min>
+    <max>4</max>
+    <wrap>0</wrap>
+   </binding>
+  </action>
+
+  <action>
+   <name>Mode Switch Increase</name>
+   <button>0</button>
+   <x>  23</x>
+   <y>-514</y>
+   <w>20</w>
+   <h>60</h>
+   <binding>
+    <command>property-adjust</command>
+    <property>/instrumentation/navcomputer/mode-switch-position</property>
+    <step>1</step>
+    <min>1</min>
+    <max>4</max>
+    <wrap>0</wrap>
+   </binding>
+  </action>
+
+  <!--  cockpit light dimmer hotspots -->
+  <action>
+   <name>panel brighter</name>
+   <button>0</button>
+   <x>-290</x>
+   <y>-145</y>
+   <w>40</w>
+   <h>55</h>
+   <binding>
+    <command>property-adjust</command>
+    <property>/controls[0]/lighting[0]/instruments-norm</property>
+    <step>0.1</step>
+    <min>0</min>
+    <max>1</max>
+    <wrap>0</wrap>
+   </binding>
+  </action>
+
+  <action>
+   <name>panel darker</name>
+   <button>0</button>
+   <x>-335</x>
+   <y>-145</y>
+   <w>40</w>
+   <h>55</h>
+   <binding>
+    <command>property-adjust</command>
+    <property>/controls[0]/lighting[0]/instruments-norm</property>
+    <step>-0.1</step>
+    <min>0</min>
+    <max>1</max>
+    <wrap>0</wrap>
+   </binding>
+  </action>
+
+  <action>
+   <name>g-meter reset</name>
+   <button>0</button>
+   <x>-266</x>
+   <y>-322</y>
+   <w>40</w>
+   <h>40</h>
+   <binding>
+    <command>property-assign</command>
+    <property>/controls/gmeter/reset</property>
+    <value>0</value>
+   </binding>
+  </action>
+
+  <action>
+   <name>g ready</name>
+   <button>0</button>
+   <x>-350</x>
+   <y>-50</y>
+   <w>60</w>
+   <h>30</h>
+   <binding>
+    <command>property-assign</command>
+    <property>controls/armament/g_ready</property>
+    <value>true</value>
+   </binding>
+  </action>
+
+  <action>
+   <name>g clear</name>
+   <button>0</button>
+   <x>-350</x>
+   <y>-80</y>
+   <w>60</w>
+   <h>30</h>
+   <binding>
+    <command>property-assign</command>
+    <property>controls/armament/g_ready</property>
+    <value>false</value>
+   </binding>
+  </action-->
+
+  <!--  Fuel panel controls -->
+  <action>
+   <name>Ext Fuel Trans OFF</name>
+   <button>0</button>
+   <x>370</x>
+   <y>-460</y>
+   <w>30</w>
+   <h>30</h>
+   <binding>
+    <command>property-assign</command>
+    <property>controls/external-tank/is-feeding</property>
+    <value>false</value>
+   </binding>
+   <binding>
+    <command>property-assign</command>
+    <property>controls/external-tank/pump-stop</property>
+    <value>true</value>
+   </binding>
+  </action>
+
+  <action>
+   <name>Ext Fuel Trans ON</name>
+   <button>0</button>
+   <x>370</x>
+   <y>-430</y>
+   <w>30</w>
+   <h>30</h>
+   <binding>
+    <command>property-assign</command>
+    <property>controls/external-tank/is-feeding</property>
+    <value>true</value>
+   </binding>
+   <binding>
+    <command>property-assign</command>
+    <property>controls/external-tank/pump-restart</property>
+    <value>true</value>
+   </binding>
+  </action>
+
+  <action>
+   <name>Fuel SHUTOFF Port</name>
+   <button>0</button>
+   <x>415</x>
+   <y>-440</y>
+   <w>30</w>
+   <h>30</h>
+   <binding>
+    <command>property-assign</command>
+    <property>controls/fuel-cutoff1</property>
+    <value>true</value>
+   </binding>
+  </action>
+
+  <action>
+   <name>Fuel SHUTOFF NORM Port</name>
+   <button>0</button>
+   <x>415</x>
+   <y>-470</y>
+   <w>30</w>
+   <h>30</h>
+   <binding>
+    <command>property-assign</command>
+    <property>controls/fuel-cutoff1</property>
+    <value>false</value>
+   </binding>
+  </action>
+
+  <action>
+   <name>Fuel SHUTOFF Starboard</name>
+   <button>0</button>
+   <x>445</x>
+   <y>-440</y>
+   <w>30</w>
+   <h>30</h>
+   <binding>
+    <command>property-assign</command>
+    <property>controls/fuel-cutoff2</property>
+    <value>true</value>
+   </binding>
+  </action>
+
+  <action>
+   <name>Fuel SHUTOFF NORM Starboard</name>
+   <button>0</button>
+   <x>445</x>
+   <y>-470</y>
+   <w>30</w>
+   <h>30</h>
+   <binding>
+    <command>property-assign</command>
+    <property>controls/fuel-cutoff2</property>
+    <value>false</value>
+   </binding>
+  </action>
+
+  <action>
+   <name>Fuel Gage Test OFF</name>
+   <button>0</button>
+   <x>380</x>
+   <y>-410</y>
+   <w>30</w>
+   <h>30</h>
+   <binding>
+    <command>property-assign</command>
+    <property>controls/fuel-gage-test</property>
+    <value>false</value>
+   </binding>
+  </action>
+
+  <action>
+   <name>Fuel Gage Test ON</name>
+   <button>0</button>
+   <x>410</x>
+   <y>-410</y>
+   <w>30</w>
+   <h>30</h>
+   <binding>
+    <command>property-assign</command>
+    <property>controls/fuel-gage-test</property>
+    <value>true</value>
+   </binding>
+  </action>
+
+ </actions>
+
+  </instrument>
+ </instruments>
+</PropertyList>
+
+
+

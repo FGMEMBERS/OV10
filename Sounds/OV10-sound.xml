@@ -251,6 +251,7 @@
      <name>gunfire</name>
      <mode>looped</mode>
      <condition>
+      <or>
       <and>
        <property>controls/armament/trigger</property>
        <greater-than>
@@ -261,10 +262,104 @@
          <property>controls/armament/master-arm</property>
          <value>true</value>
        </equals>
+       <equals>
+         <property>controls/armament/charging</property>
+         <value>false</value>
+       </equals>
+       <equals>
+         <property>controls/armament/gun-charged</property>
+         <value>true</value>
+       </equals>
+       <equals>
+         <property>controls/armament/g_ready</property>
+         <value>true</value>
+       </equals>
+       <equals>
+         <property>controls/level/easy</property>
+         <value>false</value>
+       </equals>
       </and>
+      <and>
+       <property>controls/armament/trigger</property>
+       <greater-than>
+         <property>ai/submodels/submodel[0]/count</property>
+         <value>0</value>
+       </greater-than>
+       <equals>
+         <property>controls/armament/master-arm</property>
+         <value>true</value>
+       </equals>
+       <equals>
+         <property>controls/level/easy</property>
+         <value>true</value>
+       </equals>
+      </and>
+      </or>
      </condition>
    <path>Aircraft/OV10/Sounds/gunfire_1.wav</path>
   </guns>
+
+    <williepl>
+     <name>wpfirel</name>
+     <condition>
+       <property>controls/armament/trigger1</property>
+     </condition>
+   <path>Aircraft/OV10/Sounds/rockets.wav</path>
+  </williepl>
+
+    <williepr>
+     <name>wpfirer</name>
+     <condition>
+       <and>
+       <property>controls/armament/trigger5</property>
+       <greater-than>
+         <property>ai/submodels/submodel[6]/count</property>
+         <value>0</value>
+       </greater-than>
+       </and>
+     </condition>
+   <path>Aircraft/OV10/Sounds/rockets_ripple.wav</path>
+  </williepr>
+
+    <drop1>
+     <name>drop1 sound</name>
+     <condition>
+       <property>controls/armament/station1</property>
+     </condition>
+   <path>Sounds/gear-lck.wav</path>
+  </drop1>
+
+    <drop2>
+     <name>drop2 sound</name>
+     <condition>
+       <property>controls/armament/station2</property>
+     </condition>
+   <path>Sounds/gear-lck.wav</path>
+  </drop2>
+
+    <drop3>
+     <name>drop3 sound</name>
+     <condition>
+       <property>controls/armament/station3</property>
+     </condition>
+   <path>Sounds/gear-lck.wav</path>
+  </drop3>
+
+    <drop4>
+     <name>drop4 sound</name>
+     <condition>
+       <property>controls/armament/station4</property>
+     </condition>
+   <path>Sounds/gear-lck.wav</path>
+  </drop4>
+
+    <drop5>
+     <name>drop5 sound</name>
+     <condition>
+       <property>controls/armament/station5</property>
+     </condition>
+   <path>Sounds/gear-lck.wav</path>
+  </drop5>
 
  </fx>
 </PropertyList>

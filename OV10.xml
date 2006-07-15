@@ -170,7 +170,7 @@
         <tank type="FUEL">    
             <location unit="IN">
                 <x> 249.6 </x>
-                <y> 15 </y>
+                <y> 21.5 </y>
                 <z> -35 </z>
             </location>
             <capacity unit="LBS"> 500 </capacity>
@@ -179,7 +179,7 @@
         <tank type="FUEL">    
             <location unit="IN">
                 <x> 249.6 </x>
-                <y> -15 </y>
+                <y> -21.5 </y>
                 <z> -35 </z>
             </location>
             <capacity unit="LBS"> 500 </capacity>
@@ -189,20 +189,59 @@
         <tank type="FUEL">    
             <location unit="IN">
                 <x> 249.6 </x>
-                <y> 15 </y>
+                <y> 35.8 </y>
                 <z> -30 </z>
             </location>
-            <capacity unit="LBS"> 140 </capacity>
-            <contents unit="LBS"> 140 </contents>
+            <capacity unit="LBS"> 190 </capacity>
+            <contents unit="LBS"> 190 </contents>
         </tank>
         <tank type="FUEL">    
             <location unit="IN">
                 <x> 249.6 </x>
-                <y> -15 </y>
+                <y> -35.8 </y>
                 <z> -30 </z>
             </location>
-            <capacity unit="LBS"> 140 </capacity>
-            <contents unit="LBS"> 140 </contents>
+            <capacity unit="LBS"> 190 </capacity>
+            <contents unit="LBS"> 190 </contents>
+        </tank>
+	<!-- Pilots weight -->
+        <tank type="FUEL">    
+            <location unit="IN">
+                <x> 90 </x>
+                <y> 0 </y>
+                <z> 10 </z>
+            </location>
+            <capacity unit="LBS"> 191 </capacity>
+            <contents unit="LBS"> 191 </contents>
+        </tank>
+        <tank type="FUEL">    
+            <location unit="IN">
+                <x> 150 </x>
+                <y> 0 </y>
+                <z> 10 </z>
+            </location>
+            <capacity unit="LBS"> 192 </capacity>
+            <contents unit="LBS"> 192 </contents>
+        </tank>
+	<!-- Rear payload weight -->
+        <tank type="FUEL">    
+            <location unit="IN">
+                <x> 249.6 </x>
+                <y> 0 </y>
+                <z> 20 </z>
+            </location>
+            <capacity unit="LBS"> 200 </capacity>
+            <contents unit="LBS"> 200 </contents>
+        </tank>
+	<!-- Paratroopers weight -->
+        <tank type="FUEL">    
+            <location unit="IN">
+                <x> 249.6 </x>
+                <y> 0 </y>
+                <z> 20 </z>
+            </location>
+            <capacity unit="LBS"> 1100 </capacity>
+            <contents unit="LBS"> 1100 </contents>
         </tank>
     </propulsion>
     <flight_control name="FCS: OV10">

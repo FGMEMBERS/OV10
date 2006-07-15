@@ -40,6 +40,8 @@ update_fuel = func {
 	current_G = getprop("accelerations/pilot/z-accel-fps_sec[0]");
 	negGtimeT = getprop("controls/negGtime[0]");
 	speed = getprop("velocities/airspeed-kt[0]");
+	fuel_cutoff1 = getprop("controls/fuel-cutoff1");
+	fuel_cutoff2 = getprop("controls/fuel-cutoff2");
 	
 	if (feeding and !empty and !failed and !restart and attached)
 	{
@@ -108,5 +110,14 @@ update_fuel = func {
 		{
 			setprop("controls/external-tank/pump-has-failed[0]","true");
 		}
+	}
+
+	if (fuel_cutoff1)
+	{
+		setprop("/controls/engines/engine[0]/cutoff",1);
+	}
+	if (fuel_cutoff2)
+	{
+		setprop("/controls/engines/engine[1]/cutoff",1);
 	}
 };
