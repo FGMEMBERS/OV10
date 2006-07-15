@@ -319,7 +319,7 @@
     <property>controls/armament/g_ready</property>
     <value>false</value>
    </binding>
-  </action-->
+  </action>
 
   <!--  Fuel panel controls -->
   <action>
