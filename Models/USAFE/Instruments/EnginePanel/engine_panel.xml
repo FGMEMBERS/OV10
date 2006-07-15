@@ -1,0 +1,161 @@
+<?xml version="1.0"?>
+
+<!-- OV10 engine panel, by Julien Pierru -->
+
+<PropertyList>
+
+ <path>engine_panel.ac</path> 
+ 
+ <!-- *** Switch animation *** -->
+ <animation> 
+   <type>select</type>
+    <object-name>RUN_1</object-name>
+    <condition>
+     <property>controls/engines/run1</property>
+    </condition>
+ </animation>
+
+ <animation> 
+   <type>select</type>
+    <object-name>RUN_2</object-name>
+    <condition>
+     <property>controls/engines/run2</property>
+    </condition>
+ </animation>
+
+ <animation> 
+   <type>select</type>
+    <object-name>START_1</object-name>
+    <condition>
+     <property>controls/engines/start1</property>
+    </condition>
+ </animation>
+
+ <animation> 
+   <type>select</type>
+    <object-name>START_2</object-name>
+    <condition>
+     <property>controls/engines/start2</property>
+    </condition>
+ </animation>
+
+ <animation> 
+   <type>select</type>
+    <object-name>ABORT_1</object-name>
+    <condition>
+     <property>controls/engines/abort1</property>
+    </condition>
+ </animation>
+
+ <animation> 
+   <type>select</type>
+    <object-name>ABORT_2</object-name>
+    <condition>
+     <property>controls/engines/abort2</property>
+    </condition>
+ </animation>
+
+ <animation> 
+   <type>select</type>
+    <object-name>INST_OFF</object-name>
+    <condition>
+     <property>controls/instruments/inst-off</property>
+    </condition>
+ </animation>
+
+ <animation> 
+   <type>select</type>
+    <object-name>INV_NO1</object-name>
+    <condition>
+     <property>controls/instruments/inv-no1</property>
+    </condition>
+ </animation>
+
+ <animation> 
+   <type>select</type>
+    <object-name>INV_NO2</object-name>
+    <condition>
+     <property>controls/instruments/inv-no2</property>
+    </condition>
+ </animation>
+
+ <animation> 
+   <type>select</type>
+    <object-name>LGEN_RESET</object-name>
+    <condition>
+     <property>controls/power/lgen-reset</property>
+    </condition>
+ </animation>
+
+ <animation> 
+   <type>select</type>
+    <object-name>LGEN_ON</object-name>
+    <condition>
+     <property>controls/power/lgen-on</property>
+    </condition>
+ </animation>
+
+ <animation> 
+   <type>select</type>
+    <object-name>LGEN_OFF</object-name>
+    <condition>
+     <property>controls/power/lgen-off</property>
+    </condition>
+ </animation>
+
+ <animation> 
+   <type>select</type>
+    <object-name>RGEN_RESET</object-name>
+    <condition>
+     <property>controls/power/rgen-reset</property>
+    </condition>
+ </animation>
+
+ <animation> 
+   <type>select</type>
+    <object-name>RGEN_ON</object-name>
+    <condition>
+     <property>controls/power/rgen-on</property>
+    </condition>
+ </animation>
+
+ <animation> 
+   <type>select</type>
+    <object-name>RGEN_OFF</object-name>
+    <condition>
+     <property>controls/power/rgen-off</property>
+    </condition>
+ </animation>
+
+ <animation> 
+   <type>select</type>
+    <object-name>BATT_EMERG</object-name>
+    <condition>
+     <property>controls/power/batt-emerg</property>
+    </condition>
+ </animation>
+
+ <animation> 
+   <type>select</type>
+    <object-name>BATT_ON</object-name>
+    <condition>
+     <property>controls/power/batt-on</property>
+    </condition>
+ </animation>
+
+ <animation> 
+   <type>select</type>
+    <object-name>BATT_OFF</object-name>
+    <condition>
+     <property>controls/power/batt-off</property>
+    </condition>
+ </animation>
+
+ <!-- *** LoD *** -->
+ <animation>
+  <type>range</type>
+  <min-m>0</min-m>
+  <max-m>5</max-m>
+ </animation>
+
+</PropertyList>

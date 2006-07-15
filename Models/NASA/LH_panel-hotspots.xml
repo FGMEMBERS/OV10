@@ -1,0 +1,130 @@
+<?xml version="1.0"?>
+<!DOCTYPE PropertyList SYSTEM "panel.dtd">
+
+<!-- This part should be the same for any 3D panel.  Customize the actions section -->
+<PropertyList>
+
+ <name>OV10 Panel Hotspots</name>
+ <background>Aircraft/OV10/Models/USAFE/transparent.rgb</background>
+ <w>400</w>
+ <h>400</h>
+
+ <instruments>
+  <instrument>
+   <name>Hot Spot Map</name>
+   <x>200</x>
+   <y>200</y>
+   <w>400</w>
+   <h>400</h>
+   <w-base>400</w-base>
+   <h-base>400</h-base>
+
+
+<!-- define hotspot actions below -->
+
+ <actions>
+  <!--  HSI Course Bug -->
+  <action>
+   <name>START_1</name>
+   <button>0</button>
+   <x>-240</x>
+   <y>40</y>
+   <w>80</w>
+   <h>80</h>
+   <binding>
+    <command>property-assign</command>
+    <property>controls/engines/start1</property>
+    <value>true</value>
+   </binding>
+   <binding>
+    <command>property-assign</command>
+    <property>controls/engines/run1</property>
+    <value>false</value>
+   </binding>
+   <binding>
+    <command>property-assign</command>
+    <property>controls/engines/abort1</property>
+    <value>false</value>
+   </binding>
+  </action>
+
+  <action>
+   <name>ABORT_1</name>
+   <button>0</button>
+   <x>-240</x>
+   <y>-40</y>
+   <w>80</w>
+   <h>80</h>
+   <binding>
+    <command>property-assign</command>
+    <property>controls/engines/start1</property>
+    <value>false</value>
+   </binding>
+   <binding>
+    <command>property-assign</command>
+    <property>controls/engines/run1</property>
+    <value>false</value>
+   </binding>
+   <binding>
+    <command>property-assign</command>
+    <property>controls/engines/abort1</property>
+    <value>true</value>
+   </binding>
+  </action>
+
+  <action>
+   <name>START_2</name>
+   <button>0</button>
+   <x>0</x>
+   <y>40</y>
+   <w>80</w>
+   <h>80</h>
+   <binding>
+    <command>property-assign</command>
+    <property>controls/engines/start2</property>
+    <value>true</value>
+   </binding>
+   <binding>
+    <command>property-assign</command>
+    <property>controls/engines/run2</property>
+    <value>false</value>
+   </binding>
+   <binding>
+    <command>property-assign</command>
+    <property>controls/engines/abort2</property>
+    <value>false</value>
+   </binding>
+  </action>
+
+  <action>
+   <name>ABORT_2</name>
+   <button>0</button>
+   <x>0</x>
+   <y>-40</y>
+   <w>80</w>
+   <h>80</h>
+   <binding>
+    <command>property-assign</command>
+    <property>controls/engines/start2</property>
+    <value>false</value>
+   </binding>
+   <binding>
+    <command>property-assign</command>
+    <property>controls/engines/run2</property>
+    <value>false</value>
+   </binding>
+   <binding>
+    <command>property-assign</command>
+    <property>controls/engines/abort2</property>
+    <value>true</value>
+   </binding>
+  </action>
+
+ </actions>
+
+  </instrument>
+ </instruments>
+</PropertyList>
+
+
+
