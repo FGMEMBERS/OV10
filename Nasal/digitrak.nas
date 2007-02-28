@@ -341,7 +341,7 @@ of_button = func {
   # Unused
 
 no_gps = func {
-	  setprop(Locks, "gps-track", "off");
+	  setprop(Locks, "gps-track", "off");
   setprop(Locks, "gps-flight", "off");
   setprop(Locks, "gps-valid", "off");
   setprop(Locks, "hdg-hold", "on");	
