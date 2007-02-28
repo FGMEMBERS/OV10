@@ -1,0 +1,24 @@
+<?xml version="1.0"?>
+<!--
+    Usable with FlightGear
+    Property of Gerard Robin  gh.robin@laposte.net
+    Copyright License:  GPL
+-->
+<PropertyList>
+
+	<path>bezel-f8e.ac</path>
+	
+	<animation>
+		<type>noshadow</type>
+		<object-name>Bezel</object-name>
+	</animation>
+
+	<animation include="Instrument-Light5.xml">
+		<object-name>Couronne</object-name>
+	</animation>
+
+	<animation include="Instrument-Light2.xml">
+		<object-name>Corps</object-name>
+	</animation>
+
+</PropertyList>
