@@ -1,0 +1,79 @@
+<?xml version="1.0"?>
+
+<!-- OV10 engine panel, by Julien Pierru -->
+
+<PropertyList>
+
+ <path>VORTACAN_panel.ac</path> 
+ 
+ <!-- *** Switch animation *** -->
+ <animation> 
+   <type>select</type>
+    <object-name>TACAN</object-name>
+		<condition>
+			<!--equals>
+				<property>instrumentation/heading-indicator/nav-switch</property>
+				<value>9</value>
+			</equals-->
+			<equals>
+				<property>/instrumentation/heading-indicator/switch-tacan-acls</property>
+				<value>0</value>
+			</equals>
+		</condition>
+ </animation>
+
+ <animation> 
+   <type>select</type>
+    <object-name>VOR</object-name>
+		<condition>
+			<equals>
+				<property>instrumentation/heading-indicator/nav-switch</property>
+				<value>8</value>
+			</equals>
+		</condition>
+ </animation>
+
+ <animation> 
+   <type>select</type>
+    <object-name>L_IGN_ON</object-name>
+    <condition>
+     <property>controls/engines/l-ign</property>
+    </condition>
+ </animation>
+
+ <animation> 
+   <type>select</type>
+    <object-name>L_IGN_OFF</object-name>
+    <condition>
+     <not>
+      <property>controls/engines/l-ign</property>
+     </not>
+    </condition>
+ </animation>
+
+ <animation> 
+   <type>select</type>
+    <object-name>R_IGN_ON</object-name>
+    <condition>
+     <property>controls/engines/r-ign</property>
+    </condition>
+ </animation>
+
+ <animation> 
+   <type>select</type>
+    <object-name>R_IGN_OFF</object-name>
+    <condition>
+     <not>
+      <property>controls/engines/r-ign</property>
+     </not>
+    </condition>
+ </animation>
+
+ <!-- *** LoD *** -->
+ <animation>
+  <type>range</type>
+  <min-m>0</min-m>
+  <max-m>5</max-m>
+ </animation>
+
+</PropertyList>

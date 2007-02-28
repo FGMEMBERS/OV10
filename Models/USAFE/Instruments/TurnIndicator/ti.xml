@@ -1,0 +1,88 @@
+<?xml version="1.0"?>
+
+<!-- 2 Minute Turn Indicator, by Dave Culp -->
+
+<PropertyList>
+
+ <path>ti.ac</path>
+
+ <animation>
+  <type>rotate</type>
+  <object-name>needle</object-name>
+  <property>orientation/roll-deg</property>
+  <min>-20.0</min>
+  <max>20.0</max>
+  <factor>0.5</factor> 
+  <center>
+   <x-m>-0.019</x-m>
+   <y-m>0</y-m>
+   <z-m>0</z-m>
+  </center>
+  <axis>
+   <x>-1</x>
+   <y>0</y>
+   <z>0</z>
+  </axis>
+ </animation> 
+
+ <animation>
+  <type>translate</type>
+  <object-name>ball</object-name>
+  <condition>
+   <greater-than>
+    <property>velocities/airspeed-kt</property>
+    <value>5.0</value>
+   </greater-than>
+  </condition>
+  <property>orientation/side-slip-deg</property>
+  <min-m>-0.02</min-m>
+  <max-m>0.02</max-m>
+  <factor>0.002</factor> 
+  <axis>
+   <x>0</x>
+   <y>1</y>
+   <z>0</z>
+  </axis>
+ </animation> 
+
+ <animation>
+  <type>material</type>
+  <object-name>face</object-name>
+   <emission>
+     <red>0.6</red>
+     <green>0.3</green>
+     <blue>0.3</blue>
+    <factor-prop>controls/lighting/instruments-norm</factor-prop>
+   </emission> 
+ </animation>    
+
+ <animation>
+  <type>material</type>
+  <object-name>needle</object-name>
+   <emission>
+     <red>0.6</red>
+     <green>0.3</green>
+     <blue>0.3</blue>
+    <factor-prop>controls/lighting/instruments-norm</factor-prop>
+   </emission> 
+ </animation>  
+
+ <animation>
+  <type>material</type>
+  <object-name>ball</object-name>
+   <emission>
+     <red>0.6</red>
+     <green>0.3</green>
+     <blue>0.3</blue>
+    <factor-prop>controls/lighting/instruments-norm</factor-prop>
+   </emission> 
+ </animation>  
+
+ <!-- *** LoD *** -->
+ <animation>
+  <type>range</type>
+  <min-m>0</min-m>
+  <max-m>5</max-m>
+ </animation>
+
+</PropertyList>
