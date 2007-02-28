@@ -1,0 +1,91 @@
+<?xml version="1.0"?>
+<!--
+    Usable with FlightGear
+    Property of Gerard Robin  gh.robin@laposte.net
+    Copyright License:  GPL
+-->
+
+<PropertyList>
+
+ <path>tacan.ac</path>
+
+	<animation>
+		<type>textranslate</type>
+		<object-name>100</object-name>
+		<property>/instrumentation/tacan/frequencies/selected-channel[1]</property>
+		<factor>0.1</factor>
+		<step>1</step>
+		<scroll>0</scroll>
+		<axis>
+			<x>0</x>
+			<y>-1</y>
+			<z>0</z>
+		</axis>
+ 	</animation>
+
+	<animation>
+		<type>textranslate</type>
+		<object-name>10</object-name>
+		<property>/instrumentation/tacan/frequencies/selected-channel[2]</property>
+		<factor>0.1</factor>
+		<step>1</step>
+		<scroll>0</scroll>
+		<axis>
+			<x>0</x>
+			<y>-1</y>
+			<z>0</z>
+		</axis>
+ 	</animation>
+
+	<animation>
+		<type>textranslate</type>
+		<object-name>1</object-name>
+		<property>/instrumentation/tacan/frequencies/selected-channel[3]</property>
+		<factor>0.1</factor>
+		<step>1</step>
+		<scroll>0</scroll>
+		<axis>
+			<x>0</x>
+			<y>-1</y>
+			<z>0</z>
+		</axis>
+ 	</animation>
+
+  	<!--binding>
+  		<condition>
+  		 <equals>
+   		  <property>/instrumentation/tacan/frequencies/selected-channel[4]</property>
+   		  <value>X</value>
+   		 </equals>
+		</condition>
+   	 <command>property-assign</command>
+   	 <property>/instrumentation/tacan/frequencies/valueXY</property>
+   	 <value type="int">0</value>
+  	</binding>
+  	<binding>
+  		<condition>
+  		 <equals>
+   		  <property>/instrumentation/tacan/frequencies/selected-channel[4]</property>
+   		  <value>Y</value>
+   		 </equals>
+		</condition>
+   	 <command>property-assign</command>
+   	 <property>/instrumentation/tacan/frequencies/valueXY</property>
+   	 <value type="int">1</value>
+  	</binding-->
+
+	<animation>
+		<type>textranslate</type>
+		<object-name>X</object-name>
+		<property>/instrumentation/tacan/frequencies/valueXY[0]</property>
+		<factor>0.5</factor>
+		<step>1</step>
+		<scroll>1</scroll>
+		<axis>
+			<x>0</x>
+			<y>-1</y>
+			<z>0</z>
+		</axis>
+ 	</animation>
+
+</PropertyList>
