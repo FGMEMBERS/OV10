@@ -337,7 +337,7 @@
 
  <!-- GPS Panel hotspots -->
  <panel>
-  <path>Aircraft/OV10/Models/NASA/Instruments/KLN90/GPSa.xml</path>
+  <path>Aircraft/OV10/Models/NASA/Instruments/KLN90/GPS.xml</path>
   <bottom-left>
    <x-m>-2.92</x-m>
    <y-m>0.215</y-m>

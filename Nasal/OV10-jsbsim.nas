@@ -21,6 +21,7 @@ sec1cron = func {
    update_fuel_pump_warning();
    update_fuel();
    set_fuel_warning();
+   set_marker_light();
    #set_G_warning();
 
 #   feedengineschedule();
@@ -32,6 +33,7 @@ sec1cron = func {
 
 sec15cron = func {
    beacon();
+   update_channel();
    settimer(sec15cron,1.5);
 }
 
@@ -98,6 +100,7 @@ init = func {
 #   initfuel();
 #   presetfuel();
 #   initautopilot();
+
 	settimer(init_startup_status(),10);
 
    # schedule the 1st call

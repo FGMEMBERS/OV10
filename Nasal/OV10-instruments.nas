@@ -288,6 +288,40 @@ setlistener( nstation3 , set_station3 );
 setlistener( nstation4 , set_station4 );
 setlistener( nstation5 , set_station5 );
 
+# outer/inner marker
+
+matlist3 = { # MATERIALS
+#       status   diffuse            ambient            emission           specular           shi trans
+	"on":    [0.97, 0.368, 0.1,    0.97, 0.368, 0.1,    0.97, 0.368, 0.1,     0.05, 0.05, 0.05,     10, 0],
+	"off":   [0.61, 0.39, 0.29,    0.61, 0.39, 0.29,    0.0, 0.0, 0.0,     0.05, 0.05, 0.05,     10, 0],
+};
+
+set_marker_light = func() {
+	i = 0;
+	outer = getprop("/instrumentation/marker-beacon/outer");
+	inner = getprop("/instrumentation/marker-beacon/inner");	
+
+	if (outer or inner)
+	{
+		mat = matlist3 ["on"];
+	}
+	else
+	{	
+		mat = matlist3 ["off"];
+	}
+
+	base = "sim/model/nav/material/light-on/";
+	foreach (t; ["diffuse", "ambient", "emission", "specular"]) {
+		foreach (c; ["red", "green", "blue"]) {
+			setprop(base ~ t ~ "/" ~ c, mat[i]);
+			i += 1;
+		}
+	}
+	setprop(base ~ "shininess", mat[i]);
+	setprop(base ~ "transparency/alpha", 1.0 - mat[i + 1]);
+
+}
+
 # warning panel
 pbrakes = props.globals.getNode("/controls/gear/brake-parking", 1);
 
@@ -434,4 +468,110 @@ tailBeacon = func() {
 	setprop(base ~ "diffuse/red", 1);
 	setprop(base ~ "ambient/red", 1);
 	setprop(base ~ "emission/red", 1);
+}
+
+# TACAN channels
+channel = props.globals.getNode("/instrumentation/tacan/frequencies/selected-channel[4]", 1);
+
+update_channel = func() {
+	channel = getprop("/instrumentation/tacan/frequencies/selected-channel[4]");
+	if  ( channel == "X" )
+	{
+		#print("X");
+		setprop("/instrumentation/tacan/frequencies/valueXY",0.0);
+	}
+	else
+	{
+		#print("Y");
+		setprop("/instrumentation/tacan/frequencies/valueXY",1.0);
+	}
+}
+
+update_channel();
+#setlistener( channel , update_channel );
+
+increase_first_2 = func() {
+	h = getprop("/instrumentation/tacan/frequencies/selected-channel[1]");
+	d = getprop("/instrumentation/tacan/frequencies/selected-channel[2]");
+
+	d = d+1;
+
+	if ( d == 10 )
+	{	
+		d = 0;
+		h = h+1;
+	}
+	if ( h == 10 )
+	{
+		h = 0;
+	}
+
+	setprop("/instrumentation/tacan/frequencies/selected-channel[1]",h);
+	setprop("/instrumentation/tacan/frequencies/selected-channel[2]",d);
+}
+
+decrease_first_2 = func() {
+	h = getprop("/instrumentation/tacan/frequencies/selected-channel[1]");
+	d = getprop("/instrumentation/tacan/frequencies/selected-channel[2]");
+
+	d = d-1;
+
+	if ( d == -1 )
+	{	
+		d = 9;
+		h = h-1;
+	}
+	if ( h == -1 )
+	{
+		h = 9;
+	}
+
+	setprop("/instrumentation/tacan/frequencies/selected-channel[1]",h);
+	setprop("/instrumentation/tacan/frequencies/selected-channel[2]",d);
+}
+
+increase_last_2 = func() {
+	u = getprop("/instrumentation/tacan/frequencies/selected-channel[3]");
+	x = getprop("/instrumentation/tacan/frequencies/selected-channel[4]");
+
+	u = u+1;
+
+	if ( u == 10 )
+	{	
+		u = 0;
+		if ( x == "X" )
+		{
+			x = "Y";
+		}
+		else
+		{
+			x = "X";
+		}
+	}
+
+	setprop("/instrumentation/tacan/frequencies/selected-channel[3]",u);
+	setprop("/instrumentation/tacan/frequencies/selected-channel[4]",x);
+}
+
+decrease_last_2 = func() {
+	u = getprop("/instrumentation/tacan/frequencies/selected-channel[3]");
+	x = getprop("/instrumentation/tacan/frequencies/selected-channel[4]");
+
+	u = u-1;
+
+	if ( u == -1 )
+	{	
+		u = 9;
+		if ( x == "X" )
+		{
+			x = "Y";
+		}
+		else
+		{
+			x = "X";
+		}
+	}
+
+	setprop("/instrumentation/tacan/frequencies/selected-channel[3]",u);
+	setprop("/instrumentation/tacan/frequencies/selected-channel[4]",x);
 }

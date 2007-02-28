@@ -6,13 +6,13 @@
     <name>left-guns</name>
     <model>Aircraft/OV10/Models/USAFE/Stores/M60C/tracer.xml</model>
     <trigger>controls/armament/gun-trigger</trigger>
-    <speed>2400.0</speed>
+    <speed>2800.0</speed>
     <repeat>true</repeat>
     <delay>0.15</delay>
     <count>500</count>
     <x-offset>3.0</x-offset>
     <y-offset>-2.5</y-offset>
-    <z-offset>-2.4</z-offset>
+    <z-offset>-2.2</z-offset>
     <yaw-offset>0.0</yaw-offset>
     <pitch-offset>0.0</pitch-offset>
     <wind>false</wind>
@@ -45,13 +45,13 @@
     <name>right-guns</name>
     <model>Aircraft/OV10/Models/USAFE/Stores/M60C/tracer.xml</model>
     <trigger>controls/armament/gun-trigger</trigger>
-    <speed>2400.0</speed>
+    <speed>2800.0</speed>
     <repeat>true</repeat>
     <delay>0.15</delay>
     <count>500</count>
     <x-offset>3.0</x-offset>
     <y-offset>2.5</y-offset>
-    <z-offset>-2.4</z-offset>
+    <z-offset>-2.2</z-offset>
     <yaw-offset>0.0</yaw-offset>
     <pitch-offset>0.0</pitch-offset>
     <wind>false</wind>

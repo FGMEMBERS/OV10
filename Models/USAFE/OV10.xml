@@ -46,22 +46,40 @@
  <!-- ************* Instruments **************************** -->
 
  <model>
-  <path>Aircraft/OV10/Models/USAFE/Instruments/HSI/HSI.xml</path>
+  <path>Aircraft/OV10/Models/USAFE/Instruments/BDHI/HI-f8e.xml</path>
   <offsets>
    <x-m>-3.04</x-m>
    <y-m>0</y-m>
-   <z-m>-0.264</z-m>
+   <z-m>-0.263</z-m>
   </offsets>
  </model>
 
  <model>
+  <path>Aircraft/OV10/Models/USAFE/Instruments/TACAN/tacan.xml</path>
+  <offsets>
+   <x-m>-3.04</x-m>
+   <y-m>0</y-m>
+   <z-m>-0.370</z-m>
+  </offsets>
+ </model>
+
+ <model>
+  <path>Aircraft/OV10/Models/USAFE/Instruments/CourseIndicator/ILS-f8e.xml</path>
+  <offsets>
+   <x-m>-3.04</x-m>
+   <y-m>0.12</y-m>
+   <z-m>-0.253</z-m>
+  </offsets>
+ </model>
+
+ <!--model>
   <path>Aircraft/OV10/Models/USAFE/Instruments/HSI/navpanel.xml</path>
   <offsets>
    <x-m>-3.001</x-m>
    <y-m>0</y-m>
    <z-m>-0.35</z-m>
   </offsets>
- </model>
+ </model-->
 
  <model>
   <path>Aircraft/OV10/Models/USAFE/Instruments/AI/AI.xml</path>
@@ -208,6 +226,15 @@
  </model>
 
  <model>
+  <path>Aircraft/OV10/Models/USAFE/Instruments/TurnIndicator/ti.xml</path>
+  <offsets>
+   <x-m>-3.05</x-m>
+   <y-m>0.11</y-m>
+   <z-m>-0.058</z-m>
+  </offsets>
+ </model>
+
+ <model>
   <path>Aircraft/OV10/Models/USAFE/Instruments/Gear-Flaps/gear-flaps.xml</path>
   <offsets>
    <x-m>-3.06</x-m>
@@ -315,6 +342,15 @@
    <x-m>-3.06</x-m>
    <y-m>-0.38</y-m>
    <z-m>-0.18</z-m>
+  </offsets>
+ </model>
+
+ <model>
+  <path>Aircraft/OV10/Models/USAFE/Instruments/UpperLeftPanel/VORTACAN_panel.xml</path>
+  <offsets>
+   <x-m>-3.06</x-m>
+   <y-m>-0.38</y-m>
+   <z-m>-0.06</z-m>
   </offsets>
  </model>
 
@@ -1175,7 +1211,7 @@
     </condition>
   </animation>
 
-<!-- ********************* Cowl Flaps **************** -->
+<!-- ********************* Oil Cooler Doors **************** -->
 
   <animation>
     <type>rotate</type>

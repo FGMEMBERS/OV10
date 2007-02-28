@@ -15,20 +15,40 @@
       <dep>0.0</dep>
     </entry>
     <entry>
+      <ind>50</ind>
+      <dep>20.0</dep>
+    </entry>
+    <entry>
       <ind>100</ind>
-      <dep>86.0</dep>
+      <dep>85.0</dep>
+    </entry>
+   <entry>
+      <ind>120</ind>
+      <dep>110.0</dep>
+    </entry>
+   <entry>
+      <ind>150</ind>
+      <dep>135.0</dep>
     </entry>
     <entry>
       <ind>200</ind>
-      <dep>156.0</dep>
+      <dep>185.0</dep>
+    </entry>
+   <entry>
+      <ind>250</ind>
+      <dep>230.0</dep>
     </entry>
     <entry>
       <ind>300</ind>
-      <dep>220.0</dep>
+      <dep>275.0</dep>
+    </entry>
+   <entry>
+      <ind>350</ind>
+      <dep>310.0</dep>
     </entry>
     <entry>
       <ind>400</ind>
-      <dep>274.0</dep>
+      <dep>350.0</dep>
     </entry>
   </interpolation>   
   <center>
