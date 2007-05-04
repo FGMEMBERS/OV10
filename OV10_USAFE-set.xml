@@ -408,7 +408,6 @@ David Culp,  davidculp2@comcast.net
    </ov10>
   </model>
 
-  <number-views type="int">7</number-views>
   <view n="0">
    <internal archive="y">true</internal>
    <config>
@@ -419,7 +418,7 @@ David Culp,  davidculp2@comcast.net
    </config>
   </view>
 
-  <view n="6">
+  <view n="100">
     <name>Engine Start Panel View</name>
     <type>lookfrom</type>
    <internal archive="y">true</internal>

@@ -383,7 +383,6 @@ David Culp,  davidculp2@comcast.net
    </ov10>
   </model>
 
-  <number-views type="int">10</number-views>
   <view n="0">
    <internal archive="y">true</internal>
    <config>
@@ -394,7 +393,7 @@ David Culp,  davidculp2@comcast.net
    </config>
   </view>
 
-  <view n="6">
+  <view n="100">
     <name>Tail Camera View</name>
     <type>lookfrom</type>
    <internal archive="y">true</internal>
@@ -420,7 +419,7 @@ David Culp,  davidculp2@comcast.net
    </config>
   </view>
 
-  <view n="7">
+  <view n="101">
     <name>Engine Start Panel View</name>
     <type>lookfrom</type>
    <internal archive="y">true</internal>
@@ -446,7 +445,7 @@ David Culp,  davidculp2@comcast.net
    </config>
   </view>
 
-  <view n="8">
+  <view n="102">
     <name>AP Panel View</name>
     <type>lookfrom</type>
    <internal archive="y">true</internal>
@@ -472,7 +471,7 @@ David Culp,  davidculp2@comcast.net
    </config>
   </view>
 
-  <view n="9">
+  <view n="103">
     <name>GPS Panel View</name>
     <type>lookfrom</type>
    <internal archive="y">true</internal>
