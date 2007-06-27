@@ -101,7 +101,7 @@ init = func {
 #   presetfuel();
 #   initautopilot();
 
-	settimer(init_startup_status(),10);
+	settimer(init_startup_status,10);
 
    # schedule the 1st call
 #   settimer(flashinglightcron,0);
