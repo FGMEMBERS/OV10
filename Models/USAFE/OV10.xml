@@ -707,7 +707,7 @@
  <animation>
   <type>rotate</type>
   <object-name>RudderLeft</object-name>
-  <property>/surface-positions/rudder-pos-norm</property>
+  <property>surface-positions/rudder-pos-norm</property>
   <factor>25</factor> <!-- check -->
   <center>
    <x-m>6.30</x-m>
@@ -724,7 +724,7 @@
  <animation>
   <type>rotate</type>
   <object-name>RudderRight</object-name>
-  <property>/surface-positions/rudder-pos-norm</property>
+  <property>surface-positions/rudder-pos-norm</property>
   <factor>25</factor> <!-- check -->
   <center>
    <x-m>6.30</x-m>
@@ -741,7 +741,7 @@
  <animation>
   <type>rotate</type>
   <object-name>AileronLeft</object-name>
-  <property>/surface-positions/left-aileron-pos-norm</property>
+  <property>surface-positions/left-aileron-pos-norm</property>
   <factor>-25</factor>
   <center>
    <x-m>1.3867</x-m>
@@ -758,7 +758,7 @@
  <animation>
   <type>rotate</type>
   <object-name>AileronRight</object-name>
-  <property>/surface-positions/right-aileron-pos-norm</property>
+  <property>surface-positions/right-aileron-pos-norm</property>
   <factor>25</factor>
   <center>
    <x-m>1.3867</x-m>
@@ -776,7 +776,7 @@
   <type>rotate</type>
   <object-name>Elevator</object-name>
   <object-name>ElevatorCounterWeight</object-name>
-  <property>/surface-positions/elevator-pos-norm</property>
+  <property>surface-positions/elevator-pos-norm</property>
   <factor>25</factor> <!-- check -->
   <center>
    <x-m>7.167</x-m>
@@ -794,7 +794,7 @@
   <type>rotate</type>
   <object-name>FlapLeftOuter</object-name>
   <object-name>FlapLeftInner</object-name>
-  <property>/surface-positions/flap-pos-norm</property>
+  <property>surface-positions/flap-pos-norm</property>
   <factor>40</factor>
   <center>
    <x-m>1.386722</x-m>
@@ -812,7 +812,7 @@
   <type>rotate</type>
   <object-name>FlapRightInner</object-name>
   <object-name>FlapRightOuter</object-name>
-  <property>/surface-positions/flap-pos-norm</property>
+  <property>surface-positions/flap-pos-norm</property>
   <factor>40</factor>
   <center>
    <x-m>1.386722</x-m>
@@ -1254,7 +1254,7 @@
  <animation>
   <type>rotate</type>
   <object-name>spoiler1</object-name>
-  <property>/surface-positions/right-aileron-pos-norm</property>
+  <property>surface-positions/right-aileron-pos-norm</property>
   <factor>-90</factor> 
   <offset-deg>95</offset-deg>
   <max-deg>100</max-deg>
@@ -1273,7 +1273,7 @@
  <animation>
   <type>rotate</type>
   <object-name>spoiler2</object-name>
-  <property>/surface-positions/right-aileron-pos-norm</property>
+  <property>surface-positions/right-aileron-pos-norm</property>
   <factor>-90</factor> 
   <offset-deg>95</offset-deg>
   <max-deg>100</max-deg>
@@ -1292,7 +1292,7 @@
  <animation>
   <type>rotate</type>
   <object-name>spoiler3</object-name>
-  <property>/surface-positions/right-aileron-pos-norm</property>
+  <property>surface-positions/right-aileron-pos-norm</property>
   <factor>-90</factor> 
   <offset-deg>95</offset-deg>
   <max-deg>100</max-deg>
@@ -1311,7 +1311,7 @@
  <animation>
   <type>rotate</type>
   <object-name>spoiler4</object-name>
-  <property>/surface-positions/right-aileron-pos-norm</property>
+  <property>surface-positions/right-aileron-pos-norm</property>
   <factor>-90</factor> 
   <offset-deg>95</offset-deg>
   <max-deg>100</max-deg>
@@ -1330,7 +1330,7 @@
  <animation>
   <type>rotate</type>
   <object-name>spoiler5</object-name>
-  <property>/surface-positions/right-aileron-pos-norm</property>
+  <property>surface-positions/right-aileron-pos-norm</property>
   <factor>-90</factor> 
   <offset-deg>-95</offset-deg>
   <min-deg>-100</min-deg>
@@ -1349,7 +1349,7 @@
  <animation>
   <type>rotate</type>
   <object-name>spoiler6</object-name>
-  <property>/surface-positions/right-aileron-pos-norm</property>
+  <property>surface-positions/right-aileron-pos-norm</property>
   <factor>-90</factor> 
   <offset-deg>-95</offset-deg>
   <min-deg>-100</min-deg>
@@ -1368,7 +1368,7 @@
  <animation>
   <type>rotate</type>
   <object-name>spoiler7</object-name>
-  <property>/surface-positions/right-aileron-pos-norm</property>
+  <property>surface-positions/right-aileron-pos-norm</property>
   <factor>-90</factor> 
   <offset-deg>-95</offset-deg>
   <min-deg>-100</min-deg>
@@ -1387,7 +1387,7 @@
  <animation>
   <type>rotate</type>
   <object-name>spoiler8</object-name>
-  <property>/surface-positions/right-aileron-pos-norm</property>
+  <property>surface-positions/right-aileron-pos-norm</property>
   <factor>-90</factor> 
   <offset-deg>-95</offset-deg>
   <min-deg>-100</min-deg>
