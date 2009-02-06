@@ -208,7 +208,7 @@ showDialog = func {
 		number.set("halign", "left");
 		number.set("label", "-0.123");
 		number.set("format", "%.1f lbs");
-		number.set("property", "consumables/fuel/tank[0]/level-lb");
+		number.set("property", "consumables/fuel/tank[0]/level-lbs");
 		number.set("live", 1);
 		number.setColor(0, 1, 0);	
 		
