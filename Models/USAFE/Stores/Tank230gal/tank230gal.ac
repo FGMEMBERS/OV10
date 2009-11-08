@@ -1,5 +1,5 @@
 AC3Db
-MATERIAL "ac3dmat13" rgb 0.055 0.098 0.055  amb 0 0.039 0  emis 0 0 0  spec 0 0.059 0  shi 0  trans 0
+MATERIAL "ac3dmat13" rgb 0.055 0.098 0.055  amb 0.055 0.098 0.055  emis 0 0 0  spec 0 0.059 0  shi 0  trans 0
 OBJECT world
 kids 1
 OBJECT poly

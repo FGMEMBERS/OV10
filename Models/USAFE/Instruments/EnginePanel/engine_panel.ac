@@ -1,8 +1,8 @@
 AC3Db
 MATERIAL "DefaultWhite" rgb 1 1 1  amb 1 1 1  emis 0 0 0  spec 0.5 0.5 0.5  shi 64  trans 0
-MATERIAL "sw-mat" rgb 0.85 0.85 0.85 amb 0.5 0.5 0.5 emis 0 0 0 spec 0.7 0.7 0.7 shi 32 trans 0
-MATERIAL "ac3dmat2" rgb 0.231 0.251 0.251 amb 0.2 0.2 0.2 emis 0 0 0 spec 0 0 0 shi 7 trans 0
-MATERIAL "blackcover-mat" rgb 1 0.150563 0.13811 amb 0.5 0.5 0.5 emis 0 0 0 spec 0.3 0.3 0.3 shi 32 trans 0
+MATERIAL "sw-mat" rgb 0.85 0.85 0.85 amb 0.85 0.85 0.85 emis 0 0 0 spec 0.7 0.7 0.7 shi 32 trans 0
+MATERIAL "ac3dmat2" rgb 0.231 0.251 0.251 amb 0.231 0.251 0.251 emis 0 0 0 spec 0 0 0 shi 7 trans 0
+MATERIAL "blackcover-mat" rgb 1 0.150563 0.13811 amb 1 0.150563 0.13811 emis 0 0 0 spec 0.3 0.3 0.3 shi 32 trans 0
 OBJECT world
 kids 27
 OBJECT poly
