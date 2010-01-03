@@ -602,7 +602,7 @@ Some unusual features of the OV-10 are that the cockpit is entered from the righ
    <pump-fail-time type="int">0</pump-fail-time>
    <last-level-gal_us type="float">220</last-level-gal_us>
   </external-tank>
-  <smoke type="bool">true</smoke>
+  <smoke type="bool">false</smoke>
   <jump-signal type="bool">false</jump-signal>
   <signal type="bool">false</signal>
   <paratroopers type="bool">false</paratroopers>
