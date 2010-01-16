@@ -10,7 +10,7 @@ init_fuel = func {
 	}
 	else
 	{
-		external = getprop("controls/external-tank/level-gal_us[0]");
+		external = getprop("consumables/fuel/tank[1]/level-gal_us[0]");
 	}
 
 	print (internal);
