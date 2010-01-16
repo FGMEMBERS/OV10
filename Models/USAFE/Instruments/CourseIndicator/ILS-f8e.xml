@@ -362,7 +362,7 @@
 		</axis>
 	</animation>
 
-	<animation>
+	<!--<animation>
 		<type>rotate</type>
 		<object-name>Bouton-D</object-name>
 		<property>/instrumentation/heading-indicator/setting-manual-hdg</property>
@@ -396,7 +396,7 @@
 			<y>0</y>
 			<z>0</z>
 		</axis>
-	</animation>
+	</animation>-->
 
 	<animation>
 		<type>textranslate</type>
