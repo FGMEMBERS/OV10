@@ -512,6 +512,17 @@ Some unusual features of the OV-10 are that the cockpit is entered from the righ
    </text>
   </help>
 
+   <multiplay>
+     <generic>
+	   <float n="0" alias="/gear/gear[0]/steering-norm"/>
+	   <float n="1" alias="/gear/gear[0]/rollspeed-ms"/>
+	   <float n="2" alias="/gear/gear[1]/rollspeed-ms"/>
+	   <float n="3" alias="/gear/gear[2]/rollspeed-ms"/>
+	 	   
+	   <int n="0" alias="/controls/smoke"/>
+	   <int n="1" type="int"/>
+	 </generic>
+   </multiplay>
  </sim>
 
  <consumables>
@@ -602,7 +613,7 @@ Some unusual features of the OV-10 are that the cockpit is entered from the righ
    <pump-fail-time type="int">0</pump-fail-time>
    <last-level-gal_us type="float">220</last-level-gal_us>
   </external-tank>
-  <smoke type="bool">false</smoke>
+  <smoke type="int">0</smoke>
   <jump-signal type="bool">false</jump-signal>
   <signal type="bool">false</signal>
   <paratroopers type="bool">false</paratroopers>
@@ -694,16 +705,16 @@ Some unusual features of the OV-10 are that the cockpit is entered from the righ
     <binding>
      <command>property-assign</command>
      <property>controls/smoke</property>
-     <value>true</value>
+     <value>1</value>
     </binding>
    </key>
    <key n="83">
     <name>S</name>
-    <desc>Start smoke</desc>
+    <desc>Stop smoke</desc>
     <binding>
      <command>property-assign</command>
      <property>controls/smoke</property>
-     <value>false</value>
+     <value>0</value>
     </binding>
    </key>
    <key n="101">
@@ -770,6 +781,9 @@ Some unusual features of the OV-10 are that the cockpit is entered from the righ
     <Jumpers>
       <file>Aircraft/OV10/Nasal/paratroopers.nas</file>
     </Jumpers>
+    <undercarriage>
+      <file>Aircraft/OV10/Nasal/undercarriage.nas</file>
+    </undercarriage>
   </nasal>
 
 

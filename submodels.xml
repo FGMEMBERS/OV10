@@ -258,25 +258,6 @@
   </submodel>
 
   <submodel> 
-    <name>engine-smoke</name>
-    <model>Aircraft/OV10/Models/USAFE/ExternalSystems/EngineSmoke/smoke.xml</model>
-    <trigger>controls/smoke</trigger>
-    <speed>10</speed>
-    <repeat>true</repeat>
-    <delay>0.005</delay>
-    <count>30000</count>
-    <x-offset>-10</x-offset><!--x-offset>-2</x-offset-->
-    <y-offset>8.5</y-offset>
-    <z-offset>2</z-offset>
-    <yaw-offset>0.0</yaw-offset>
-    <pitch-offset>0.0</pitch-offset>
-    <eda>20</eda>
-    <wind>true</wind>
-    <buoyancy>33</buoyancy>
-    <life>10</life>
-  </submodel>
-
-  <submodel> 
     <name>parachutist</name>
     <model>Models/Geometry/parachuter.xml</model>
     <trigger>controls/jump-signal</trigger>

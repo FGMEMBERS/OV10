@@ -8,6 +8,49 @@
 
  <path>OV10_NATO.ac</path>
 
+ <nasal>
+   <load>
+      var self = cmdarg();
+      var float_0 = self.getNode("sim/multiplay/generic/float[0]", 1);
+      var float_1 = self.getNode("sim/multiplay/generic/float[1]", 1);
+      var float_2 = self.getNode("sim/multiplay/generic/float[2]", 1);
+      var float_3 = self.getNode("sim/multiplay/generic/float[3]", 1);
+	  
+      var int_0 = self.getNode("sim/multiplay/generic/int[0]", 1);
+
+
+      var gear_0_steering = self.getNode("gear/gear[0]/steering-norm", 1);
+      var gear_0_rollspeed = self.getNode("gear/gear[0]/rollspeed-ms", 1);
+      var gear_1_rollspeed = self.getNode("gear/gear[1]/rollspeed-ms", 1);
+      var gear_2_rollspeed = self.getNode("gear/gear[2]/rollspeed-ms", 1);
+      var smoke = self.getNode("controls/smoke", 1);
+      	  
+      gear_0_steering.alias(float_0);
+      gear_0_rollspeed.alias(float_1);
+      gear_1_rollspeed.alias(float_2);
+      gear_2_rollspeed.alias(float_3);
+	  smoke.alias(int_0);
+	  
+      var undercarriage = setlistener(self.getNode("sim/multiplay/generic/int[1]",1), func() {
+	    var int1 = self.getNode("sim/multiplay/generic/int[1]").getValue();
+		self.getNode("controls/armament/station1").setBoolValue(!bits.test(int1,0));
+		self.getNode("controls/armament/station2").setBoolValue(!bits.test(int1,1));
+		self.getNode("controls/armament/station3").setBoolValue(!bits.test(int1,2));
+		self.getNode("controls/armament/station4").setBoolValue(!bits.test(int1,3));
+		self.getNode("controls/armament/station5").setBoolValue(!bits.test(int1,4));		
+		}, 1, 0);
+	</load>
+
+  <unload>
+      gear_0_steering.unalias();
+      gear_0_rollspeed.unalias();
+      gear_1_rollspeed.unalias();
+      gear_2_rollspeed.unalias();
+      smoke.unalias();
+	  removelistener(undercarriage);
+  </unload>
+ </nasal>
+ 
  <offsets>
    <z-m>0.70</z-m>
    <pitch-deg>-1.2</pitch-deg>
@@ -827,6 +870,38 @@
  </animation>
 
 <!-- ************** Landing Gear and Doors *************** -->
+  
+  <animation>
+    <type>rotate</type>
+    <object-name>GearWheelNose</object-name>
+    <object-name>GearStrutNose</object-name>
+    <object-name>GearStrutNoseL</object-name>
+    <property>gear/gear[0]/position-norm</property>
+    <interpolation>
+      <entry>
+        <ind>0.0</ind>
+        <dep>105.0</dep>
+      </entry>
+      <entry>
+        <ind>0.25</ind>
+        <dep>105.0</dep>
+      </entry>      
+      <entry>
+        <ind>1.0</ind>
+        <dep>0.0</dep>
+      </entry>
+    </interpolation>
+    <center>
+      <x-m>-3</x-m>
+      <y-m>0</y-m>
+      <z-m>-0.75</z-m>
+    </center>
+    <axis>
+      <x>0</x>
+      <y>1</y>
+      <z>0</z>
+    </axis>
+  </animation>
 
   <animation>
     <type>rotate</type>
@@ -839,9 +914,10 @@
       </greater-than>
     </condition>
     <property>gear/gear[0]/steering-norm</property>
-    <factor>-10</factor>
+    <!-- <property>sim/multiplay/generic/float[0]</property> -->
+    <factor>-35</factor>
     <center>
-      <x-m>-2.74414</x-m>
+      <x-m>-3.15</x-m>
       <y-m>0</y-m>
       <z-m>-1.73828</z-m>
     </center>
@@ -855,90 +931,115 @@
   <animation>
     <type>rotate</type>
     <object-name>GearWheelNose</object-name>
-    <object-name>GearStrutNose</object-name>
     <object-name>GearStrutNoseL</object-name>
+    <property>gear/gear[0]/compression-norm</property>
+    <interpolation>
+      <entry>
+        <ind>0.0</ind>
+        <dep>0</dep>
+      </entry>
+      <entry>
+        <ind>0.456</ind>
+        <dep>19.34</dep>
+      </entry>
+      <entry>
+        <ind>0.912</ind>
+        <dep>38.68</dep>
+      </entry>
+      <entry>
+        <ind>1.365</ind>
+        <dep>54.34</dep>
+      </entry>
+    </interpolation>   
+    <center>
+      <x-m>-3.14</x-m>
+      <y-m>0.0</y-m>
+      <z-m>-1.599</z-m>
+    </center>
+    <axis>
+      <x>0</x>
+      <y>-1</y>
+      <z>0</z>
+    </axis>
+  </animation> 
+
+  <animation>
+    <type>spin</type>
+    <object-name>GearWheelNose</object-name>
+    <property>gear/gear[0]/rollspeed-ms</property>
+    <!-- <property>sim/multiplay/generic/float[1]</property> -->
+    <factor>28.57</factor>
+    <center>
+      <x-m>-2.745</x-m>
+      <y-m>0</y-m>
+      <z-m>-1.739</z-m>
+    </center>
+    <axis>
+      <x>0</x>
+      <y>-1</y>
+      <z>0</z>
+    </axis>
+  </animation>
+
+  <animation>
+    <type>rotate</type>
+    <object-name>GearDoorNoseLeft</object-name>
     <property>gear/gear[0]/position-norm</property>
     <interpolation>
       <entry>
         <ind>0.0</ind>
-        <dep>105.0</dep>
+        <dep>90.0</dep>
+      </entry>
+      <entry>
+        <ind>0.25</ind>
+        <dep>0.0</dep>
       </entry>
       <entry>
         <ind>1.0</ind>
         <dep>0.0</dep>
       </entry>
-    </interpolation>
+    </interpolation>   
     <center>
-      <x-m>-2.97</x-m>
-      <y-m>0</y-m>
-      <z-m>-0.75</z-m>
+      <x-m>-1.6</x-m>
+      <y-m>-0.167969</y-m>
+      <z-m>-1.0685</z-m>
     </center>
     <axis>
-      <x>0</x>
-      <y>1</y>
+      <x>1</x>
+      <y>0</y>
       <z>0</z>
     </axis>
   </animation>
 
- <animation>
-  <type>rotate</type>
-  <object-name>GearDoorNoseLeft</object-name>
-  <property>gear/gear[0]/position-norm</property>
-   <interpolation>
-    <entry>
-      <ind>0.0</ind>
-      <dep>90.0</dep>
-    </entry>
-    <entry>
-      <ind>0.25</ind>
-      <dep>0.0</dep>
-    </entry>
-    <entry>
-      <ind>1.0</ind>
-      <dep>0.0</dep>
-    </entry>
-  </interpolation>   
-  <center>
-   <x-m>-1.6</x-m>
-   <y-m>-0.167969</y-m>
-   <z-m>-1.0685</z-m>
-  </center>
-  <axis>
-   <x>1</x>
-   <y>0</y>
-   <z>0</z>
-  </axis>
- </animation>
-
   <animation>
-  <type>rotate</type>
-  <object-name>GearDoorNoseRight</object-name>
-  <property>gear/gear[0]/position-norm</property>
-   <interpolation>
-    <entry>
-      <ind>0.0</ind>
-      <dep>90.0</dep>
-    </entry>
-    <entry>
-      <ind>0.25</ind>
-      <dep>0.0</dep>
-    </entry>
-    <entry>
-      <ind>1.0</ind>
-      <dep>0.0</dep>
-    </entry>
-  </interpolation>   
-  <center>
-   <x-m>-1.6</x-m>
-   <y-m>0.167969</y-m>
-   <z-m>-1.0685</z-m>
-  </center>
-  <axis>
-   <x>-1</x>
-   <y>0</y>
-   <z>0</z>
-  </axis>
- </animation> 
+    <type>rotate</type>
+    <object-name>GearDoorNoseRight</object-name>
+    <property>gear/gear[0]/position-norm</property>
+    <interpolation>
+      <entry>
+        <ind>0.0</ind>
+        <dep>90.0</dep>
+      </entry>
+      <entry>
+        <ind>0.25</ind>
+        <dep>0.0</dep>
+      </entry>
+      <entry>
+        <ind>1.0</ind>
+        <dep>0.0</dep>
+      </entry>
+    </interpolation>   
+    <center>
+      <x-m>-1.6</x-m>
+      <y-m>0.167969</y-m>
+      <z-m>-1.0685</z-m>
+    </center>
+    <axis>
+      <x>-1</x>
+      <y>0</y>
+      <z>0</z>
+    </axis>
+  </animation> 
 
   <animation>
     <type>rotate</type>
@@ -947,10 +1048,6 @@
     <object-name>GearStrutRightB</object-name>
     <object-name>GearStrutRightC</object-name>
     <property>gear/gear[2]/position-norm</property>
-    <factor>-77</factor>
-    <offset-deg>77</offset-deg>
-    <min-deg>0</min-deg>
-    <max-deg>77</max-deg>
     <interpolation>
       <entry>
         <ind>0.0</ind>
@@ -976,6 +1073,60 @@
       <z>0</z>
     </axis>
   </animation>
+ 
+
+  <animation>
+    <type>rotate</type>
+    <object-name>GearWheelRight</object-name>
+    <object-name>GearStrutRightA</object-name>
+    <property>gear/gear[2]/compression-norm</property> 
+    <interpolation>
+      <entry>
+        <ind>0.0</ind>
+        <dep>0</dep>
+      </entry>
+      <entry>
+        <ind>0.40354</ind>
+        <dep>12.5</dep>
+      </entry>
+      <entry>
+        <ind>0.807</ind>
+        <dep>25</dep>
+      </entry>
+      <entry>
+        <ind>1.252</ind>
+        <dep>37.5</dep>
+      </entry>
+    </interpolation>   
+    <center>
+      <x-m>0.686</x-m>
+      <y-m>0.0</y-m>
+      <z-m>-1.613</z-m>
+    </center>
+    <axis>
+      <x>0</x>
+      <y>-1</y>
+      <z>0</z>
+    </axis>
+  </animation> 
+ 
+  <animation>
+    <type>spin</type>
+    <object-name>GearWheelRight</object-name>
+    <property>gear/gear[2]/rollspeed-ms</property>
+    <!-- <property>sim/multiplay/generic/float[3]</property> -->
+    <factor>22.22</factor>
+    <center>
+      <x-m>1.241</x-m>
+      <y-m>0</y-m>
+      <z-m>-1.739</z-m>
+    </center>
+    <axis>
+      <x>0</x>
+      <y>-1</y>
+      <z>0</z>
+    </axis>
+  </animation> 
 
   <animation>
     <type>rotate</type>
@@ -984,10 +1135,6 @@
     <object-name>GearStrutLeftB</object-name>
     <object-name>GearStrutLeftC</object-name>
     <property>gear/gear[1]/position-norm</property>
-    <factor>-77</factor>
-    <offset-deg>77</offset-deg>
-    <min-deg>0</min-deg>
-    <max-deg>77</max-deg>
     <interpolation>
       <entry>
         <ind>0.0</ind>
@@ -1015,124 +1162,177 @@
   </animation>
 
   <animation>
-  <type>rotate</type>
-  <object-name>GearDoorLeftOuter</object-name>
-  <property>gear/gear[1]/position-norm</property>
-   <interpolation>
-    <entry>
-      <ind>0.0</ind>
-      <dep>90.0</dep>
-    </entry>
-    <entry>
-      <ind>0.25</ind>
-      <dep>0.0</dep>
-    </entry>
-    <entry>
-      <ind>1.0</ind>
-      <dep>0.0</dep>
-    </entry>
-  </interpolation>   
-  <center>
-   <x-m>2.13477</x-m>
-   <y-m>-2.34766</y-m>
-   <z-m>-0.532484</z-m>
-  </center>
-  <axis>
-   <x>0.993311</x>
-   <y>0</y>
-   <z>0.115467</z>
-  </axis>
- </animation> 
+    <type>rotate</type>
+    <object-name>GearWheelLeft</object-name>
+    <object-name>GearStrutLeftA</object-name>
+    <property>gear/gear[1]/compression-norm</property>
+      <interpolation>
+        <entry>
+          <ind>0.0</ind>
+          <dep>0</dep>
+        </entry>
+        <entry>
+          <ind>0.40354</ind>
+          <dep>12.5</dep>
+        </entry>
+        <entry>
+          <ind>0.807</ind>
+          <dep>25</dep>
+        </entry>
+        <entry>
+          <ind>1.252</ind>
+          <dep>37.5</dep>
+        </entry>
+    </interpolation>   
+    <center>
+      <x-m>0.686</x-m>
+      <y-m>0.0</y-m>
+      <z-m>-1.613</z-m>
+    </center>
+    <axis>
+      <x>0</x>
+      <y>-1</y>
+      <z>0</z>
+    </axis>
+  </animation> 
 
   <animation>
-  <type>rotate</type>
-  <object-name>GearDoorLeftInner</object-name>
-  <property>gear/gear[1]/position-norm</property>
-   <interpolation>
-    <entry>
-      <ind>0.0</ind>
-      <dep>-90.0</dep>
-    </entry>
-    <entry>
-      <ind>0.25</ind>
-      <dep>0.0</dep>
-    </entry>
-    <entry>
-      <ind>1.0</ind>
-      <dep>0.0</dep>
-    </entry>
-  </interpolation>   
-  <center>
-   <x-m>2.13477</x-m>
-   <y-m>-1.92188</y-m>
-   <z-m>-0.532484</z-m>
-  </center>
-  <axis>
-   <x>0.993311</x>
-   <y>0</y>
-   <z>0.115467</z>
-  </axis>
- </animation> 
+    <type>spin</type>
+    <object-name>GearWheelLeft</object-name>
+    <property>gear/gear[1]/rollspeed-ms</property>
+    <!-- <property>sim/multiplay/generic/float[2]</property> -->
+    <factor>22.22</factor>
+    <center>
+      <x-m>1.241</x-m>
+      <y-m>0</y-m>
+      <z-m>-1.739</z-m>
+    </center>
+    <axis>
+      <x>0</x>
+      <y>-1</y>
+      <z>0</z>
+    </axis>
+  </animation>
 
   <animation>
-  <type>rotate</type>
-  <object-name>GearDoorRightInner</object-name>
-  <property>gear/gear[2]/position-norm</property>
-   <interpolation>
-    <entry>
-      <ind>0.0</ind>
-      <dep>90.0</dep>
-    </entry>
-    <entry>
-      <ind>0.25</ind>
-      <dep>0.0</dep>
-    </entry>
-    <entry>
-      <ind>1.0</ind>
-      <dep>0.0</dep>
-    </entry>
-  </interpolation>   
-  <center>
-   <x-m>2.13477</x-m>
-   <y-m>1.92188</y-m>
-   <z-m>-0.532484</z-m>
-  </center>
-  <axis>
-   <x>0.993311</x>
-   <y>0</y>
-   <z>0.115467</z>
-  </axis>
- </animation> 
+    <type>rotate</type>
+    <object-name>GearDoorLeftOuter</object-name>
+    <property>gear/gear[1]/position-norm</property>
+    <interpolation>
+      <entry>
+        <ind>0.0</ind>
+        <dep>90.0</dep>
+      </entry>
+      <entry>
+        <ind>0.25</ind>
+        <dep>0.0</dep>
+      </entry>
+      <entry>
+        <ind>1.0</ind>
+        <dep>0.0</dep>
+      </entry>
+    </interpolation>   
+    <center>
+      <x-m>2.13477</x-m>
+      <y-m>-2.34766</y-m>
+      <z-m>-0.532484</z-m>
+    </center>
+    <axis>
+      <x>0.993311</x>
+      <y>0</y>
+      <z>0.115467</z>
+    </axis>
+  </animation> 
 
   <animation>
-  <type>rotate</type>
-  <object-name>GearDoorRightOuter</object-name>
-  <property>gear/gear[2]/position-norm</property>
-   <interpolation>
-    <entry>
-      <ind>0.0</ind>
-      <dep>-90.0</dep>
-    </entry>
-    <entry>
-      <ind>0.25</ind>
-      <dep>0.0</dep>
-    </entry>
-    <entry>
-      <ind>1.0</ind>
-      <dep>0.0</dep>
-    </entry>
-  </interpolation>   
-  <center>
-   <x-m>2.13477</x-m>
-   <y-m>2.34766</y-m>
-   <z-m>-0.532484</z-m>
-  </center>
-  <axis>
-   <x>0.993311</x>
-   <y>0</y>
-   <z>0.115467</z>
-  </axis>
- </animation> 
+    <type>rotate</type>
+    <object-name>GearDoorLeftInner</object-name>
+    <property>gear/gear[1]/position-norm</property>
+    <interpolation>
+      <entry>
+        <ind>0.0</ind>
+        <dep>-90.0</dep>
+      </entry>
+      <entry>
+        <ind>0.25</ind>
+        <dep>0.0</dep>
+      </entry>
+      <entry>
+        <ind>1.0</ind>
+        <dep>0.0</dep>
+      </entry>
+    </interpolation>   
+    <center>
+      <x-m>2.13477</x-m>
+      <y-m>-1.92188</y-m>
+      <z-m>-0.532484</z-m>
+    </center>
+    <axis>
+      <x>0.993311</x>
+      <y>0</y>
+      <z>0.115467</z>
+    </axis>
+  </animation> 
+
+  <animation>
+    <type>rotate</type>
+    <object-name>GearDoorRightInner</object-name>
+    <property>gear/gear[2]/position-norm</property>
+    <interpolation>
+      <entry>
+        <ind>0.0</ind>
+        <dep>90.0</dep>
+      </entry>
+      <entry>
+        <ind>0.25</ind>
+        <dep>0.0</dep>
+      </entry>
+      <entry>
+        <ind>1.0</ind>
+        <dep>0.0</dep>
+      </entry>
+    </interpolation>   
+    <center>
+      <x-m>2.13477</x-m>
+      <y-m>1.92188</y-m>
+      <z-m>-0.532484</z-m>
+    </center>
+    <axis>
+      <x>0.993311</x>
+      <y>0</y>
+      <z>0.115467</z>
+    </axis>
+  </animation> 
+
+  <animation>
+    <type>rotate</type>
+    <object-name>GearDoorRightOuter</object-name>
+    <property>gear/gear[2]/position-norm</property>
+    <interpolation>
+      <entry>
+        <ind>0.0</ind>
+        <dep>-90.0</dep>
+      </entry>
+      <entry>
+        <ind>0.25</ind>
+        <dep>0.0</dep>
+      </entry>
+      <entry>
+        <ind>1.0</ind>
+        <dep>0.0</dep>
+      </entry>
+    </interpolation>   
+    <center>
+      <x-m>2.13477</x-m>
+      <y-m>2.34766</y-m>
+      <z-m>-0.532484</z-m>
+    </center>
+    <axis>
+      <x>0.993311</x>
+      <y>0</y>
+      <z>0.115467</z>
+    </axis>
+  </animation> 
 
   <animation>
     <type>select</type>
@@ -1612,7 +1812,7 @@
  <animation>
   <type>material</type>
   <object-name>beacon</object-name>
-  <property-base>/sim/model/ov10/material/bellyBeacon</property-base>
+  <property-base>sim/model/ov10/material/bellyBeacon</property-base>
 		<diffuse>
 			<red-prop>diffuse/red</red-prop>
 			<green-prop>diffuse/green</green-prop>
@@ -1669,4 +1869,15 @@
 		<shininess-prop>shininess</shininess-prop>
  </animation>
 
+ <model>
+    <path>Aircraft/OV10/Effects/smoke.xml</path>
+    <offsets>
+      <x-m>  0 </x-m>
+      <y-m>  2.55 </y-m>
+      <z-m> -0.1 </z-m>
+      <roll-deg>    0 </roll-deg>
+      <pitch-deg>   90 </pitch-deg>
+      <heading-deg> 5 </heading-deg>
+    </offsets>
+  </model>
 </PropertyList>
