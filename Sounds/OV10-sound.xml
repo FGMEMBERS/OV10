@@ -13,7 +13,7 @@
       <volume>
         <property>/engines/engine[0]/n2</property>
         <type>log</type>
-        <factor>0.35</factor>
+        <factor>0.7</factor>
         <offset>0.5</offset>
       </volume>
       <pitch>
@@ -48,7 +48,7 @@
       <volume>
         <property>/engines/engine[0]/n2</property>
         <type>log</type>
-        <factor>0.02</factor>
+        <factor>0.2</factor>
 	<offset>0.2</offset>
       </volume>
         <pitch>
@@ -68,7 +68,7 @@
       <volume>
         <property>/engines/engine[1]/n2</property>
         <type>log</type>
-        <factor>0.35</factor>
+        <factor>0.7</factor>
         <offset>0.5</offset>
       </volume>
       <pitch>
@@ -103,7 +103,7 @@
       <volume>
         <property>/engines/engine[1]/n2</property>
         <type>log</type>
-        <factor>0.02</factor>
+        <factor>0.2</factor>
         <offset>0.2</offset>
       </volume>
       <pitch>
@@ -199,13 +199,13 @@
         <factor>-0.000015</factor>
         <offset>1.0</offset>
         <min>0.1</min>
-        <max>1.0</max>
+        <max>0.8</max>
       </volume>
       <volume>
         <property>/velocities/airspeed-kt</property>
-        <factor>0.0015</factor>
+        <factor>0.0006</factor>
         <min>0.03</min>
-        <max>0.25</max>
+        <max>0.16</max>
       </volume>
       <pitch>
         <property>/velocities/airspeed-kt</property>

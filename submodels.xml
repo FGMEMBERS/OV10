@@ -4,7 +4,7 @@
 
   <submodel>
     <name>left-guns</name>
-    <model>Aircraft/OV10/Models/USAFE/Stores/M60C/tracer.xml</model>
+    <model>Aircraft/DavePack/Stores/guns/tracer.xml</model>
     <trigger>controls/armament/gun-trigger</trigger>
     <speed>2800.0</speed>
     <repeat>true</repeat>
@@ -17,9 +17,35 @@
     <pitch-offset>0.0</pitch-offset>
     <wind>false</wind>
     <cd>0.193</cd>
-    <weight>0.0249</weight>
-    <eda>0.00065</eda> 
+   <weight>0.1</weight>
+    <cd>0.193</cd>
+    <eda>0.00136354</eda> 
     <life>2.0</life>
+  </submodel>
+
+<submodel>
+    <name>left-guns-bullet</name>
+    <model>Models/Geometry/null.ac</model>
+    <trigger>/controls/armament/gun-trigger</trigger>
+    <speed>2840.0</speed>
+    <repeat>true</repeat>
+    <delay>0</delay>
+    <count>-1</count>
+    <x-offset>3.0</x-offset>
+    <y-offset>-2.5</y-offset>
+    <z-offset>-2.2</z-offset>
+    <yaw-offset>0.0</yaw-offset>
+    <pitch-offset>0.0</pitch-offset>
+    <life>10.0</life>
+    <wind>false</wind>
+    <weight>0.1069</weight>
+    <cd>0.193</cd>
+    <eda>0.00136354</eda> 
+    <collision>true</collision>
+    <collision-report>sim/ai/aircraft/collision/bullet</collision-report>
+    <impact>true</impact>
+    <impact-report>sim/ai/aircraft/impact/bullet</impact-report>
+    <submodel-path>Aircraft/A-29B/Models/Impact/bullet-submodel.xml</submodel-path>
   </submodel>
 
   <submodel> 
@@ -43,7 +69,7 @@
 
   <submodel>
     <name>right-guns</name>
-    <model>Aircraft/OV10/Models/USAFE/Stores/M60C/tracer.xml</model>
+    <model>Aircraft/DavePack/Stores/guns/tracer.xml</model>
     <trigger>controls/armament/gun-trigger</trigger>
     <speed>2800.0</speed>
     <repeat>true</repeat>
@@ -55,10 +81,35 @@
     <yaw-offset>0.0</yaw-offset>
     <pitch-offset>0.0</pitch-offset>
     <wind>false</wind>
+   <weight>0.1</weight>
     <cd>0.193</cd>
-    <weight>0.0249</weight>
-    <eda>0.00065</eda> 
+    <eda>0.00136354</eda> 
     <life>2.0</life>
+  </submodel>
+
+ <submodel>
+    <name>right-guns-bullet</name>
+    <model>Models/Geometry/null.ac</model>
+    <trigger>/controls/armament/gun-trigger</trigger>
+    <speed>2840.0</speed>
+    <repeat>true</repeat>
+    <delay>0</delay>
+    <count>-1</count>
+    <x-offset>3.0</x-offset>
+    <y-offset>2.5</y-offset>
+    <z-offset>-2.2</z-offset>
+    <yaw-offset>0.0</yaw-offset>
+    <pitch-offset>0.0</pitch-offset>
+    <life>10.0</life>
+    <wind>false</wind>
+    <weight>0.1069</weight>
+    <cd>0.193</cd>
+    <eda>0.00136354</eda> 
+    <collision>true</collision>
+    <collision-report>sim/ai/aircraft/collision/bullet2</collision-report>
+    <impact>true</impact>
+    <impact-report>sim/ai/aircraft/impact/bullet2</impact-report>
+    <submodel-path>Aircraft/A-29B/Models/Impact/bullet-submodel.xml</submodel-path>
   </submodel>
 
   <submodel> 
@@ -81,46 +132,33 @@
   </submodel>
 
   <submodel>
-    <name>fire rocket - station 0</name>
-    <model>Aircraft/OV10/Models/USAFE/Stores/WP/williepete.ac</model>
+    <name>fire rocket - station 1</name>
+    <model>Aircraft/A-29B/Models/Stores/7x70mmPod/rocket.xml</model>
     <trigger>controls/armament/trigger1</trigger>
     <trigger-once>false</trigger-once>
-    <speed>1000.0</speed>
-    <repeat>false</repeat>
+    <speed>3000.0</speed>
+    <repeat>true</repeat>
+    <delay>.25</delay>
     <count>7</count>
-    <x-offset>3.0</x-offset>
-    <y-offset>-3.0</y-offset>
-    <z-offset>-2.8</z-offset>
+    <x-offset> 1.00</x-offset>
+    <y-offset>-8.83</y-offset>
+    <z-offset>-1.00</z-offset>
     <yaw-offset>0.0</yaw-offset>
     <pitch-offset>0.0</pitch-offset>
     <eda>0.0001</eda>
-  </submodel>
-
-  <submodel> 
-    <name>rocket-smoke</name>
-    <model>Aircraft/OV10/Models/USAFE/Stores/M60C/smoke.xml</model>
-    <trigger>controls/armament/trigger1</trigger>
-    <speed>10</speed>
-    <repeat>false</repeat>
-    <delay>0.05</delay>
-    <count>-1</count>
-    <x-offset>3.0</x-offset>
-    <y-offset>-3.0</y-offset>
-    <z-offset>-2.8</z-offset>
-    <yaw-offset>0.0</yaw-offset>
-    <pitch-offset>0.0</pitch-offset>
-    <eda>10</eda>
-    <wind>true</wind>
-    <buoyancy>33</buoyancy>
-    <life>1</life>
+    <collision>true</collision>
+    <collision-report>sim/ai/aircraft/collision/cannon</collision-report>
+    <impact>true</impact>
+    <impact-report>sim/ai/aircraft/impact/droptank</impact-report>
+    <submodel-path>Aircraft/A-29B/Models/Stores/7x70mmPod/rocket-submodel.xml</submodel-path>
   </submodel>
 
   <submodel>
     <name>fire rocket - station 4</name>
-    <model>Aircraft/OV10/Models/USAFE/Stores/WP/williepete.ac</model>
+    <model>Aircraft/A-29B/Models/Stores/7x70mmPod/rocket.xml</model>
     <trigger>controls/armament/trigger5</trigger>
     <trigger-once>false</trigger-once>
-    <speed>1000.0</speed>
+    <speed>3000.0</speed>
     <repeat>true</repeat>
     <delay>0.10</delay>
     <count>7</count>
@@ -130,47 +168,90 @@
     <yaw-offset>0.0</yaw-offset>
     <pitch-offset>0.0</pitch-offset>
     <eda>0.0001</eda>
+    <collision>true</collision>
+    <collision-report>sim/ai/aircraft/collision/cannon</collision-report>
+    <impact>true</impact>
+    <impact-report>sim/ai/aircraft/impact/droptank</impact-report>
+ <submodel-path>Aircraft/A-29B/Models/Stores/7x70mmPod/rocket-submodel.xml</submodel-path>
   </submodel>
 
-  <submodel> 
-    <name>rocket-smoke2</name>
-    <model>Aircraft/OV10/Models/USAFE/Stores/M60C/smoke.xml</model>
-    <trigger>controls/armament/trigger5</trigger>
-    <speed>10</speed>
-    <repeat>true</repeat>
-    <delay>0.05</delay>
-    <count>15</count>
-    <x-offset>3.0</x-offset>
-    <y-offset>3.0</y-offset>
-    <z-offset>-2.8</z-offset>
-    <yaw-offset>0.0</yaw-offset>
-    <pitch-offset>0.0</pitch-offset>
-    <eda>10</eda>
-    <wind>true</wind>
-    <buoyancy>33</buoyancy>
-    <life>1</life>
-  </submodel>
 
-<!--
   <submodel>
     <name>smoke generator</name>
     <model>Models/Geometry/smoke_trail.ac</model>
     <trigger>controls/armament/smoke</trigger>
-    <speed>20.0</speed>
+    <speed>0.0</speed>
     <repeat>true</repeat>
-    <delay>0.17</delay>
+    <delay>0.05</delay>
     <count>-1</count>
-    <x-offset>-4.0</x-offset>
-    <y-offset>9.0</y-offset>
+    <x-offset>4.0</x-offset>
+    <y-offset>-1.0</y-offset>
     <z-offset>-1.0</z-offset>
     <yaw-offset>180.0</yaw-offset>
     <pitch-offset>0.0</pitch-offset>
     <eda>0.01</eda>
-    <buoyancy>32.0</buoyancy>
+    <buoyancy>25.0</buoyancy>
     <aero-stabilise>false</aero-stabilise>
-    <life>1.7</life>
+    <life>50</life>
   </submodel>
--->
+
+<submodel>
+    <name>smoke generator2</name>
+    <model>Models/Geometry/smoke_trail.ac</model>
+    <trigger>controls/armament/smoke</trigger>
+    <speed>0.0</speed>
+    <repeat>true</repeat>
+    <delay>0.05</delay>
+    <count>-1</count>
+    <x-offset>2.0</x-offset>
+    <y-offset>-1.0</y-offset>
+    <z-offset>-1.0</z-offset>
+    <yaw-offset>180.0</yaw-offset>
+    <pitch-offset>0.0</pitch-offset>
+    <eda>0.01</eda>
+    <buoyancy>25.0</buoyancy>
+    <aero-stabilise>false</aero-stabilise>
+    <life>50</life>
+  </submodel>
+
+<submodel>
+    <name>smoke generator3</name>
+    <model>Models/Geometry/smoke_trail.ac</model>
+    <trigger>controls/armament/smoke</trigger>
+    <speed>0.0</speed>
+    <repeat>true</repeat>
+    <delay>0.05</delay>
+    <count>-1</count>
+    <x-offset>-2.0</x-offset>
+    <y-offset>-1.0</y-offset>
+    <z-offset>-1.0</z-offset>
+    <yaw-offset>180.0</yaw-offset>
+    <pitch-offset>0.0</pitch-offset>
+    <eda>0.01</eda>
+    <buoyancy>25.0</buoyancy>
+    <aero-stabilise>false</aero-stabilise>
+    <life>50</life>
+  </submodel>
+
+<submodel>
+    <name>smoke generator4</name>
+    <model>Models/Geometry/smoke_trail.ac</model>
+    <trigger>controls/armament/smoke</trigger>
+    <speed>0.0</speed>
+    <repeat>true</repeat>
+    <delay>0.05</delay>
+    <count>-1</count>
+    <x-offset>-4.0</x-offset>
+    <y-offset>-1.0</y-offset>
+    <z-offset>-1.0</z-offset>
+    <yaw-offset>180.0</yaw-offset>
+    <pitch-offset>0.0</pitch-offset>
+    <eda>0.01</eda>
+    <buoyancy>25.0</buoyancy>
+    <aero-stabilise>false</aero-stabilise>
+    <life>50</life>
+  </submodel>
+
 
   <submodel>
     <name>jettison station 0</name>
@@ -258,43 +339,22 @@
   </submodel>
 
   <submodel> 
-    <name>parachutist</name>
-    <model>Models/Geometry/parachuter.xml</model>
-    <trigger>controls/jump-signal</trigger>
-    <speed>0</speed>
+    <name>engine-smoke</name>
+    <model>Aircraft/OV10/Models/USAFE/ExternalSystems/EngineSmoke/smoke.xml</model>
+    <trigger>controls/smoke</trigger>
+    <speed>10</speed>
     <repeat>true</repeat>
-    <delay>1</delay>
-    <count>5</count>
-    <x-offset>-5</x-offset>
-    <y-offset>0</y-offset>
-    <z-offset>-2</z-offset>
+    <delay>0.005</delay>
+    <count>30000</count>
+    <x-offset>-10</x-offset><!--x-offset>-2</x-offset-->
+    <y-offset>8.5</y-offset>
+    <z-offset>2</z-offset>
     <yaw-offset>0.0</yaw-offset>
     <pitch-offset>0.0</pitch-offset>
-    <cd>1.2</cd>
-    <eda>100</eda>
-    <weight>200</weight>
+    <eda>20</eda>
     <wind>true</wind>
-    <buoyancy>20</buoyancy>
-    <life>600</life>
-  </submodel>
-
-  <submodel> 
-    <name>eject-front</name>
-    <model>Models/Geometry/ejector.xml</model>
-    <trigger>controls/eject</trigger>
-    <speed>300</speed>
-    <repeat>false</repeat>
-    <x-offset>3</x-offset>
-    <y-offset>0</y-offset>
-    <z-offset>0</z-offset>
-    <yaw-offset>0.0</yaw-offset>
-    <pitch-offset>90.0</pitch-offset>
-    <cd>1.2</cd>
-    <eda>100</eda>
-    <weight>200</weight>
-    <wind>true</wind>
-    <buoyancy>20</buoyancy>
-    <life>600</life>
+    <buoyancy>33</buoyancy>
+    <life>10</life>
   </submodel>
 
 </PropertyList>

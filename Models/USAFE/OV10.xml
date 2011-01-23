@@ -598,152 +598,12 @@
 
  <!-- ************* Propellers **************************** -->
 
- <animation>
-  <type>select</type>
-  <object-name>PropLeft</object-name>
-  <condition>
-   <less-than>
-    <property>engines/engine[0]/n2</property>
-    <value>2</value>
-   </less-than>
-  </condition>
- </animation>
-
- <animation>
-  <type>select</type>
-  <object-name>PropRight</object-name>
-  <condition>
-   <less-than>
-    <property>engines/engine[1]/n2</property>
-    <value>2</value>
-   </less-than>
-  </condition>
- </animation>
+<model>
+  <name>Propellers</name>
+  <path>Aircraft/OV10/Models/USAFE/OV10_Props.xml</path>
+</model>
 
 
- <animation>
-  <type>select</type>
-  <object-name>PropBlurLeft</object-name>
-  <condition>
-   <and>
-    <greater-than>
-     <property>engines/engine[0]/n2</property>
-     <value>2</value>
-    </greater-than>
-    <less-than>
-     <property>engines/engine[0]/n2</property>
-     <value>30</value>
-    </less-than>
-   </and>
-  </condition>
- </animation>
-
- <animation>
-  <type>select</type>
-  <object-name>PropBlurRight</object-name>
-  <condition>
-   <and>
-    <greater-than>
-     <property>engines/engine[1]/n2</property>
-     <value>2</value>
-    </greater-than>
-    <less-than>
-     <property>engines/engine[1]/n2</property>
-     <value>30</value>
-    </less-than>
-   </and>
-  </condition>
- </animation>
-
- <animation>
-  <type>select</type>
-  <object-name>noshadow.lh_prop_disk</object-name>
-  <condition>
-    <greater-than>
-     <property>engines/engine[0]/n2</property>
-     <value>30</value>
-    </greater-than>
-  </condition>
- </animation>
-
- <animation>
-  <type>select</type>
-  <object-name>noshadow.rh_prop_disk</object-name>
-  <condition>
-    <greater-than>
-     <property>engines/engine[1]/n2</property>
-     <value>30</value>
-    </greater-than>
-  </condition>
- </animation>
-
- <animation>
-  <type>spin</type>
-  <object-name>PropLeft</object-name>
-  <property>engines/engine[0]/thrust_lb</property>
-  <factor>1.0</factor>
-  <center>
-   <x-m>0.0</x-m>
-   <y-m>-2.14</y-m>
-   <z-m>-0.13</z-m>
-  </center>
-  <axis>
-   <x>1.0</x>
-   <y>0.0</y>
-   <z>0.0</z>
-  </axis>
- </animation>
-
- <animation>
-  <type>spin</type>
-  <object-name>PropBlurLeft</object-name>
-  <property>engines/engine[0]/thrust_lb</property>
-  <factor>1.0</factor>
-  <center>
-   <x-m>0.0</x-m>
-   <y-m>-2.14</y-m>
-   <z-m>-0.13</z-m>
-  </center>
-  <axis>
-   <x>1.0</x>
-   <y>0.0</y>
-   <z>0.0</z>
-  </axis>
- </animation>
-
- <animation>
-  <type>spin</type>
-  <object-name>PropRight</object-name>
-  <property>engines/engine[0]/thrust_lb</property>
-  <factor>-1.0</factor>
-  <center>
-   <x-m>0.0</x-m>
-   <y-m>2.14</y-m>
-   <z-m>-0.13</z-m>
-  </center>
-  <axis>
-   <x>1.0</x>
-   <y>0.0</y>
-   <z>0.0</z>
-  </axis>
- </animation>
-
- <animation>
-  <type>spin</type>
-  <object-name>PropBlurRight</object-name>
-  <property>engines/engine[0]/thrust_lb</property>
-  <factor>-1.0</factor>
-  <center>
-   <x-m>0.0</x-m>
-   <y-m>2.14</y-m>
-   <z-m>-0.13</z-m>
-  </center>
-  <axis>
-   <x>1.0</x>
-   <y>0.0</y>
-   <z>0.0</z>
-  </axis>
- </animation>
 
 <!-- ****************** Flight Controls ***************** -->
 
@@ -873,40 +733,10 @@
   
   <animation>
     <type>rotate</type>
-    <object-name>GearWheelNose</object-name>
-    <object-name>GearStrutNose</object-name>
-    <object-name>GearStrutNoseL</object-name>
-    <property>gear/gear[0]/position-norm</property>
-    <interpolation>
-      <entry>
-        <ind>0.0</ind>
-        <dep>105.0</dep>
-      </entry>
-      <entry>
-        <ind>0.25</ind>
-        <dep>105.0</dep>
-      </entry>      
-      <entry>
-        <ind>1.0</ind>
-        <dep>0.0</dep>
-      </entry>
-    </interpolation>
-    <center>
-      <x-m>-3</x-m>
-      <y-m>0</y-m>
-      <z-m>-0.75</z-m>
-    </center>
-    <axis>
-      <x>0</x>
-      <y>1</y>
-      <z>0</z>
-    </axis>
-  </animation>
-
-  <animation>
-    <type>rotate</type>
-    <object-name>GearWheelNose</object-name>
-    <object-name>GearStrutNoseL</object-name>
+    <object-name>TorsionLink</object-name>
+    <object-name>WheelYoke</object-name>
+    <object-name>ShockPistonN</object-name>
+    <object-name>TireN</object-name>
     <condition>
       <greater-than>
         <property>gear/gear[0]/position-norm</property>
@@ -914,12 +744,11 @@
       </greater-than>
     </condition>
     <property>gear/gear[0]/steering-norm</property>
-    <!-- <property>sim/multiplay/generic/float[0]</property> -->
-    <factor>-35</factor>
+    <factor>-10</factor>
     <center>
-      <x-m>-3.15</x-m>
+      <x-m>-3.157</x-m>
       <y-m>0</y-m>
-      <z-m>-1.73828</z-m>
+      <z-m>0</z-m>
     </center>
     <axis>
       <x>0</x>
@@ -930,49 +759,157 @@
 
   <animation>
     <type>rotate</type>
-    <object-name>GearWheelNose</object-name>
-    <object-name>GearStrutNoseL</object-name>
+    <object-name>StrutN</object-name>
+    <object-name>TorsionLink</object-name>
+    <object-name>WheelYoke</object-name>
+    <object-name>ShockPistonN</object-name>
+    <object-name>TireN</object-name>
+    <object-name>DragStrutN</object-name>
+    <property>gear/gear[0]/position-norm</property>
+    <interpolation>
+      <entry><ind> 0.0</ind><dep>125.0</dep></entry>
+      <entry><ind> 1.0</ind><dep>  0.0</dep></entry>
+    </interpolation>   
+    <center>
+      <x-m>-3.157</x-m>
+      <y-m>0</y-m>
+      <z-m>-0.934</z-m>
+    </center>
+    <axis>
+      <x>0</x>
+      <y>1</y>
+      <z>0</z>
+    </axis>
+  </animation>
+  <animation>
+    <type>rotate</type>
+    <object-name>DragStrutN</object-name>
+    <property>gear/gear[0]/position-norm</property>
+    <interpolation>
+      <entry><ind> 0.0</ind><dep>-90.0</dep></entry>
+      <entry><ind> 0.5</ind><dep>-60.0</dep></entry>
+      <entry><ind>0.75</ind><dep>-35.0</dep></entry>
+      <entry><ind> 1.0</ind><dep>  0.0</dep></entry>
+    </interpolation>   
+    <center>
+      <x-m>-3.012</x-m>
+      <y-m>0</y-m>
+      <z-m>-1.243</z-m>
+    </center>
+    <axis>
+      <x>0</x>
+      <y>1</y>
+      <z>0</z>
+    </axis>
+  </animation>
+
+  <animation>
+    <type>rotate</type>
+    <object-name>TireL</object-name>
+    <object-name>BrakeL</object-name>
+    <object-name>StrutL</object-name>
+    <object-name>TorsionStrutL</object-name>
+    <object-name>ShockStrutL</object-name>
+    <object-name>ShockPistonL</object-name>
+    <object-name>ShockLinkL</object-name>
+    <object-name>DragStrutL</object-name>
+    <property>gear/gear[1]/position-norm</property>
+    <interpolation>
+      <entry><ind> 0.0</ind><dep>101.0</dep></entry>
+      <entry><ind>0.25</ind><dep>101.0</dep></entry>
+      <entry><ind> 1.0</ind><dep>  0.0</dep></entry>
+    </interpolation>   
+    <center>
+      <x-m>0.917</x-m>
+      <y-m>0</y-m>
+      <z-m>-0.550</z-m>
+    </center>
+    <axis>
+      <x>0</x>
+      <y>-1</y>
+      <z>0</z>
+    </axis>
+  </animation>
+  <animation>
+    <type>rotate</type>
+    <object-name>DragStrutL</object-name>
+    <property>gear/gear[1]/position-norm</property>
+    <interpolation>
+      <entry><ind> 0.0</ind><dep>-49.0</dep></entry>
+      <entry><ind>0.25</ind><dep>-49.0</dep></entry>
+      <entry><ind> 1.0</ind><dep>  0.0</dep></entry>
+    </interpolation>   
+    <center>
+      <x-m>0.992</x-m>
+      <y-m>0</y-m>
+      <z-m>-0.981</z-m>
+    </center>
+    <axis>
+      <x>0</x>
+      <y>-1</y>
+      <z>0</z>
+    </axis>
+  </animation>
+
+  <animation>
+    <type>rotate</type>
+    <object-name>TireR</object-name>
+    <object-name>BrakeR</object-name>
+    <object-name>StrutR</object-name>
+    <object-name>TorsionStrutR</object-name>
+    <object-name>ShockStrutR</object-name>
+    <object-name>ShockPistonR</object-name>
+    <object-name>ShockLinkR</object-name>
+    <object-name>DragStrutR</object-name>
+    <property>gear/gear[2]/position-norm</property>
+    <interpolation>
+      <entry><ind> 0.0</ind><dep>101.0</dep></entry>
+      <entry><ind>0.25</ind><dep>101.0</dep></entry>
+      <entry><ind> 1.0</ind><dep>  0.0</dep></entry>
+    </interpolation>   
+    <center>
+      <x-m>0.917</x-m>
+      <y-m>0</y-m>
+      <z-m>-0.550</z-m>
+    </center>
+    <axis>
+      <x>0</x>
+      <y>-1</y>
+      <z>0</z>
+    </axis>
+  </animation>
+  <animation>
+    <type>rotate</type>
+    <object-name>DragStrutR</object-name>
+    <property>gear/gear[2]/position-norm</property>
+    <interpolation>
+      <entry><ind> 0.0</ind><dep>-49.0</dep></entry>
+      <entry><ind>0.25</ind><dep>-49.0</dep></entry>
+      <entry><ind> 1.0</ind><dep> 0.0</dep></entry>
+    </interpolation>   
+    <center>
+      <x-m>0.992</x-m>
+      <y-m>0</y-m>
+      <z-m>-0.981</z-m>
+    </center>
+    <axis>
+      <x>0</x>
+      <y>-1</y>
+      <z>0</z>
+    </axis>
+  </animation>
+
+
+  <animation>
+    <type>rotate</type>
+    <object-name>TireN</object-name>
+    <object-name>WheelYoke</object-name>
     <property>gear/gear[0]/compression-norm</property>
-    <interpolation>
-      <entry>
-        <ind>0.0</ind>
-        <dep>0</dep>
-      </entry>
-      <entry>
-        <ind>0.456</ind>
-        <dep>19.34</dep>
-      </entry>
-      <entry>
-        <ind>0.912</ind>
-        <dep>38.68</dep>
-      </entry>
-      <entry>
-        <ind>1.365</ind>
-        <dep>54.34</dep>
-      </entry>
-    </interpolation>   
+    <factor>15</factor>
     <center>
-      <x-m>-3.14</x-m>
-      <y-m>0.0</y-m>
-      <z-m>-1.599</z-m>
-    </center>
-    <axis>
-      <x>0</x>
-      <y>-1</y>
-      <z>0</z>
-    </axis>
-  </animation> 
-
-  <animation>
-    <type>spin</type>
-    <object-name>GearWheelNose</object-name>
-    <property>gear/gear[0]/rollspeed-ms</property>
-    <!-- <property>sim/multiplay/generic/float[1]</property> -->
-    <factor>28.57</factor>
-    <center>
-      <x-m>-2.745</x-m>
+      <x-m>-3.329</x-m>
       <y-m>0</y-m>
-      <z-m>-1.739</z-m>
+      <z-m>-1.571</z-m>
     </center>
     <axis>
       <x>0</x>
@@ -980,232 +917,29 @@
       <z>0</z>
     </axis>
   </animation>
-
   <animation>
-    <type>rotate</type>
-    <object-name>GearDoorNoseLeft</object-name>
-    <property>gear/gear[0]/position-norm</property>
-    <interpolation>
-      <entry>
-        <ind>0.0</ind>
-        <dep>90.0</dep>
-      </entry>
-      <entry>
-        <ind>0.25</ind>
-        <dep>0.0</dep>
-      </entry>
-      <entry>
-        <ind>1.0</ind>
-        <dep>0.0</dep>
-      </entry>
-    </interpolation>   
-    <center>
-      <x-m>-1.6</x-m>
-      <y-m>-0.167969</y-m>
-      <z-m>-1.0685</z-m>
-    </center>
+    <type>translate</type>
+    <object-name>ShockPistonN</object-name>
+    <property>gear/gear[0]/compression-norm</property>
+    <factor>0.05</factor>
     <axis>
-      <x>1</x>
+      <x>0</x>
       <y>0</y>
-      <z>0</z>
+      <z>1</z>
     </axis>
   </animation>
 
   <animation>
     <type>rotate</type>
-    <object-name>GearDoorNoseRight</object-name>
-    <property>gear/gear[0]/position-norm</property>
-    <interpolation>
-      <entry>
-        <ind>0.0</ind>
-        <dep>90.0</dep>
-      </entry>
-      <entry>
-        <ind>0.25</ind>
-        <dep>0.0</dep>
-      </entry>
-      <entry>
-        <ind>1.0</ind>
-        <dep>0.0</dep>
-      </entry>
-    </interpolation>   
-    <center>
-      <x-m>-1.6</x-m>
-      <y-m>0.167969</y-m>
-      <z-m>-1.0685</z-m>
-    </center>
-    <axis>
-      <x>-1</x>
-      <y>0</y>
-      <z>0</z>
-    </axis>
-  </animation> 
-
-  <animation>
-    <type>rotate</type>
-    <object-name>GearWheelRight</object-name>
-    <object-name>GearStrutRightA</object-name>
-    <object-name>GearStrutRightB</object-name>
-    <object-name>GearStrutRightC</object-name>
-    <property>gear/gear[2]/position-norm</property>
-    <interpolation>
-      <entry>
-        <ind>0.0</ind>
-        <dep>77.0</dep>
-      </entry>
-      <entry>
-        <ind>0.25</ind>
-        <dep>77.0</dep>
-      </entry>
-      <entry>
-        <ind>1.0</ind>
-        <dep>0.0</dep>
-      </entry>
-    </interpolation>   
-    <center>
-      <x-m>0.3</x-m>
-      <y-m>0.0</y-m>
-      <z-m>-0.725</z-m>
-    </center>
-    <axis>
-      <x>0</x>
-      <y>-1</y>
-      <z>0</z>
-    </axis>
-  </animation>
- 
-
-  <animation>
-    <type>rotate</type>
-    <object-name>GearWheelRight</object-name>
-    <object-name>GearStrutRightA</object-name>
-    <property>gear/gear[2]/compression-norm</property> 
-    <interpolation>
-      <entry>
-        <ind>0.0</ind>
-        <dep>0</dep>
-      </entry>
-      <entry>
-        <ind>0.40354</ind>
-        <dep>12.5</dep>
-      </entry>
-      <entry>
-        <ind>0.807</ind>
-        <dep>25</dep>
-      </entry>
-      <entry>
-        <ind>1.252</ind>
-        <dep>37.5</dep>
-      </entry>
-    </interpolation>   
-    <center>
-      <x-m>0.686</x-m>
-      <y-m>0.0</y-m>
-      <z-m>-1.613</z-m>
-    </center>
-    <axis>
-      <x>0</x>
-      <y>-1</y>
-      <z>0</z>
-    </axis>
-  </animation> 
- 
-  <animation>
-    <type>spin</type>
-    <object-name>GearWheelRight</object-name>
-    <property>gear/gear[2]/rollspeed-ms</property>
-    <!-- <property>sim/multiplay/generic/float[3]</property> -->
-    <factor>22.22</factor>
-    <center>
-      <x-m>1.241</x-m>
-      <y-m>0</y-m>
-      <z-m>-1.739</z-m>
-    </center>
-    <axis>
-      <x>0</x>
-      <y>-1</y>
-      <z>0</z>
-    </axis>
-  </animation> 
-
-  <animation>
-    <type>rotate</type>
-    <object-name>GearWheelLeft</object-name>
-    <object-name>GearStrutLeftA</object-name>
-    <object-name>GearStrutLeftB</object-name>
-    <object-name>GearStrutLeftC</object-name>
-    <property>gear/gear[1]/position-norm</property>
-    <interpolation>
-      <entry>
-        <ind>0.0</ind>
-        <dep>77.0</dep>
-      </entry>
-      <entry>
-        <ind>0.25</ind>
-        <dep>77.0</dep>
-      </entry>
-      <entry>
-        <ind>1.0</ind>
-        <dep>0.0</dep>
-      </entry>
-    </interpolation>   
-    <center>
-      <x-m>0.3</x-m>
-      <y-m>0</y-m>
-      <z-m>-0.725</z-m>
-    </center>
-    <axis>
-      <x>0</x>
-      <y>-1</y>
-      <z>0</z>
-    </axis>
-  </animation>
-
-  <animation>
-    <type>rotate</type>
-    <object-name>GearWheelLeft</object-name>
-    <object-name>GearStrutLeftA</object-name>
+    <object-name>TireL</object-name>
+    <object-name>BrakeL</object-name>
+    <object-name>TorsionStrutL</object-name>
     <property>gear/gear[1]/compression-norm</property>
-      <interpolation>
-        <entry>
-          <ind>0.0</ind>
-          <dep>0</dep>
-        </entry>
-        <entry>
-          <ind>0.40354</ind>
-          <dep>12.5</dep>
-        </entry>
-        <entry>
-          <ind>0.807</ind>
-          <dep>25</dep>
-        </entry>
-        <entry>
-          <ind>1.252</ind>
-          <dep>37.5</dep>
-        </entry>
-    </interpolation>   
+    <factor>15</factor>
     <center>
-      <x-m>0.686</x-m>
-      <y-m>0.0</y-m>
-      <z-m>-1.613</z-m>
-    </center>
-    <axis>
-      <x>0</x>
-      <y>-1</y>
-      <z>0</z>
-    </axis>
-  </animation> 
-
-  <animation>
-    <type>spin</type>
-    <object-name>GearWheelLeft</object-name>
-    <property>gear/gear[1]/rollspeed-ms</property>
-    <!-- <property>sim/multiplay/generic/float[2]</property> -->
-    <factor>22.22</factor>
-    <center>
-      <x-m>1.241</x-m>
+      <x-m>0.699</x-m>
       <y-m>0</y-m>
-      <z-m>-1.739</z-m>
+      <z-m>-1.796</z-m>
     </center>
     <axis>
       <x>0</x>
@@ -1213,132 +947,204 @@
       <z>0</z>
     </axis>
   </animation>
+  <animation>
+    <type>translate</type>
+    <object-name>ShockStrutL</object-name>
+    <property>gear/gear[1]/compression-norm</property>
+    <factor>0.08</factor>
+    <axis>
+      <x>0</x>
+      <y>0</y>
+      <z>1</z>
+    </axis>
+  </animation>
 
   <animation>
     <type>rotate</type>
-    <object-name>GearDoorLeftOuter</object-name>
-    <property>gear/gear[1]/position-norm</property>
-    <interpolation>
-      <entry>
-        <ind>0.0</ind>
-        <dep>90.0</dep>
-      </entry>
-      <entry>
-        <ind>0.25</ind>
-        <dep>0.0</dep>
-      </entry>
-      <entry>
-        <ind>1.0</ind>
-        <dep>0.0</dep>
-      </entry>
-    </interpolation>   
+    <object-name>TireR</object-name>
+    <object-name>BrakeR</object-name>
+    <object-name>TorsionStrutR</object-name>
+    <property>gear/gear[2]/compression-norm</property>
+    <factor>15</factor>
     <center>
-      <x-m>2.13477</x-m>
-      <y-m>-2.34766</y-m>
-      <z-m>-0.532484</z-m>
+      <x-m>0.699</x-m>
+      <y-m>0</y-m>
+      <z-m>-1.796</z-m>
     </center>
     <axis>
-      <x>0.993311</x>
-      <y>0</y>
-      <z>0.115467</z>
+      <x>0</x>
+      <y>-1</y>
+      <z>0</z>
     </axis>
-  </animation> 
+  </animation>
+  <animation>
+    <type>translate</type>
+    <object-name>ShockStrutR</object-name>
+    <property>gear/gear[2]/compression-norm</property>
+    <factor>0.08</factor>
+    <axis>
+      <x>0</x>
+      <y>0</y>
+      <z>1</z>
+    </axis>
+  </animation>
+
+
+
+
+ <animation>
+  <type>rotate</type>
+  <object-name>GearDoorNoseLeft</object-name>
+  <property>gear/gear[0]/position-norm</property>
+   <interpolation>
+    <entry>
+      <ind>0.0</ind>
+      <dep>90.0</dep>
+    </entry>
+    <entry>
+      <ind>0.25</ind>
+      <dep>0.0</dep>
+    </entry>
+    <entry>
+      <ind>1.0</ind>
+      <dep>0.0</dep>
+    </entry>
+  </interpolation>   
+  <center>
+   <x-m>-1.6</x-m>
+   <y-m>-0.167969</y-m>
+   <z-m>-1.0685</z-m>
+  </center>
+  <axis>
+   <x>1</x>
+   <y>0</y>
+   <z>0</z>
+  </axis>
+ </animation>
 
   <animation>
-    <type>rotate</type>
-    <object-name>GearDoorLeftInner</object-name>
-    <property>gear/gear[1]/position-norm</property>
-    <interpolation>
-      <entry>
-        <ind>0.0</ind>
-        <dep>-90.0</dep>
-      </entry>
-      <entry>
-        <ind>0.25</ind>
-        <dep>0.0</dep>
-      </entry>
-      <entry>
-        <ind>1.0</ind>
-        <dep>0.0</dep>
-      </entry>
-    </interpolation>   
-    <center>
-      <x-m>2.13477</x-m>
-      <y-m>-1.92188</y-m>
-      <z-m>-0.532484</z-m>
-    </center>
-    <axis>
-      <x>0.993311</x>
-      <y>0</y>
-      <z>0.115467</z>
-    </axis>
-  </animation> 
+  <type>rotate</type>
+  <object-name>GearDoorNoseRight</object-name>
+  <property>gear/gear[0]/position-norm</property>
+   <interpolation>
+    <entry>
+      <ind>0.0</ind>
+      <dep>90.0</dep>
+    </entry>
+    <entry>
+      <ind>0.25</ind>
+      <dep>0.0</dep>
+    </entry>
+    <entry>
+      <ind>1.0</ind>
+      <dep>0.0</dep>
+    </entry>
+  </interpolation>   
+  <center>
+   <x-m>-1.6</x-m>
+   <y-m>0.167969</y-m>
+   <z-m>-1.0685</z-m>
+  </center>
+  <axis>
+   <x>-1</x>
+   <y>0</y>
+   <z>0</z>
+  </axis>
+ </animation> 
 
   <animation>
-    <type>rotate</type>
-    <object-name>GearDoorRightInner</object-name>
-    <property>gear/gear[2]/position-norm</property>
-    <interpolation>
-      <entry>
-        <ind>0.0</ind>
-        <dep>90.0</dep>
-      </entry>
-      <entry>
-        <ind>0.25</ind>
-        <dep>0.0</dep>
-      </entry>
-      <entry>
-        <ind>1.0</ind>
-        <dep>0.0</dep>
-      </entry>
-    </interpolation>   
-    <center>
-      <x-m>2.13477</x-m>
-      <y-m>1.92188</y-m>
-      <z-m>-0.532484</z-m>
-    </center>
-    <axis>
-      <x>0.993311</x>
-      <y>0</y>
-      <z>0.115467</z>
-    </axis>
-  </animation> 
+  <type>rotate</type>
+  <object-name>GearDoorLeftOuter</object-name>
+  <property>gear/gear[1]/position-norm</property>
+  <interpolation>
+    <entry><ind> 0.0</ind><dep>90.0</dep></entry>
+    <entry><ind>0.25</ind><dep> 0.0</dep></entry>
+    <entry><ind> 1.0</ind><dep> 0.0</dep></entry>
+  </interpolation>   
+  <center>
+   <x-m>2.13477</x-m>
+   <y-m>-2.34766</y-m>
+   <z-m>-0.632484</z-m>
+  </center>
+  <axis>
+   <x>0.993311</x>
+   <y>0</y>
+   <z>0.115467</z>
+  </axis>
+ </animation> 
 
   <animation>
-    <type>rotate</type>
-    <object-name>GearDoorRightOuter</object-name>
-    <property>gear/gear[2]/position-norm</property>
-    <interpolation>
-      <entry>
-        <ind>0.0</ind>
-        <dep>-90.0</dep>
-      </entry>
-      <entry>
-        <ind>0.25</ind>
-        <dep>0.0</dep>
-      </entry>
-      <entry>
-        <ind>1.0</ind>
-        <dep>0.0</dep>
-      </entry>
-    </interpolation>   
-    <center>
-      <x-m>2.13477</x-m>
-      <y-m>2.34766</y-m>
-      <z-m>-0.532484</z-m>
-    </center>
-    <axis>
-      <x>0.993311</x>
-      <y>0</y>
-      <z>0.115467</z>
-    </axis>
-  </animation> 
+  <type>rotate</type>
+  <object-name>GearDoorLeftInner</object-name>
+  <property>gear/gear[1]/position-norm</property>
+  <interpolation>
+    <entry><ind> 0.0</ind><dep>-90.0</dep></entry>
+    <entry><ind>0.25</ind><dep>  0.0</dep></entry>
+    <entry><ind> 1.0</ind><dep>  0.0</dep></entry>
+  </interpolation>   
+  <center>
+   <x-m>2.13477</x-m>
+   <y-m>-1.92188</y-m>
+   <z-m>-0.632484</z-m>
+  </center>
+  <axis>
+   <x>0.993311</x>
+   <y>0</y>
+   <z>0.115467</z>
+  </axis>
+ </animation> 
 
+  <animation>
+  <type>rotate</type>
+  <object-name>GearDoorRightInner</object-name>
+  <property>gear/gear[2]/position-norm</property>
+  <interpolation>
+    <entry><ind> 0.0</ind><dep>90.0</dep></entry>
+    <entry><ind>0.25</ind><dep> 0.0</dep></entry>
+    <entry><ind> 1.0</ind><dep> 0.0</dep></entry>
+  </interpolation>   
+  <center>
+   <x-m>2.13477</x-m>
+   <y-m>1.92188</y-m>
+   <z-m>-0.632484</z-m>
+  </center>
+  <axis>
+   <x>0.993311</x>
+   <y>0</y>
+   <z>0.115467</z>
+  </axis>
+ </animation> 
+
+  <animation>
+  <type>rotate</type>
+  <object-name>GearDoorRightOuter</object-name>
+  <property>gear/gear[2]/position-norm</property>
+  <interpolation>
+    <entry><ind> 0.0</ind><dep>-90.0</dep></entry>
+    <entry><ind>0.25</ind><dep>  0.0</dep></entry>
+    <entry><ind> 1.0</ind><dep>  0.0</dep></entry>
+  </interpolation>   
+  <center>
+   <x-m>2.13477</x-m>
+   <y-m>2.34766</y-m>
+   <z-m>-0.632484</z-m>
+  </center>
+  <axis>
+   <x>0.993311</x>
+   <y>0</y>
+   <z>0.115467</z>
+  </axis>
+ </animation> 
+
+<!--
   <animation>
     <type>select</type>
-    <object-name>GearWheelNose</object-name>
-    <object-name>GearStrutNose</object-name>
-    <object-name>GearStrutNoseL</object-name>
+    <object-name>StrutN</object-name>
+    <object-name>DragStrutN</object-name>
+    <object-name>TorsionLink</object-name>
+    <object-name>WheelYoke</object-name>
+    <object-name>ShockPistonN</object-name>
+    <object-name>TireN</object-name>
     <condition>
       <greater-than>
       <property>gear/gear[0]/position-norm</property>
@@ -1346,6 +1152,41 @@
       </greater-than>
     </condition>
   </animation>
+  <animation>
+    <type>select</type>
+    <object-name>TireL</object-name>
+    <object-name>BrakeL</object-name>
+    <object-name>StrutL</object-name>
+    <object-name>TorsionStrutL</object-name>
+    <object-name>ShockStrutL</object-name>
+    <object-name>ShockPistonL</object-name>
+    <object-name>ShockLinkL</object-name>
+    <object-name>DragStrutL</object-name>
+    <condition>
+      <greater-than>
+      <property>gear/gear[1]/position-norm</property>
+      <value>0.005</value>
+      </greater-than>
+    </condition>
+  </animation>
+  <animation>
+    <type>select</type>
+    <object-name>TireR</object-name>
+    <object-name>BrakeR</object-name>
+    <object-name>StrutR</object-name>
+    <object-name>TorsionStrutR</object-name>
+    <object-name>ShockStrutR</object-name>
+    <object-name>ShockPistonR</object-name>
+    <object-name>ShockLinkR</object-name>
+    <object-name>DragStrutR</object-name>
+    <condition>
+      <greater-than>
+      <property>gear/gear[2]/position-norm</property>
+      <value>0.005</value>
+      </greater-than>
+    </condition>
+  </animation>
+-->
 
   <animation>
     <type>select</type>
@@ -1361,39 +1202,11 @@
 
   <animation>
     <type>select</type>
-    <object-name>GearWheelRight</object-name>
-    <object-name>GearStrutRightA</object-name>
-    <object-name>GearStrutRightB</object-name>
-    <object-name>GearStrutRightC</object-name>
-    <condition>
-      <greater-than>
-      <property>gear/gear[2]/position-norm</property>
-      <value>0.005</value>
-      </greater-than>
-    </condition>
-  </animation>
-
-  <animation>
-    <type>select</type>
     <object-name>GearDoorRightOuter</object-name>
     <object-name>GearDoorRightInner</object-name>
     <condition>
       <greater-than>
       <property>gear/gear[2]/position-norm</property>
-      <value>0.005</value>
-      </greater-than>
-    </condition>
-  </animation>
-
-  <animation>
-    <type>select</type>
-    <object-name>GearWheelLeft</object-name>
-    <object-name>GearStrutLeftA</object-name>
-    <object-name>GearStrutLeftB</object-name>
-    <object-name>GearStrutLeftC</object-name>
-    <condition>
-      <greater-than>
-      <property>gear/gear[1]/position-norm</property>
       <value>0.005</value>
       </greater-than>
     </condition>
@@ -1410,6 +1223,83 @@
       </greater-than>
     </condition>
   </animation>
+
+<animation>
+  <type>spin</type>
+  <object-name>TireN</object-name>
+  <condition>
+    <and>
+      <less-than>
+        <property>position/altitude-agl-ft</property>
+        <value>50.0</value>
+      </less-than>
+      <property>gear/gear[0]/wow</property>
+    </and>
+  </condition>
+  <property>velocities/uBody-fps</property>
+  <factor>-4.5</factor>
+  <center>
+    <x-m>-2.848</x-m>
+    <y-m>0</y-m>
+    <z-m>-1.867</z-m>
+  </center>
+  <axis>
+    <x>0</x>
+    <y>1</y>
+    <z>0</z>
+  </axis>
+</animation> 
+<animation>
+  <type>spin</type>
+  <object-name>TireL</object-name>
+  <condition>
+    <and>
+      <less-than>
+        <property>position/altitude-agl-ft</property>
+        <value>50.0</value>
+      </less-than>
+      <property>gear/gear[1]/wow</property>
+    </and>
+  </condition>
+  <property>velocities/uBody-fps</property>
+  <factor>-4</factor>
+  <center>
+    <x-m>1.228</x-m>
+    <y-m>0</y-m>
+    <z-m>-1.980</z-m>
+  </center>
+  <axis>
+    <x>0</x>
+    <y>1</y>
+    <z>0</z>
+  </axis>
+</animation> 
+<animation>
+  <type>spin</type>
+  <object-name>TireR</object-name>
+  <condition>
+    <and>
+      <less-than>
+        <property>position/altitude-agl-ft</property>
+        <value>50.0</value>
+      </less-than>
+      <property>gear/gear[2]/wow</property>
+    </and>
+  </condition>
+  <property>velocities/uBody-fps</property>
+  <factor>-4</factor>
+  <center>
+    <x-m>1.228</x-m>
+    <y-m>0</y-m>
+    <z-m>-1.980</z-m>
+  </center>
+  <axis>
+    <x>0</x>
+    <y>1</y>
+    <z>0</z>
+  </axis>
+</animation> 
+
 
 <!-- ********************* Oil Cooler Doors **************** -->
 

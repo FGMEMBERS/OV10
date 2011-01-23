@@ -1,0 +1,29 @@
+<?xml version="1.0"?>
+
+<system name="drag">
+
+  <property value="1.0">systems/drag/basic</property>
+  <property value="0.05">systems/drag/tank-600-gallon</property>
+  <property value="0.05">systems/drag/tank-370-gallon-left</property>
+  <property value="0.05">systems/drag/tank-370-gallon-right</property>
+
+  <channel name="Drag">
+
+     <summer name="systems/drag/total">
+        <input>systems/drag/basic</input>
+        <input>systems/drag/tank-600-gallon</input>
+        <input>systems/drag/tank-370-gallon-left</input>
+        <input>systems/drag/tank-370-gallon-right</input>
+     </summer>
+
+     <!-- release external stores -->
+     <switch name="systems/drag/index">
+          <default value="systems/drag/total"/>
+          <test value="systems/drag/basic">
+                systems/armament/release == 1
+          </test>
+     </switch>
+
+  </channel>
+
+</system>

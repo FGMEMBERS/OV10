@@ -1,0 +1,210 @@
+<?xml version="1.0"?>
+
+<!--
+OV-10 Bronco
+Gary R. Neely 'Buckaroo', April 2010
+-->
+
+<PropertyList>
+
+<path>mesh_props.ac</path>
+
+
+<!-- Special Shaders -->
+
+<animation>
+  <type>noshadow</type>
+  <object-name>PropL</object-name>
+  <object-name>PropL</object-name>
+  <object-name>PropBlurSlowL</object-name>
+  <object-name>PropBlurSlowR</object-name>
+  <object-name>PropBlurFastL</object-name>
+  <object-name>PropBlurFastR</object-name>
+</animation>
+
+
+<!-- Animations  -->
+
+<!-- Selects: Prop Models -->
+
+<animation>
+  <type>select</type>
+  <object-name>PropL</object-name>
+  <condition>
+    <less-than>
+      <property>engines/engine[0]/n2</property>
+      <value>40</value>
+    </less-than>
+  </condition>
+</animation>
+<animation>
+  <type>select</type>
+  <object-name>PropR</object-name>
+  <condition>
+    <less-than>
+      <property>engines/engine[1]/n2</property>
+      <value>40</value>
+    </less-than>
+  </condition>
+</animation>
+
+<!-- Selects: Prop Blur Slow -->
+
+<animation>
+  <type>select</type>
+  <object-name>PropBlurSlowL</object-name>
+  <condition>
+    <and>
+      <greater-than-equals>
+        <property>engines/engine[0]/n2</property>
+        <value>30</value>
+      </greater-than-equals>
+      <less-than>
+        <property>engines/engine[0]/n2</property>
+        <value>66</value>
+      </less-than>
+    </and>
+  </condition>
+</animation>
+<animation>
+  <type>select</type>
+  <object-name>PropBlurSlowR</object-name>
+  <condition>
+    <and>
+      <greater-than-equals>
+        <property>engines/engine[1]/n2</property>
+        <value>30</value>
+      </greater-than-equals>
+      <less-than>
+        <property>engines/engine[1]/n2</property>
+        <value>66</value>
+      </less-than>
+    </and>
+  </condition>
+</animation>
+
+<!-- Selects: Prop Blur Fast -->
+
+<animation>
+  <type>select</type>
+  <object-name>PropBlurFastL</object-name>
+  <condition>
+    <greater-than-equals>
+      <property>engines/engine[0]/n2</property>
+      <value>65</value>
+    </greater-than-equals>
+  </condition>
+</animation>
+<animation>
+  <type>select</type>
+  <object-name>PropBlurFastR</object-name>
+  <condition>
+    <greater-than-equals>
+      <property>engines/engine[1]/n2</property>
+      <value>65</value>
+    </greater-than-equals>
+  </condition>
+</animation>
+
+<!-- Spins, Gear ratio unknown, using n2 as reference value -->
+
+<animation>
+  <type>spin</type>
+  <object-name>PropL</object-name>
+  <property>engines/engine[0]/n2</property>
+  <factor>10</factor>
+  <center>
+    <x-m>0.0</x-m>
+    <y-m>-2.131</y-m>
+    <z-m>-0.119</z-m>
+  </center>
+  <axis>
+    <x>1.0</x>
+    <y>0.0</y>
+    <z>0.0</z>
+  </axis>
+</animation>
+<animation>
+  <type>spin</type>
+  <object-name>PropBlurSlowL</object-name>
+  <property>engines/engine[0]/n2</property>
+  <factor>0.2</factor>
+  <center>
+    <x-m>0.0</x-m>
+    <y-m>-2.131</y-m>
+    <z-m>-0.119</z-m>
+  </center>
+  <axis>
+    <x>1.0</x>
+    <y>0.0</y>
+    <z>0.0</z>
+  </axis>
+</animation>
+<animation>
+  <type>spin</type>
+  <object-name>PropBlurFastL</object-name>
+  <property>engines/engine[0]/n2</property>
+  <factor>0.2</factor>
+  <center>
+    <x-m>0.0</x-m>
+    <y-m>-2.131</y-m>
+    <z-m>-0.119</z-m>
+  </center>
+  <axis>
+    <x>1.0</x>
+    <y>0.0</y>
+    <z>0.0</z>
+  </axis>
+</animation>
+
+<animation>
+  <type>spin</type>
+  <object-name>PropR</object-name>
+  <property>engines/engine[1]/n2</property>
+  <factor>10</factor>
+  <center>
+    <x-m>0.0</x-m>
+    <y-m>2.131</y-m>
+    <z-m>-0.119</z-m>
+  </center>
+  <axis>
+    <x>1.0</x>
+    <y>0.0</y>
+    <z>0.0</z>
+  </axis>
+</animation>
+<animation>
+  <type>spin</type>
+  <object-name>PropBlurSlowR</object-name>
+  <property>engines/engine[1]/n2</property>
+  <factor>0.2</factor>
+  <center>
+    <x-m>0.0</x-m>
+    <y-m>2.131</y-m>
+    <z-m>-0.119</z-m>
+  </center>
+  <axis>
+    <x>1.0</x>
+    <y>0.0</y>
+    <z>0.0</z>
+  </axis>
+</animation>
+<animation>
+  <type>spin</type>
+  <object-name>PropBlurFastR</object-name>
+  <property>engines/engine[1]/n2</property>
+  <factor>0.2</factor>
+  <center>
+    <x-m>0.0</x-m>
+    <y-m>2.131</y-m>
+    <z-m>-0.119</z-m>
+  </center>
+  <axis>
+    <x>1.0</x>
+    <y>0.0</y>
+    <z>0.0</z>
+  </axis>
+</animation>
+
+</PropertyList>
+

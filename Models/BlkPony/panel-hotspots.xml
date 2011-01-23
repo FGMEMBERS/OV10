@@ -1,0 +1,1160 @@
+<?xml version="1.0"?>
+<!DOCTYPE PropertyList SYSTEM "panel.dtd">
+
+<!-- This part should be the same for any 3D panel.  Customize the actions section -->
+<PropertyList>
+
+ <name>OV10 Panel Hotspots</name>
+ <background>Aircraft/OV10/Models/USAFE/transparent.rgb</background>
+ <w>1024</w>
+ <h>768</h>
+ <y-offset>10</y-offset>
+
+ <instruments>
+  <instrument>
+   <name>Hot Spot Map</name>
+   <x>512</x>
+   <y>384</y>
+   <w>1024</w>
+   <h>768</h>
+   <w-base>1024</w-base>
+   <h-base>1024</h-base>
+
+
+ <layers>
+  <layer>
+   <name>background</name>
+   <texture>
+
+<!--
+     <path>Aircraft/OV10/Models/USAFE/hotspotgrid.rgb</path>
+-->
+     <path>Aircraft/OV10/Models/USAFE/transparent.rgb</path>
+
+     <x1>0.0</x1>
+     <y1>0.0</y1>
+     <x2>1.0</x2>
+     <y2>1.0</y2>
+   </texture>
+  </layer>
+ </layers>
+
+<!-- define hotspot actions below -->
+
+ <actions>
+  <!--  HSI Course Bug -->
+  <!--action>
+   <name>Course Bug Decrease</name>
+   <button>0</button>
+   <x>-74</x>
+   <y>-444</y>
+   <w>20</w>
+   <h>30</h>
+   <binding>
+    <command>property-adjust</command>
+    <property>/instrumentation/nav/radials/selected-deg[0]</property>
+    <step>-1</step>
+    <min>0</min>
+    <max>359</max>
+    <wrap>1</wrap>
+   </binding>
+  </action>
+  <action>
+   <name>Course Bug Large Decrease</name>
+   <button>1</button>
+   <x>-74</x>
+   <y>-444</y>
+   <w>20</w>
+   <h>30</h>
+   <binding>
+    <command>property-adjust</command>
+    <property>/instrumentation/nav/radials/selected-deg[0]</property>
+    <step>-10</step>
+    <min>0</min>
+    <max>359</max>
+    <wrap>1</wrap>
+   </binding>
+  </action>
+
+  <action>
+   <name>Course Bug Increase</name>
+   <button>0</button>
+   <x>-54</x>
+   <y>-444</y>
+   <w>20</w>
+   <h>30</h>
+   <binding>
+    <command>property-adjust</command>
+    <property>/instrumentation/nav/radials/selected-deg[0]</property>
+    <step>1</step>
+    <min>0</min>
+    <max>359</max>
+    <wrap>1</wrap>
+   </binding>
+  </action>
+  <action>
+   <name>Course Bug Large Increase</name>
+   <button>1</button>
+   <x>-54</x>
+   <y>-444</y>
+   <w>20</w>
+   <h>30</h>
+   <binding>
+    <command>property-adjust</command>
+    <property>/instrumentation/nav/radials/selected-deg[0]</property>
+    <step>10</step>
+    <min>0</min>
+    <max>359</max>
+    <wrap>1</wrap>
+   </binding>
+  </action-->
+
+  <!--  HSI Heading Bug -->
+  <!--action>
+   <name>Heading Bug Decrease</name>
+   <button>0</button>
+   <x> 54</x>
+   <y>-444</y>
+   <w>20</w>
+   <h>30</h>
+   <binding>
+    <command>property-adjust</command>
+    <property>/autopilot/settings/heading-bug-deg</property>
+    <step>1</step>
+    <min>0</min>
+    <max>359</max>
+    <wrap>1</wrap>
+   </binding>
+  </action>
+  <action>
+   <name>Heading Bug Large Decrease</name>
+   <button>1</button>
+   <x> 54</x>
+   <y>-444</y>
+   <w>20</w>
+   <h>30</h>
+   <binding>
+    <command>property-adjust</command>
+    <property>/autopilot/settings/heading-bug-deg</property>
+    <step>10</step>
+    <min>0</min>
+    <max>359</max>
+    <wrap>1</wrap>
+   </binding>
+  </action>
+
+  <action>
+   <name>Heading Bug Increase</name>
+   <button>0</button>
+   <x> 32</x>
+   <y>-444</y>
+   <w>20</w>
+   <h>30</h>
+   <binding>
+    <command>property-adjust</command>
+    <property>/autopilot/settings/heading-bug-deg</property>
+    <step>-1</step>
+    <min>0</min>
+    <max>359</max>
+    <wrap>1</wrap>
+   </binding>
+  </action>
+  <action>
+   <name>Heading Bug Large Increase</name>
+   <button>1</button>
+   <x> 32</x>
+   <y>-444</y>
+   <w>20</w>
+   <h>30</h>
+   <binding>
+    <command>property-adjust</command>
+    <property>/autopilot/settings/heading-bug-deg</property>
+    <step>-10</step>
+    <min>0</min>
+    <max>359</max>
+    <wrap>1</wrap>
+   </binding>
+  </action>
+
+  <action>
+   <name>Bearing Switch Decrease</name>
+   <button>0</button>
+   <x> -30</x>
+   <y>-504</y>
+   <w>20</w>
+   <h>60</h>
+   <binding>
+    <command>property-adjust</command>
+    <property>/instrumentation/navcomputer/brg-switch-position</property>
+    <step>-1</step>
+    <min>1</min>
+    <max>4</max>
+    <wrap>0</wrap>
+   </binding>
+  </action>
+
+  <action>
+   <name>Bearing Switch Increase</name>
+   <button>0</button>
+   <x> -9</x>
+   <y>-504</y>
+   <w>20</w>
+   <h>60</h>
+   <binding>
+    <command>property-adjust</command>
+    <property>/instrumentation/navcomputer/brg-switch-position</property>
+    <step>1</step>
+    <min>1</min>
+    <max>4</max>
+    <wrap>0</wrap>
+   </binding>
+  </action>
+
+  <action>
+   <name>Mode Switch Decrease</name>
+   <button>0</button>
+   <x>   2</x>
+   <y>-514</y>
+   <w>20</w>
+   <h>60</h>
+   <binding>
+    <command>property-adjust</command>
+    <property>/instrumentation/navcomputer/mode-switch-position</property>
+    <step>-1</step>
+    <min>1</min>
+    <max>4</max>
+    <wrap>0</wrap>
+   </binding>
+  </action>
+
+  <action>
+   <name>Mode Switch Increase</name>
+   <button>0</button>
+   <x>  23</x>
+   <y>-514</y>
+   <w>20</w>
+   <h>60</h>
+   <binding>
+    <command>property-adjust</command>
+    <property>/instrumentation/navcomputer/mode-switch-position</property>
+    <step>1</step>
+    <min>1</min>
+    <max>4</max>
+    <wrap>0</wrap>
+   </binding>
+  </action-->
+
+  <!-- ALT hotspots -->
+  <action>
+   <name>decrease pressure</name>
+   <button>0</button>
+   <x>  -110</x>
+   <y>-420</y>
+   <w>30</w>
+   <h>30</h>
+   <binding>
+    <command>property-adjust</command>
+    <property>/instrumentation/altimeter/setting-inhg[0]</property>
+    <step>-0.01</step>
+    <min>27.0</min>
+    <max>32.0</max>
+    <wrap>1</wrap>
+   </binding>
+  </action>
+  <action>
+   <name>increase pressure</name>
+   <button>0</button>
+   <x>  -80</x>
+   <y>-420</y>
+   <w>30</w>
+   <h>30</h>
+   <binding>
+    <command>property-adjust</command>
+    <property>/instrumentation/altimeter/setting-inhg[0]</property>
+    <step>0.01</step>
+    <min>27.0</min>
+    <max>32.0</max>
+    <wrap>1</wrap>
+   </binding>
+  </action>
+
+  <!--  ILS hotspots -->
+  <action>
+   <name>decrease course -10</name>
+   <button>0</button>
+   <x>  40</x>
+   <y>-430</y>
+   <w>20</w>
+   <h>30</h>
+   <binding>
+    <command>property-adjust</command>
+    <property>/instrumentation/nav/radials/selected-deg[0]</property>
+    <step>-10</step>
+    <min>0</min>
+    <max>359</max>
+    <wrap>1</wrap>
+   </binding>
+  </action>
+  <action>
+   <name>decrease course -1</name>
+   <button>0</button>
+   <x>  60</x>
+   <y>-430</y>
+   <w>20</w>
+   <h>30</h>
+   <binding>
+    <command>property-adjust</command>
+    <property>/instrumentation/nav/radials/selected-deg[0]</property>
+    <step>-1</step>
+    <min>0</min>
+    <max>359</max>
+    <wrap>1</wrap>
+   </binding>
+  </action>
+  <action>
+   <name>increase course +1</name>
+   <button>0</button>
+   <x>  80</x>
+   <y>-430</y>
+   <w>20</w>
+   <h>30</h>
+   <binding>
+    <command>property-adjust</command>
+    <property>/instrumentation/nav/radials/selected-deg[0]</property>
+    <step>1</step>
+    <min>0</min>
+    <max>359</max>
+    <wrap>1</wrap>
+   </binding>
+  </action>
+  <action>
+   <name>increase course +10</name>
+   <button>0</button>
+   <x>  100</x>
+   <y>-430</y>
+   <w>20</w>
+   <h>30</h>
+   <binding>
+    <command>property-adjust</command>
+    <property>/instrumentation/nav/radials/selected-deg[0]</property>
+    <step>10</step>
+    <min>0</min>
+    <max>359</max>
+    <wrap>1</wrap>
+   </binding>
+  </action>
+
+  <!--  VOR/TACAN panel hotspots -->
+  <action>
+   <name>TACAN</name>
+   <button>0</button>
+   <x>-415</x>
+   <y>-160</y>
+   <w>30</w>
+   <h>20</h>
+   <binding>
+    <command>property-assign</command>
+    <property>/instrumentation/heading-indicator/switch-tacan-acls</property>
+    <value>0</value>
+   </binding>
+   <binding>
+    <command>property-assign</command>
+    <property>instrumentation/heading-indicator/nav-switch</property>
+    <value>18</value>
+   </binding>
+  </action>
+  <action>
+   <name>VOR</name>
+   <button>0</button>
+   <x>-415</x>
+   <y>-180</y>
+   <w>30</w>
+   <h>20</h>
+   <binding>
+    <command>property-assign</command>
+    <property>/instrumentation/heading-indicator/switch-tacan-acls</property>
+    <value>1</value>
+   </binding>
+   <binding>
+    <command>property-assign</command>
+    <property>instrumentation/heading-indicator/nav-switch</property>
+    <value>8</value>
+   </binding>
+  </action>
+
+  <!--  TACAN hotspots -->
+  <action>
+   <name>decrease first 2</name>
+   <button>0</button>
+   <x>  -90</x>
+   <y>-500</y>
+   <w>30</w>
+   <h>30</h>
+   <binding>
+	<command>nasal</command>
+	<script>OV10.decrease_first_2()</script>
+   </binding>
+  </action>
+  <action>
+   <name>increase first 2</name>
+   <button>0</button>
+   <x>  -60</x>
+   <y>-500</y>
+   <w>30</w>
+   <h>30</h>
+   <binding>
+	<command>nasal</command>
+	<script>OV10.increase_first_2()</script>
+   </binding>
+  </action>
+  <action>
+   <name>decrease last 2</name>
+   <button>0</button>
+   <x>  15</x>
+   <y>-500</y>
+   <w>30</w>
+   <h>30</h>
+   <binding>
+	<command>nasal</command>
+	<script>OV10.decrease_last_2()</script>
+   </binding>
+  </action>
+  <action>
+   <name>increase last 2</name>
+   <button>0</button>
+   <x>  45</x>
+   <y>-500</y>
+   <w>30</w>
+   <h>30</h>
+   <binding>
+	<command>nasal</command>
+	<script>OV10.increase_last_2()</script>
+   </binding>
+  </action>
+
+  <!--  cockpit light dimmer hotspots -->
+  <action>
+   <name>panel brighter</name>
+   <button>0</button>
+   <x>-290</x>
+   <y>-145</y>
+   <w>40</w>
+   <h>55</h>
+   <binding>
+    <command>property-adjust</command>
+    <property>/controls[0]/lighting[0]/instruments-norm</property>
+    <step>0.1</step>
+    <min>0</min>
+    <max>1</max>
+    <wrap>0</wrap>
+   </binding>
+  </action>
+
+  <action>
+   <name>panel darker</name>
+   <button>0</button>
+   <x>-335</x>
+   <y>-145</y>
+   <w>40</w>
+   <h>55</h>
+   <binding>
+    <command>property-adjust</command>
+    <property>/controls[0]/lighting[0]/instruments-norm</property>
+    <step>-0.1</step>
+    <min>0</min>
+    <max>1</max>
+    <wrap>0</wrap>
+   </binding>
+  </action>
+
+  <action>
+   <name>g-meter reset</name>
+   <button>0</button>
+   <x>-266</x>
+   <y>-322</y>
+   <w>40</w>
+   <h>40</h>
+   <binding>
+    <command>property-assign</command>
+    <property>/controls/gmeter/reset</property>
+    <value>0</value>
+   </binding>
+  </action>
+
+  <action>
+   <name>gunsight on</name>
+   <button>0</button>
+   <x>105</x>
+   <y>430</y>
+   <w>40</w>
+   <h>40</h>
+   <binding>
+    <command>property-assign</command>
+    <property>controls/armament/gunsight/power-on</property>
+    <value>true</value>
+   </binding>
+  </action>
+
+  <action>
+   <name>gunsight off</name>
+   <button>0</button>
+   <x>105</x>
+   <y>395</y>
+   <w>40</w>
+   <h>40</h>
+   <binding>
+    <command>property-assign</command>
+    <property>controls/armament/gunsight/power-on</property>
+    <value>false</value>
+   </binding>
+  </action>
+
+  <action>
+   <name>emergency jettison button</name>
+   <button>0</button>
+   <x>-384</x>
+   <y>-130</y>
+   <w>32</w>
+   <h>40</h>
+   <binding>
+    <command>property-assign</command>
+    <property>controls/armament/station[0]/jettison-all</property>
+    <value>true</value>
+   </binding>
+   <binding>
+    <command>property-assign</command>
+    <property>controls/armament/station[1]/jettison-all</property>
+    <value>true</value>
+   </binding>
+   <binding>
+    <command>property-assign</command>
+    <property>controls/armament/station[2]/jettison-all</property>
+    <value>true</value>
+   </binding>
+   <binding>
+    <command>property-assign</command>
+    <property>controls/armament/station[3]/jettison-all</property>
+    <value>true</value>
+   </binding>
+   <binding>
+    <command>property-assign</command>
+    <property>controls/armament/station[4]/jettison-all</property>
+    <value>true</value>
+   </binding>
+   <binding>
+    <command>property-assign</command>
+    <property>controls/external-tank/is-attached</property>
+    <value>false</value>
+   </binding>
+   <binding>
+    <command>property-assign</command>
+    <property>consumables/fuel/tank[1]/level-gal_us</property>
+    <value>0</value>
+   </binding>
+  </action>
+
+  <!--  Weapons stations switches -->
+  <action>
+   <name>fire1</name>
+   <button>0</button>
+   <x>148</x>
+   <y>-45</y>
+   <w>30</w>
+   <h>20</h>
+   <binding>
+    <command>property-assign</command>
+    <property>controls/armament/fire1</property>
+    <value>true</value>
+   </binding>
+   <binding>
+    <command>property-assign</command>
+    <property>controls/armament/off1</property>
+    <value>false</value>
+   </binding>
+   <binding>
+    <command>property-assign</command>
+    <property>controls/armament/drop1</property>
+    <value>false</value>
+   </binding>
+  </action>
+
+  <action>
+   <name>off1</name>
+   <button>0</button>
+   <x>148</x>
+   <y>-65</y>
+   <w>30</w>
+   <h>20</h>
+   <binding>
+    <command>property-assign</command>
+    <property>controls/armament/fire1</property>
+    <value>false</value>
+   </binding>
+   <binding>
+    <command>property-assign</command>
+    <property>controls/armament/off1</property>
+    <value>true</value>
+   </binding>
+   <binding>
+    <command>property-assign</command>
+    <property>controls/armament/drop1</property>
+    <value>false</value>
+   </binding>
+  </action>
+
+  <action>
+   <name>drop1</name>
+   <button>0</button>
+   <x>148</x>
+   <y>-85</y>
+   <w>30</w>
+   <h>20</h>
+   <binding>
+    <command>property-assign</command>
+    <property>controls/armament/fire1</property>
+    <value>false</value>
+   </binding>
+   <binding>
+    <command>property-assign</command>
+    <property>controls/armament/off1</property>
+    <value>false</value>
+   </binding>
+   <binding>
+    <command>property-assign</command>
+    <property>controls/armament/drop1</property>
+    <value>true</value>
+   </binding>
+  </action>
+
+  <action>
+   <name>fire2</name>
+   <button>0</button>
+   <x>182</x>
+   <y>-45</y>
+   <w>30</w>
+   <h>20</h>
+   <binding>
+    <command>property-assign</command>
+    <property>controls/armament/fire2</property>
+    <value>true</value>
+   </binding>
+   <binding>
+    <command>property-assign</command>
+    <property>controls/armament/off2</property>
+    <value>false</value>
+   </binding>
+   <binding>
+    <command>property-assign</command>
+    <property>controls/armament/drop2</property>
+    <value>false</value>
+   </binding>
+  </action>
+
+  <action>
+   <name>off2</name>
+   <button>0</button>
+   <x>182</x>
+   <y>-65</y>
+   <w>30</w>
+   <h>20</h>
+   <binding>
+    <command>property-assign</command>
+    <property>controls/armament/fire2</property>
+    <value>false</value>
+   </binding>
+   <binding>
+    <command>property-assign</command>
+    <property>controls/armament/off2</property>
+    <value>true</value>
+   </binding>
+   <binding>
+    <command>property-assign</command>
+    <property>controls/armament/drop2</property>
+    <value>false</value>
+   </binding>
+  </action>
+
+  <action>
+   <name>drop2</name>
+   <button>0</button>
+   <x>182</x>
+   <y>-85</y>
+   <w>30</w>
+   <h>20</h>
+   <binding>
+    <command>property-assign</command>
+    <property>controls/armament/fire2</property>
+    <value>false</value>
+   </binding>
+   <binding>
+    <command>property-assign</command>
+    <property>controls/armament/off2</property>
+    <value>false</value>
+   </binding>
+   <binding>
+    <command>property-assign</command>
+    <property>controls/armament/drop2</property>
+    <value>true</value>
+   </binding>
+  </action>
+
+  <action>
+   <name>fire3</name>
+   <button>0</button>
+   <x>250</x>
+   <y>-45</y>
+   <w>30</w>
+   <h>20</h>
+   <binding>
+    <command>property-assign</command>
+    <property>controls/armament/fire3</property>
+    <value>true</value>
+   </binding>
+   <binding>
+    <command>property-assign</command>
+    <property>controls/armament/off3</property>
+    <value>false</value>
+   </binding>
+   <binding>
+    <command>property-assign</command>
+    <property>controls/armament/drop3</property>
+    <value>false</value>
+   </binding>
+  </action>
+
+  <action>
+   <name>off3</name>
+   <button>0</button>
+   <x>250</x>
+   <y>-65</y>
+   <w>30</w>
+   <h>20</h>
+   <binding>
+    <command>property-assign</command>
+    <property>controls/armament/fire3</property>
+    <value>false</value>
+   </binding>
+   <binding>
+    <command>property-assign</command>
+    <property>controls/armament/off3</property>
+    <value>true</value>
+   </binding>
+   <binding>
+    <command>property-assign</command>
+    <property>controls/armament/drop3</property>
+    <value>false</value>
+   </binding>
+  </action>
+
+  <action>
+   <name>drop3</name>
+   <button>0</button>
+   <x>250</x>
+   <y>-85</y>
+   <w>30</w>
+   <h>20</h>
+   <binding>
+    <command>property-assign</command>
+    <property>controls/armament/fire3</property>
+    <value>false</value>
+   </binding>
+   <binding>
+    <command>property-assign</command>
+    <property>controls/armament/off3</property>
+    <value>false</value>
+   </binding>
+   <binding>
+    <command>property-assign</command>
+    <property>controls/armament/drop3</property>
+    <value>true</value>
+   </binding>
+  </action>
+
+  <action>
+   <name>fire4</name>
+   <button>0</button>
+   <x>288</x>
+   <y>-45</y>
+   <w>30</w>
+   <h>20</h>
+   <binding>
+    <command>property-assign</command>
+    <property>controls/armament/fire4</property>
+    <value>true</value>
+   </binding>
+   <binding>
+    <command>property-assign</command>
+    <property>controls/armament/off4</property>
+    <value>false</value>
+   </binding>
+   <binding>
+    <command>property-assign</command>
+    <property>controls/armament/drop4</property>
+    <value>false</value>
+   </binding>
+  </action>
+
+  <action>
+   <name>off4</name>
+   <button>0</button>
+   <x>288</x>
+   <y>-65</y>
+   <w>30</w>
+   <h>20</h>
+   <binding>
+    <command>property-assign</command>
+    <property>controls/armament/fire4</property>
+    <value>false</value>
+   </binding>
+   <binding>
+    <command>property-assign</command>
+    <property>controls/armament/off4</property>
+    <value>true</value>
+   </binding>
+   <binding>
+    <command>property-assign</command>
+    <property>controls/armament/drop4</property>
+    <value>false</value>
+   </binding>
+  </action>
+
+  <action>
+   <name>drop4</name>
+   <button>0</button>
+   <x>288</x>
+   <y>-85</y>
+   <w>30</w>
+   <h>20</h>
+   <binding>
+    <command>property-assign</command>
+    <property>controls/armament/fire4</property>
+    <value>false</value>
+   </binding>
+   <binding>
+    <command>property-assign</command>
+    <property>controls/armament/off4</property>
+    <value>false</value>
+   </binding>
+   <binding>
+    <command>property-assign</command>
+    <property>controls/armament/drop4</property>
+    <value>true</value>
+   </binding>
+  </action>
+
+  <action>
+   <name>fire5</name>
+   <button>0</button>
+   <x>325</x>
+   <y>-45</y>
+   <w>30</w>
+   <h>20</h>
+   <binding>
+    <command>property-assign</command>
+    <property>controls/armament/fire5</property>
+    <value>true</value>
+   </binding>
+   <binding>
+    <command>property-assign</command>
+    <property>controls/armament/off5</property>
+    <value>false</value>
+   </binding>
+   <binding>
+    <command>property-assign</command>
+    <property>controls/armament/drop5</property>
+    <value>false</value>
+   </binding>
+  </action>
+
+  <action>
+   <name>off5</name>
+   <button>0</button>
+   <x>325</x>
+   <y>-65</y>
+   <w>30</w>
+   <h>20</h>
+   <binding>
+    <command>property-assign</command>
+    <property>controls/armament/fire5</property>
+    <value>false</value>
+   </binding>
+   <binding>
+    <command>property-assign</command>
+    <property>controls/armament/off5</property>
+    <value>true</value>
+   </binding>
+   <binding>
+    <command>property-assign</command>
+    <property>controls/armament/drop5</property>
+    <value>false</value>
+   </binding>
+  </action>
+
+  <action>
+   <name>drop5</name>
+   <button>0</button>
+   <x>325</x>
+   <y>-85</y>
+   <w>30</w>
+   <h>20</h>
+   <binding>
+    <command>property-assign</command>
+    <property>controls/armament/fire5</property>
+    <value>false</value>
+   </binding>
+   <binding>
+    <command>property-assign</command>
+    <property>controls/armament/off5</property>
+    <value>false</value>
+   </binding>
+   <binding>
+    <command>property-assign</command>
+    <property>controls/armament/drop5</property>
+    <value>true</value>
+   </binding>
+  </action>
+ 
+  <!-- Weapons arm station -->
+  <action>
+   <name>master arm on</name>
+   <button>0</button>
+   <x>-182</x>
+   <y>-50</y>
+   <w>30</w>
+   <h>30</h>
+   <binding>
+    <command>property-assign</command>
+    <property>controls/armament/master-arm</property>
+    <value>true</value>
+   </binding>
+  </action>
+
+  <action>
+   <name>master arm off</name>
+   <button>0</button>
+   <x>-182</x>
+   <y>-80</y>
+   <w>30</w>
+   <h>30</h>
+   <binding>
+    <command>property-assign</command>
+    <property>controls/armament/master-arm</property>
+    <value>false</value>
+   </binding>
+  </action>
+
+  <action>
+   <name>arm nose</name>
+   <button>0</button>
+   <x>-216</x>
+   <y>-50</y>
+   <w>30</w>
+   <h>30</h>
+   <binding>
+    <command>property-assign</command>
+    <property>controls/armament/arm_nose</property>
+    <value>true</value>
+   </binding>
+  </action>
+
+  <action>
+   <name>arm tail</name>
+   <button>0</button>
+   <x>-216</x>
+   <y>-80</y>
+   <w>30</w>
+   <h>30</h>
+   <binding>
+    <command>property-assign</command>
+    <property>controls/armament/arm_nose</property>
+    <value>false</value>
+   </binding>
+  </action>
+
+  <action>
+   <name>mk4 ready</name>
+   <button>0</button>
+   <x>-284</x>
+   <y>-50</y>
+   <w>30</w>
+   <h>30</h>
+   <binding>
+    <command>property-assign</command>
+    <property>controls/armament/mk4_ready</property>
+    <value>true</value>
+   </binding>
+  </action>
+
+  <action>
+   <name>mk4 clear</name>
+   <button>0</button>
+   <x>-284</x>
+   <y>-80</y>
+   <w>30</w>
+   <h>30</h>
+   <binding>
+    <command>property-assign</command>
+    <property>controls/armament/mk4_ready</property>
+    <value>false</value>
+   </binding>
+  </action>
+
+  <action>
+   <name>g ready</name>
+   <button>0</button>
+   <x>-350</x>
+   <y>-50</y>
+   <w>60</w>
+   <h>30</h>
+   <binding>
+    <command>property-assign</command>
+    <property>controls/armament/g_ready</property>
+    <value>true</value>
+   </binding>
+  </action>
+
+  <action>
+   <name>g clear</name>
+   <button>0</button>
+   <x>-350</x>
+   <y>-80</y>
+   <w>60</w>
+   <h>30</h>
+   <binding>
+    <command>property-assign</command>
+    <property>controls/armament/g_ready</property>
+    <value>false</value>
+   </binding>
+  </action>
+
+  <!--  Fuel panel controls -->
+  <action>
+   <name>Ext Fuel Trans OFF</name>
+   <button>0</button>
+   <x>370</x>
+   <y>-460</y>
+   <w>30</w>
+   <h>30</h>
+   <binding>
+    <command>property-assign</command>
+    <property>controls/external-tank/is-feeding</property>
+    <value>false</value>
+   </binding>
+   <binding>
+    <command>property-assign</command>
+    <property>controls/external-tank/pump-stop</property>
+    <value>true</value>
+   </binding>
+  </action>
+
+  <action>
+   <name>Ext Fuel Trans ON</name>
+   <button>0</button>
+   <x>370</x>
+   <y>-430</y>
+   <w>30</w>
+   <h>30</h>
+   <binding>
+    <command>property-assign</command>
+    <property>controls/external-tank/is-feeding</property>
+    <value>true</value>
+   </binding>
+   <binding>
+    <command>property-assign</command>
+    <property>controls/external-tank/pump-restart</property>
+    <value>true</value>
+   </binding>
+  </action>
+
+  <action>
+   <name>Fuel SHUTOFF Port</name>
+   <button>0</button>
+   <x>415</x>
+   <y>-440</y>
+   <w>30</w>
+   <h>30</h>
+   <binding>
+    <command>property-assign</command>
+    <property>controls/fuel-cutoff1</property>
+    <value>true</value>
+   </binding>
+  </action>
+
+  <action>
+   <name>Fuel SHUTOFF NORM Port</name>
+   <button>0</button>
+   <x>415</x>
+   <y>-470</y>
+   <w>30</w>
+   <h>30</h>
+   <binding>
+    <command>property-assign</command>
+    <property>controls/fuel-cutoff1</property>
+    <value>false</value>
+   </binding>
+  </action>
+
+  <action>
+   <name>Fuel SHUTOFF Starboard</name>
+   <button>0</button>
+   <x>445</x>
+   <y>-440</y>
+   <w>30</w>
+   <h>30</h>
+   <binding>
+    <command>property-assign</command>
+    <property>controls/fuel-cutoff2</property>
+    <value>true</value>
+   </binding>
+  </action>
+
+  <action>
+   <name>Fuel SHUTOFF NORM Starboard</name>
+   <button>0</button>
+   <x>445</x>
+   <y>-470</y>
+   <w>30</w>
+   <h>30</h>
+   <binding>
+    <command>property-assign</command>
+    <property>controls/fuel-cutoff2</property>
+    <value>false</value>
+   </binding>
+  </action>
+
+  <action>
+   <name>Fuel Gage Test OFF</name>
+   <button>0</button>
+   <x>380</x>
+   <y>-410</y>
+   <w>30</w>
+   <h>30</h>
+   <binding>
+    <command>property-assign</command>
+    <property>controls/fuel-gage-test</property>
+    <value>false</value>
+   </binding>
+  </action>
+
+  <action>
+   <name>Fuel Gage Test ON</name>
+   <button>0</button>
+   <x>410</x>
+   <y>-410</y>
+   <w>30</w>
+   <h>30</h>
+   <binding>
+    <command>property-assign</command>
+    <property>controls/fuel-gage-test</property>
+    <value>true</value>
+   </binding>
+  </action>
+
+ </actions>
+
+  </instrument>
+ </instruments>
+</PropertyList>
+
+
+

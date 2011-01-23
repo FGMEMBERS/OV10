@@ -10,7 +10,7 @@ David Culp,  davidculp2@comcast.net
 
  <sim>
 
-  <description>US Air Force Europe North American OV-10A Bronco</description>
+  <description>North American OV-10A NASA Bronco</description>
   <author>David Culp (FDM), Jens Thoms Toerring/Capt. Slug/David Culp (3D)</author>
   <status>beta</status>
  
@@ -386,10 +386,10 @@ David Culp,  davidculp2@comcast.net
   <view n="0">
    <internal archive="y">true</internal>
    <config>
-    <pitch-offset-deg>-9</pitch-offset-deg>
+    <pitch-offset-deg>-7.6</pitch-offset-deg>
     <x-offset-m archive="y">0</x-offset-m><!-- right/left -->
     <y-offset-m archive="y">0.92</y-offset-m><!-- up/down -->
-    <z-offset-m archive="y">-1.9</z-offset-m><!-- aft/fore -->
+    <z-offset-m archive="y">-2.0</z-offset-m><!-- aft/fore -->
    </config>
   </view>
 
@@ -419,15 +419,17 @@ David Culp,  davidculp2@comcast.net
    </config>
   </view>
 
-  <view n="101">
+  <view n="100">
     <name>Engine Start Panel View</name>
     <type>lookfrom</type>
    <internal archive="y">true</internal>
    <config>
-    <pitch-offset-deg>-45</pitch-offset-deg>
+    <default-field-of-view-deg type="double">55.0</default-field-of-view-deg>
     <x-offset-m archive="y">0</x-offset-m><!-- right/left -->
     <y-offset-m archive="y">0.82</y-offset-m><!-- up/down -->
     <z-offset-m archive="y">-2.5</z-offset-m><!-- aft/fore -->
+    <pitch-offset-deg>-45</pitch-offset-deg>
+    <heading-offset-deg type="double">45</heading-offset-deg>
       <from-model type="bool">true</from-model>
       <from-model-idx type="int">0</from-model-idx>
       <ground-level-nearplane-m type="double">0.5f</ground-level-nearplane-m>
@@ -497,10 +499,37 @@ David Culp,  davidculp2@comcast.net
    </config>
   </view>
 
-  <current-view>
-   <field-of-view>60.0</field-of-view>
+<view n="99999">
+    <name>Canopy View</name>
+    <type>lookfrom</type>
+   <internal archive="y">true</internal>
    <config>
-    <default-field-of-view-deg archive="y">60.0</default-field-of-view-deg>
+    <pitch-offset-deg>40</pitch-offset-deg>
+    <x-offset-m archive="y">0</x-offset-m><!-- right/left -->
+    <y-offset-m archive="y">0.90</y-offset-m><!-- up/down -->
+    <z-offset-m archive="y">-2.0</z-offset-m><!-- aft/fore -->
+      <from-model type="bool">true</from-model>
+      <from-model-idx type="int">0</from-model-idx>
+      <ground-level-nearplane-m type="double">0.5f</ground-level-nearplane-m>
+      <default-field-of-view-deg type="double">90</default-field-of-view-deg>
+      <default-pitch-deg type="double">0</default-pitch-deg>
+      <default-heading-deg type="double">0</default-heading-deg>
+      <front-direction-deg type="double">0</front-direction-deg>
+      <front-left-direction-deg type="double">45</front-left-direction-deg>
+      <left-direction-deg type="double">90</left-direction-deg>
+      <back-left-direction-deg type="double">135</back-left-direction-deg>
+      <back-direction-deg type="double">180</back-direction-deg>
+      <back-right-direction-deg type="double">225</back-right-direction-deg>
+      <right-direction-deg type="double">270</right-direction-deg>
+      <front-right-direction-deg type="double">315</front-right-direction-deg>
+   </config>
+  </view>
+
+
+  <current-view>
+   <field-of-view>78</field-of-view>
+   <config>
+    <default-field-of-view-deg archive="y">78</default-field-of-view-deg>
    </config>
   </current-view>
 

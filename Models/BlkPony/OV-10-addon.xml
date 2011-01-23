@@ -1,0 +1,162 @@
+<?xml version="1.0"?>
+
+
+
+<PropertyList>
+
+    
+        <keyboard>
+            <key n="83">
+                <name>S</name>
+                <desc>Toggle Smoke</desc>
+                <binding>
+                    <command>property-toggle</command>
+                    <property>sim/multiplay/generic/int[6]</property>
+                </binding>
+            </key>
+        </keyboard>
+  
+ <!-- Smoke -->
+  <model>
+    <path>Aircraft/OV10/Models/BlkPony/Effects/smoke.xml</path>
+    <offsets>
+      <x-m>  1.5 </x-m>
+      <y-m>  .4 </y-m>
+      <z-m> -0.75 </z-m>
+      <pitch-deg> -1.0 </pitch-deg>
+    </offsets>
+  </model>
+<!-- Smoke -->
+  <model>
+    <path>Aircraft/OV10/Models/BlkPony/Effects/smoke.xml</path>
+    <offsets>
+      <x-m>  1.5 </x-m>
+      <y-m>  1.0 </y-m>
+      <z-m> -0.75 </z-m>
+      <pitch-deg> -1.0 </pitch-deg>
+    </offsets>
+  </model>
+<!-- Smoke -->
+  <model>
+    <path>Aircraft/OV10/Models/BlkPony/Effects/smoke.xml</path>
+    <offsets>
+      <x-m>  1.5 </x-m>
+      <y-m>  1.6 </y-m>
+      <z-m> -0.75 </z-m>
+      <pitch-deg> -1.0 </pitch-deg>
+    </offsets>
+  </model>
+<!-- Smoke -->
+  <model>
+    <path>Aircraft/OV10/Models/BlkPony/Effects/smoke.xml</path>
+    <offsets>
+      <x-m>  1.5 </x-m>
+      <y-m>  2.2 </y-m>
+      <z-m> -0.75 </z-m>
+      <pitch-deg> -1.0 </pitch-deg>
+    </offsets>
+  </model>
+<!-- Smoke -->
+  <model>
+    <path>Aircraft/OV10/Models/BlkPony/Effects/smoke.xml</path>
+    <offsets>
+      <x-m>  1.5 </x-m>
+      <y-m>  2.8 </y-m>
+      <z-m> -0.75 </z-m>
+      <pitch-deg> -1.0 </pitch-deg>
+    </offsets>
+  </model>
+<!-- Smoke -->
+  <model>
+    <path>Aircraft/OV10/Models/BlkPony/Effects/smoke.xml</path>
+    <offsets>
+      <x-m>  1.5 </x-m>
+      <y-m>  3.4 </y-m>
+      <z-m> -0.75 </z-m>
+      <pitch-deg> -1.0 </pitch-deg>
+    </offsets>
+  </model>
+<!-- Smoke -->
+  <model>
+    <path>Aircraft/OV10/Models/BlkPony/Effects/smoke.xml</path>
+    <offsets>
+      <x-m>  1.5 </x-m>
+      <y-m>  4.0 </y-m>
+      <z-m> -0.75 </z-m>
+      <pitch-deg> -1.0 </pitch-deg>
+    </offsets>
+  </model>
+
+<!-- Smoke -->
+  <model>
+    <path>Aircraft/OV10/Models/BlkPony/Effects/smoke.xml</path>
+    <offsets>
+      <x-m>  1.5 </x-m>
+      <y-m>  -.4 </y-m>
+      <z-m> -0.75 </z-m>
+      <pitch-deg> -1.0 </pitch-deg>
+    </offsets>
+  </model>
+<!-- Smoke -->
+  <model>
+    <path>Aircraft/OV10/Models/BlkPony/Effects/smoke.xml</path>
+    <offsets>
+      <x-m>  1.5 </x-m>
+      <y-m>  -1.0 </y-m>
+      <z-m> -0.75 </z-m>
+      <pitch-deg> -1.0 </pitch-deg>
+    </offsets>
+  </model>
+<!-- Smoke -->
+  <model>
+    <path>Aircraft/OV10/Models/BlkPony/Effects/smoke.xml</path>
+    <offsets>
+      <x-m>  1.5 </x-m>
+      <y-m>  -1.6 </y-m>
+      <z-m> -0.75 </z-m>
+      <pitch-deg> -1.0 </pitch-deg>
+    </offsets>
+  </model>
+<!-- Smoke -->
+  <model>
+    <path>Aircraft/OV10/Models/BlkPony/Effects/smoke.xml</path>
+    <offsets>
+      <x-m>  1.5 </x-m>
+      <y-m>  -2.2 </y-m>
+      <z-m> -0.75 </z-m>
+      <pitch-deg> -1.0 </pitch-deg>
+    </offsets>
+  </model>
+<!-- Smoke -->
+  <model>
+    <path>Aircraft/OV10/Models/BlkPony/Effects/smoke.xml</path>
+    <offsets>
+      <x-m>  1.5 </x-m>
+      <y-m>  -2.8 </y-m>
+      <z-m> -0.75 </z-m>
+      <pitch-deg> -1.0 </pitch-deg>
+    </offsets>
+  </model>
+<!-- Smoke -->
+  <model>
+    <path>Aircraft/OV10/Models/BlkPony/Effects/smoke.xml</path>
+    <offsets>
+      <x-m>  1.5 </x-m>
+      <y-m>  -3.4 </y-m>
+      <z-m> -0.75 </z-m>
+      <pitch-deg> -1.0 </pitch-deg>
+    </offsets>
+  </model>
+<!-- Smoke -->
+  <model>
+    <path>Aircraft/OV10/Models/BlkPony/Effects/smoke.xml</path>
+    <offsets>
+      <x-m>  1.5 </x-m>
+      <y-m>  -4.0 </y-m>
+      <z-m> -0.75 </z-m>
+      <pitch-deg> -1.0 </pitch-deg>
+    </offsets>
+  </model>
+
+ 
+</PropertyList>

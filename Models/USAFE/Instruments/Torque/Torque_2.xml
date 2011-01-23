@@ -10,7 +10,7 @@
   <type>rotate</type>
   <object-name>needle</object-name>
   <property>engines/engine[1]/thrust_lb</property>
-  <factor>0.1733333</factor>
+  <factor>0.130</factor> <!--0.1733333 for orig engines-->
   <center>
    <x-m>-0.015</x-m>
    <y-m>0</y-m>

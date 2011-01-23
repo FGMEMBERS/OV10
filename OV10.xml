@@ -7,7 +7,7 @@
     <fileheader>
         <author> Dave Culp, based on Aero-Matic </author>
         <filecreationdate> 2001-01-01 </filecreationdate>
-        <version> $Revision$ </version>
+        <version> $Revision: 1.14 $ </version>
         <description> OV-10 Bronco </description>
     </fileheader>
 
@@ -51,9 +51,9 @@
     <ground_reactions>
         <contact type="BOGEY" name="NOSE_LG">
             <location unit="IN">
-                <x> 64.9 </x>
+                <x> 65 </x>
                 <y> 0 </y>
-                <z> -56 </z>
+                <z> -61 </z>
             </location>
             <static_friction> 0.8 </static_friction>
             <dynamic_friction> 0.5 </dynamic_friction>
@@ -67,8 +67,8 @@
         <contact type="BOGEY" name="LEFT_MLG">
             <location unit="IN">
                 <x> 216.0 </x>
-                <y> -87 </y>
-                <z> -55.0 </z>
+                <y> -43.2 </y>
+                <z> -64.0 </z>
             </location>
             <static_friction> 0.8 </static_friction>
             <dynamic_friction> 0.5 </dynamic_friction>
@@ -82,8 +82,8 @@
         <contact type="BOGEY" name="RIGHT_MLG">
             <location unit="IN">
                 <x> 216.0 </x>
-                <y> 87 </y>
-                <z> -55.0 </z>
+                <y> 43.2 </y>
+                <z> -64.0 </z>
             </location>
             <static_friction> 0.8 </static_friction>
             <dynamic_friction> 0.5 </dynamic_friction>
@@ -96,7 +96,7 @@
         </contact>
     </ground_reactions>
     <propulsion>
-        <engine file="T76">
+        <engine file="PT6A-68C">
             <location unit="IN">
                 <x> 190 </x>
                 <y> -80 </y>
@@ -121,7 +121,7 @@
                 </orient>
             </thruster>
         </engine>
-        <engine file="T76">
+        <engine file="PT6A-68C">
             <location unit="IN">
                 <x> 190 </x>
                 <y> 80 </y>
@@ -244,6 +244,9 @@
             <contents unit="LBS"> 1100 </contents>
         </tank>
     </propulsion>
+
+   <!--<system file="propulsion"/>-->
+
     <flight_control name="FCS: OV10">
 
         <channel name="Pitch">

@@ -195,7 +195,7 @@ kids 0
 OBJECT poly
 name "face"
 loc -3.05444 -0.357446 0.242839
-texture "torque.rgb"
+texture "PT6torque.rgb"
 crease 45.000000
 numvert 21
 3.06857 0.367419 -0.212202

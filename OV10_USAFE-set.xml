@@ -10,7 +10,7 @@ David Culp,  davidculp2@comcast.net
 
  <sim>
 
-  <description>US Air Force Europe North American OV-10A Bronco</description>
+  <description>North American OV-10A USAFE Bronco</description>
   <author>David Culp (FDM), Jens Thoms Toerring/Capt. Slug/David Culp (3D)</author>
   <status>beta</status>
  
@@ -411,10 +411,10 @@ David Culp,  davidculp2@comcast.net
   <view n="0">
    <internal archive="y">true</internal>
    <config>
-    <pitch-offset-deg>-9</pitch-offset-deg>
+    <pitch-offset-deg>-7.6</pitch-offset-deg>
     <x-offset-m archive="y">0</x-offset-m><!-- right/left -->
     <y-offset-m archive="y">0.92</y-offset-m><!-- up/down -->
-    <z-offset-m archive="y">-1.9</z-offset-m><!-- aft/fore -->
+    <z-offset-m archive="y">-2.0</z-offset-m><!-- aft/fore -->
    </config>
   </view>
 
@@ -423,10 +423,12 @@ David Culp,  davidculp2@comcast.net
     <type>lookfrom</type>
    <internal archive="y">true</internal>
    <config>
-    <pitch-offset-deg>-45</pitch-offset-deg>
+    <default-field-of-view-deg type="double">55.0</default-field-of-view-deg>
     <x-offset-m archive="y">0</x-offset-m><!-- right/left -->
     <y-offset-m archive="y">0.82</y-offset-m><!-- up/down -->
     <z-offset-m archive="y">-2.5</z-offset-m><!-- aft/fore -->
+    <pitch-offset-deg>-45</pitch-offset-deg>
+    <heading-offset-deg type="double">45</heading-offset-deg>
       <from-model type="bool">true</from-model>
       <from-model-idx type="int">0</from-model-idx>
       <ground-level-nearplane-m type="double">0.5f</ground-level-nearplane-m>
@@ -444,10 +446,37 @@ David Culp,  davidculp2@comcast.net
    </config>
   </view>
 
-  <current-view>
-   <field-of-view>60.0</field-of-view>
+<view n="99999">
+    <name>Canopy View</name>
+    <type>lookfrom</type>
+   <internal archive="y">true</internal>
    <config>
-    <default-field-of-view-deg archive="y">60.0</default-field-of-view-deg>
+    <pitch-offset-deg>40</pitch-offset-deg>
+    <x-offset-m archive="y">0</x-offset-m><!-- right/left -->
+    <y-offset-m archive="y">0.90</y-offset-m><!-- up/down -->
+    <z-offset-m archive="y">-2.0</z-offset-m><!-- aft/fore -->
+      <from-model type="bool">true</from-model>
+      <from-model-idx type="int">0</from-model-idx>
+      <ground-level-nearplane-m type="double">0.5f</ground-level-nearplane-m>
+      <default-field-of-view-deg type="double">90</default-field-of-view-deg>
+      <default-pitch-deg type="double">0</default-pitch-deg>
+      <default-heading-deg type="double">0</default-heading-deg>
+      <front-direction-deg type="double">0</front-direction-deg>
+      <front-left-direction-deg type="double">45</front-left-direction-deg>
+      <left-direction-deg type="double">90</left-direction-deg>
+      <back-left-direction-deg type="double">135</back-left-direction-deg>
+      <back-direction-deg type="double">180</back-direction-deg>
+      <back-right-direction-deg type="double">225</back-right-direction-deg>
+      <right-direction-deg type="double">270</right-direction-deg>
+      <front-right-direction-deg type="double">315</front-right-direction-deg>
+   </config>
+  </view>
+
+
+  <current-view>
+   <field-of-view>78</field-of-view>
+   <config>
+    <default-field-of-view-deg archive="y">78</default-field-of-view-deg>
    </config>
   </current-view>
 
@@ -511,7 +540,6 @@ The North American/Rockwell OV-10 Bronco was designed for the forward air contro
 Some unusual features of the OV-10 are that the cockpit is entered from the right side, and that each wing has 4 small spoilers for roll assist.  When flying the OV-10 be careful of using idle power.  If the "power levers" are brought all the way to the idle stop the propellers will go into flat pitch, and they act as speed brakes as well as spoilers for one-third of the wing.  Land with the levers just above idle.
    </text>
   </help>
-
    <multiplay>
      <generic>
 	   <float n="0" alias="/gear/gear[0]/steering-norm"/>
@@ -553,11 +581,11 @@ Some unusual features of the OV-10 are that the cockpit is entered from the righ
  <controls>
   <armament>
    <gunsight>
-    <power-on type="bool">false</power-on>
+    <power-on type="bool">true</power-on>
     <intensity type="double">0.5</intensity>
    </gunsight>
    <release type="bool">false</release>
-   <master-arm type="bool">false</master-arm>
+   <master-arm type="bool">true</master-arm>
    <gun-trigger type="bool">false</gun-trigger>
    <gun-charged type="bool">false</gun-charged>
    <charging type="bool">false</charging>
@@ -613,7 +641,7 @@ Some unusual features of the OV-10 are that the cockpit is entered from the righ
    <pump-fail-time type="int">0</pump-fail-time>
    <last-level-gal_us type="float">220</last-level-gal_us>
   </external-tank>
-  <smoke type="int">0</smoke>
+  <smoke type="bool">false</smoke>
   <jump-signal type="bool">false</jump-signal>
   <signal type="bool">false</signal>
   <paratroopers type="bool">false</paratroopers>
@@ -710,7 +738,7 @@ Some unusual features of the OV-10 are that the cockpit is entered from the righ
    </key>
    <key n="83">
     <name>S</name>
-    <desc>Stop smoke</desc>
+    <desc>Start smoke</desc>
     <binding>
      <command>property-assign</command>
      <property>controls/smoke</property>
