@@ -1760,7 +1760,7 @@
  </animation>
 
  <model>
-    <path>Aircraft/OV10/Effects/smoke.xml</path>
+    <path>Aircraft/OV10/Models/CDF/Effects/smoke.xml</path>
     <offsets>
       <x-m>  0 </x-m>
       <y-m>  2.55 </y-m>
