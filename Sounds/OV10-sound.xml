@@ -214,7 +214,7 @@
       </pitch>
     </wind>
 
-    <buffet>
+    <!--<buffet>
       <name>alpha-buffet</name>
       <mode>looped</mode>
       <path>Sounds/rumble.wav</path>
@@ -233,7 +233,7 @@
         <property>/fdm/jsbsim/aero/alpha-rad[0]</property>
         <factor>0.1</factor>
       </pitch>
-    </buffet>
+    </buffet>-->
 
     <flap>
       <name>flaps</name>
@@ -302,7 +302,10 @@
     <williepl>
      <name>wpfirel</name>
      <condition>
+	<or>
        <property>controls/armament/trigger1</property>
+       <property>controls/armament/trigger5</property>
+	</or>
      </condition>
    <path>Aircraft/OV10/Sounds/rockets.wav</path>
   </williepl>
@@ -311,7 +314,10 @@
      <name>wpfirer</name>
      <condition>
        <and>
+	<or>
        <property>controls/armament/trigger5</property>
+	<property>controls/armament/trigger1</property>
+	</or>
        <greater-than>
          <property>ai/submodels/submodel[6]/count</property>
          <value>0</value>

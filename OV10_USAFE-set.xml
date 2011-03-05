@@ -408,6 +408,53 @@ David Culp,  davidculp2@comcast.net
    </ov10>
   </model>
 
+  <current-view>
+   <field-of-view>67</field-of-view>
+   <config>
+    <default-field-of-view-deg archive="y">67</default-field-of-view-deg>
+   </config>
+  </current-view>
+
+  <chase-distance-m>-19</chase-distance-m>
+
+  <view>
+    <name>Cockpit View</name>
+    <enabled type="bool" userarchive="y">true</enabled>
+    <type>lookfrom</type>
+    <internal type="bool">false</internal>
+    <config>
+      <from-model type="bool">true</from-model>
+      <from-model-idx type="int">0</from-model-idx>
+      <ground-level-nearplane-m type="double">0.5f</ground-level-nearplane-m>
+      <default-field-of-view-deg type="double">65.0</default-field-of-view-deg>
+      <default-pitch-deg type="double">0</default-pitch-deg>
+      <default-heading-deg type="double">0</default-heading-deg>
+      <front-direction-deg type="double">0</front-direction-deg>
+      <front-left-direction-deg type="double">45</front-left-direction-deg>
+      <left-direction-deg type="double">90</left-direction-deg>
+      <back-left-direction-deg type="double">135</back-left-direction-deg>
+      <back-direction-deg type="double">180</back-direction-deg>
+      <back-right-direction-deg type="double">225</back-right-direction-deg>
+      <right-direction-deg type="double">270</right-direction-deg>
+      <front-right-direction-deg type="double">315</front-right-direction-deg>
+      <dynamic-view type="bool">true</dynamic-view>
+      <limits>
+        <enabled type="bool">true</enabled>
+        <left>
+          <heading-max-deg type="double">140</heading-max-deg>
+          <x-offset-max-m type="double">0.15</x-offset-max-m>
+          <x-offset-threshold-deg type="double">65</x-offset-threshold-deg>
+        </left>
+        <right>
+          <heading-max-deg type="double">140</heading-max-deg>
+          <x-offset-max-m type="double">0.15</x-offset-max-m>
+          <x-offset-threshold-deg type="double">65</x-offset-threshold-deg>
+        </right>
+      </limits>
+    </config>
+  </view>
+
+
   <view n="0">
    <internal archive="y">true</internal>
    <config>
@@ -473,15 +520,6 @@ David Culp,  davidculp2@comcast.net
   </view>
 
 
-  <current-view>
-   <field-of-view>78</field-of-view>
-   <config>
-    <default-field-of-view-deg archive="y">78</default-field-of-view-deg>
-   </config>
-  </current-view>
-
-  <chase-distance-m>-19</chase-distance-m>
-
         <menubar>
             <default>
                 <menu n="10">
@@ -511,6 +549,10 @@ David Culp,  davidculp2@comcast.net
    <key>
     <name>j</name>
     <desc>Jumpers (5 paratroopers)</desc>
+   </key>
+   <key>
+    <name>c</name>
+    <desc>Toggle Canopy</desc>
    </key>
    <key>
     <name>e</name>
@@ -577,6 +619,23 @@ Some unusual features of the OV-10 are that the cockpit is entered from the righ
    </tank>
   </fuel>
  </consumables>
+
+ <fdm>
+  <jsbsim>
+   <systems>
+    <canopy>
+      <command type="double">0</command>
+    </canopy>
+    <reverser>
+      <command type="double">0</command>
+    </reverser>
+   </systems> 
+  </jsbsim>
+ </fdm>
+
+ <canopy>
+  <position-norm type="double">0</position-norm>
+ </canopy>
 
  <controls>
   <armament>
@@ -711,6 +770,16 @@ Some unusual features of the OV-10 are that the cockpit is entered from the righ
 
  <input>
   <keyboard>
+
+    <key n="99">
+     <name>c</name>
+     <desc>toggle canopy</desc>
+     <binding>
+       <command>property-toggle</command>
+       <property>fdm/jsbsim/systems/canopy/command</property>
+     </binding>
+    </key> 
+
   <key n="32">
    <name>SPACE</name>
    <desc>Release munitions at selected station</desc>

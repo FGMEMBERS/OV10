@@ -17,19 +17,19 @@
  <panel>
   <path>Aircraft/OV10/Models/USAFE/panel-hotspots.xml</path>
   <bottom-left>
-   <x-m>-3.04</x-m>
-   <y-m>-0.53</y-m>
+   <x-m>-3.03</x-m>
+   <y-m>-0.51</y-m>
    <z-m>-0.4</z-m>
   </bottom-left>
   <bottom-right>
-   <x-m>-3.04</x-m>
-   <y-m> 0.53</y-m>
+   <x-m>-3.03</x-m>
+   <y-m> 0.51</y-m>
    <z-m>-0.40</z-m>
   </bottom-right>
   <top-left>
-   <x-m>-3.04</x-m>
-   <y-m>-0.53</y-m>
-   <z-m> 0.56</z-m>
+   <x-m>-2.99</x-m>
+   <y-m>-0.51</y-m>
+   <z-m> 0.57</z-m>
   </top-left>
  </panel>
 
@@ -282,9 +282,9 @@
  <model>
   <path>Aircraft/OV10/Models/USAFE/Instruments/WeaponsArm/weapons.xml</path>
   <offsets>
-   <x-m>-2.99</x-m>
-   <y-m>-0.24</y-m>
-   <z-m>0.04</z-m>
+   <x-m>-3.021</x-m>
+   <y-m>-0.245</y-m>
+   <z-m>0.039</z-m>
    <!--pitch-deg>-10</pitch-deg-->
   </offsets>
  </model>
@@ -292,9 +292,9 @@
  <model>
   <path>Aircraft/OV10/Models/USAFE/Instruments/StationPanel/station.xml</path>
   <offsets>
-   <x-m>-2.99</x-m>
-   <y-m>0.24</y-m>
-   <z-m>0.04</z-m>
+   <x-m>-3.021</x-m>
+   <y-m>0.251</y-m>
+   <z-m>0.039</z-m>
    <!--pitch-deg>-10</pitch-deg-->
   </offsets>
  </model>
@@ -302,7 +302,7 @@
  <model>
   <path>Aircraft/OV10/Models/USAFE/Instruments/Warning/firehandle1.xml</path>
   <offsets>
-   <x-m>-2.95</x-m>
+   <x-m>-3.05</x-m>
    <y-m>0.192</y-m>
    <z-m>-0.025</z-m>
   </offsets>
@@ -311,7 +311,7 @@
  <model>
   <path>Aircraft/OV10/Models/USAFE/Instruments/Warning/firehandle2.xml</path>
   <offsets>
-   <x-m>-2.95</x-m>
+   <x-m>-3.05</x-m>
    <y-m>0.285</y-m>
    <z-m>-0.025</z-m>
   </offsets>
@@ -329,9 +329,9 @@
  <model>
   <path>Aircraft/OV10/Models/BlkPony/Instruments/KLN90/KLN90.xml</path>
   <offsets>
-   <x-m>-3.03</x-m>
-   <y-m>-0.00</y-m>
-   <z-m>-0.031</z-m>
+   <x-m>-3.04</x-m>
+   <y-m>-0.10</y-m>
+   <z-m>-0.058</z-m>
   </offsets>
  </model>
 
@@ -391,43 +391,44 @@
   </offsets>
  </model>
 
-<!-- GPS Panel hotspots -->
+<!-- GPS Panel Hotspots -->
  <panel>
   <path>Aircraft/OV10/Models/BlkPony/Instruments/KLN90/GPSa.xml</path>
   <bottom-left>
-   <x-m>-2.95</x-m>
-   <y-m>-0.0145</y-m>
-   <z-m>-0.0122</z-m>
+   <x-m>-3.03</x-m>
+   <y-m>-0.016</y-m>
+   <z-m>-0.030</z-m>
   </bottom-left>
   <bottom-right>
-   <x-m>-2.95</x-m>
-   <y-m>0.139</y-m>
-   <z-m>-0.0112</z-m>
+   <x-m>-3.03</x-m>
+   <y-m>0.147</y-m>
+   <z-m>-0.030</z-m>
   </bottom-right>
   <top-left>
-   <x-m>-2.95</x-m>
-   <y-m>-0.0129</y-m>
-   <z-m>0.0405</z-m>
+   <x-m>-3.03</x-m>
+   <y-m>-0.016</y-m>
+   <z-m>0.015</z-m>
   </top-left>
  </panel>
+
 
  <!-- digitrak Panel hotspots -->
  <panel>
   <path>Aircraft/OV10/Models/BlkPony/Instruments/digitrak/AP.xml</path>
   <bottom-left>
-   <x-m>-2.95</x-m>
-   <y-m>-0.145</y-m>
-   <z-m>-0.016</z-m>
+   <x-m>-3.02</x-m>
+   <y-m>-0.16</y-m>
+   <z-m>-0.035</z-m>
   </bottom-left>
   <bottom-right>
-   <x-m>-2.95</x-m>
+   <x-m>-3.02</x-m>
    <y-m>-0.09</y-m>
-   <z-m>-0.016</z-m>
+   <z-m>-0.035</z-m>
   </bottom-right>
   <top-left>
-   <x-m>-2.95</x-m>
-   <y-m>-0.145</y-m>
-   <z-m>0.0415</z-m>
+   <x-m>-3.02</x-m>
+   <y-m>-0.16</y-m>
+   <z-m>0.022</z-m>
   </top-left>
  </panel>
 
@@ -741,6 +742,39 @@
 
 
  <!-- ************* Exterior Animations ******************* -->
+
+ <animation>
+  <type>rotate</type>
+  <object-name>noshadow.RightFrontWi</object-name>
+  <object-name>RightFrontWindowHinge</object-name>
+  <object-name>PillarRight</object-name>
+  <property>canopy/position-norm</property>
+  <factor>90</factor>
+  <axis>
+     <x1-m> -2.84505</x1-m>
+     <y1-m> 0.433436</y1-m>
+     <z1-m> 0.376134</z1-m>
+     <x2-m> -1.67783</x2-m>
+     <y2-m> 0.488474</y2-m>
+     <z2-m> 0.51751</z2-m>
+  </axis>
+ </animation>
+
+ <animation>
+  <type>rotate</type>
+  <object-name>noshadow.LeftFrontWin</object-name>
+  <object-name>LeftFrontWindowHinge</object-name>
+  <property>canopy/position-norm</property>
+  <factor>-20</factor>
+  <axis>
+     <x1-m> -2.84448</x1-m>
+     <y1-m> -0.449915</y1-m>
+     <z1-m> 0.372413</z1-m>
+     <x2-m> -1.63007</x2-m>
+     <y2-m> -0.490619</y2-m>
+     <z2-m> 0.509933</z2-m>
+  </axis>
+ </animation>
 
 
  <!-- ************* Propellers **************************** -->

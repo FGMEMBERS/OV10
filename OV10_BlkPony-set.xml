@@ -42,7 +42,7 @@ David Culp,  davidculp2@comcast.net
       <path>Aircraft/Generic/generic-electrical.xml</path>
     </electrical>
     <autopilot>
-      <path>Aircraft/OV10/Models/NASA/Instruments/digitrak/digitrak-autopilot.xml</path>
+      <path>Aircraft/OV10/Models/BlkPony/Instruments/digitrak/digitrak-autopilot.xml</path>
     </autopilot>
   </systems>
 
@@ -417,6 +417,54 @@ David Culp,  davidculp2@comcast.net
    </ov10>
   </model>
 
+  <current-view>
+   <field-of-view>67</field-of-view>
+   <config>
+    <default-field-of-view-deg archive="y">67</default-field-of-view-deg>
+   </config>
+  </current-view>
+
+  <chase-distance-m>-19</chase-distance-m>
+
+
+
+  <view>
+    <name>Cockpit View</name>
+    <enabled type="bool" userarchive="y">true</enabled>
+    <type>lookfrom</type>
+    <internal type="bool">false</internal>
+    <config>
+      <from-model type="bool">true</from-model>
+      <from-model-idx type="int">0</from-model-idx>
+      <ground-level-nearplane-m type="double">0.5f</ground-level-nearplane-m>
+      <default-field-of-view-deg type="double">67.0</default-field-of-view-deg>
+      <default-pitch-deg type="double">0</default-pitch-deg>
+      <default-heading-deg type="double">0</default-heading-deg>
+      <front-direction-deg type="double">0</front-direction-deg>
+      <front-left-direction-deg type="double">45</front-left-direction-deg>
+      <left-direction-deg type="double">90</left-direction-deg>
+      <back-left-direction-deg type="double">135</back-left-direction-deg>
+      <back-direction-deg type="double">180</back-direction-deg>
+      <back-right-direction-deg type="double">225</back-right-direction-deg>
+      <right-direction-deg type="double">270</right-direction-deg>
+      <front-right-direction-deg type="double">315</front-right-direction-deg>
+      <dynamic-view type="bool">true</dynamic-view>
+      <limits>
+        <enabled type="bool">true</enabled>
+        <left>
+          <heading-max-deg type="double">140</heading-max-deg>
+          <x-offset-max-m type="double">0.15</x-offset-max-m>
+          <x-offset-threshold-deg type="double">65</x-offset-threshold-deg>
+        </left>
+        <right>
+          <heading-max-deg type="double">140</heading-max-deg>
+          <x-offset-max-m type="double">0.15</x-offset-max-m>
+          <x-offset-threshold-deg type="double">65</x-offset-threshold-deg>
+        </right>
+      </limits>
+    </config>
+  </view>
+
   <view n="0">
    <internal archive="y">true</internal>
    <config>
@@ -493,7 +541,7 @@ David Culp,  davidculp2@comcast.net
       <from-model type="bool">true</from-model>
       <from-model-idx type="int">0</from-model-idx>
       <ground-level-nearplane-m type="double">0.5f</ground-level-nearplane-m>
-      <default-field-of-view-deg type="double">90</default-field-of-view-deg>
+      <default-field-of-view-deg type="double">80</default-field-of-view-deg>
       <default-pitch-deg type="double">0</default-pitch-deg>
       <default-heading-deg type="double">0</default-heading-deg>
       <front-direction-deg type="double">0</front-direction-deg>
@@ -507,15 +555,6 @@ David Culp,  davidculp2@comcast.net
    </config>
   </view>
 
-
-  <current-view>
-   <field-of-view>78</field-of-view>
-   <config>
-    <default-field-of-view-deg archive="y">78</default-field-of-view-deg>
-   </config>
-  </current-view>
-
-  <chase-distance-m>-19</chase-distance-m>
 
         <menubar>
             <default>
@@ -544,6 +583,10 @@ David Culp,  davidculp2@comcast.net
   <help>
    <title>OV-10A</title>
    <key>
+    <name>c</name>
+    <desc>Toggle Canopy</desc>
+   </key>
+   <key>
     <name>j</name>
     <desc>Jumpers (5 paratroopers)</desc>
    </key>
@@ -554,10 +597,6 @@ David Culp,  davidculp2@comcast.net
    <key>
     <name>s/S</name>
     <desc>start/stop smoke</desc>
-   </key>
-   <key>
-    <name>Shift-R </name>
-    <desc>Toggle reverse thrust</desc>
    </key>
    <key>
     <name>space bar</name>
@@ -607,6 +646,23 @@ Some unusual features of the OV-10 are that the cockpit is entered from the righ
   </fuel>
  </consumables>
 
+ <fdm>
+  <jsbsim>
+   <systems>
+    <canopy>
+      <command type="double">0</command>
+    </canopy>
+    <reverser>
+      <command type="double">0</command>
+    </reverser>
+   </systems> 
+  </jsbsim>
+ </fdm>
+
+ <canopy>
+  <position-norm type="double">0</position-norm>
+ </canopy>
+
  <controls>
   <armament>
    <gunsight>
@@ -624,11 +680,11 @@ Some unusual features of the OV-10 are that the cockpit is entered from the righ
    <station3 type="bool">true</station3>
    <station4 type="bool">true</station4>
    <station5 type="bool">false</station5>
-   <nstation1 type="bool">true</nstation1>
+   <nstation1 type="bool">false</nstation1>
    <nstation2 type="bool">true</nstation2>
    <nstation3 type="bool">true</nstation3>
    <nstation4 type="bool">true</nstation4>
-   <nstation5 type="bool">true</nstation5>
+   <nstation5 type="bool">false</nstation5>
    <fire1 type="bool">false</fire1>
    <off1 type="bool">true</off1>
    <drop1 type="bool">false</drop1>
@@ -732,6 +788,15 @@ Some unusual features of the OV-10 are that the cockpit is entered from the righ
  <input>
   <keyboard>
 
+    <key n="99">
+     <name>c</name>
+     <desc>toggle canopy</desc>
+     <binding>
+       <command>property-toggle</command>
+       <property>fdm/jsbsim/systems/canopy/command</property>
+     </binding>
+    </key> 
+
 <key n="101">
   <name>e</name>
   <desc>Rocket1</desc>
@@ -830,9 +895,30 @@ Some unusual features of the OV-10 are that the cockpit is entered from the righ
    <radar-altimeter>
       <decision-height>300</decision-height>
     </radar-altimeter>
-  <gps>
+    <gps>
      <serviceable>true</serviceable> 
     </gps>
+    <radar>
+      <minimized type="bool" archive="y">false</minimized>
+      <switch type="string" archive="y">ON</switch>
+      <mode-control type="int" archive="y">1</mode-control>
+      <display-controls> 
+        <WX type="bool" archive="y">true</WX>
+        <data type="bool" archive="y">false</data>
+        <pos type="bool" archive="y">false</pos>
+      </display-controls>
+      <serviceable type="bool">true</serviceable>
+      <range type="int" archive="y">8</range>
+    </radar>
+    <wxradar>
+      <range type="int" archive="y">8</range>
+      <minimized type="bool" archive="y">false</minimized>
+      <switch type="string" archive="y">ON</switch>
+      <mode type="string" archive="y">WX</mode>
+      <lightning type="bool" archive="y">false</lightning>
+      <display-mode type="string" archive="y">plan</display-mode>
+      <serviceable type="bool" >true</serviceable>
+    </wxradar>
   </instrumentation>
 
   <nasal>
@@ -861,16 +947,14 @@ Some unusual features of the OV-10 are that the cockpit is entered from the righ
     <Jumpers>
       <file>Aircraft/OV10/Nasal/paratroopers.nas</file>
     </Jumpers>
+    <systems>
+      <file>Aircraft/OV10/Nasal/systems.nas</file>
+    </systems>
     <digitrak>
       <file>Aircraft/OV10/Nasal/digitrak.nas</file>
     </digitrak>
-                <instruments>
-                        <file>Aircraft/F-8E_Crusader/Systems/radar.nas</file>
-                        <file>Aircraft/F-8E_Crusader/Systems/navV2.nas</file>
-                        <!--<file>Aircraft/Instruments-3d/radar2/radar2.nas</file>-->
-                </instruments>
-  </nasal>
 
+  </nasal>
 
 
 </PropertyList>

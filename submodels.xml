@@ -133,15 +133,15 @@
 
   <submodel>
     <name>fire rocket - station 1</name>
-    <model>Aircraft/A-29B/Models/Stores/7x70mmPod/rocket.xml</model>
+    <model>Aircraft/DavePack/Stores/FFAR/rocket.xml</model>
     <trigger>controls/armament/trigger1</trigger>
     <trigger-once>false</trigger-once>
     <speed>3000.0</speed>
     <repeat>true</repeat>
     <delay>.25</delay>
-    <count>7</count>
+    <count>50</count>
     <x-offset> 1.00</x-offset>
-    <y-offset>-8.83</y-offset>
+    <y-offset>-4.0</y-offset>
     <z-offset>-1.00</z-offset>
     <yaw-offset>0.0</yaw-offset>
     <pitch-offset>0.0</pitch-offset>
@@ -150,21 +150,21 @@
     <collision-report>sim/ai/aircraft/collision/cannon</collision-report>
     <impact>true</impact>
     <impact-report>sim/ai/aircraft/impact/droptank</impact-report>
-    <submodel-path>Aircraft/A-29B/Models/Stores/7x70mmPod/rocket-submodel.xml</submodel-path>
+    <submodel-path>Aircraft/DavePack/Stores/FFAR/rocket-submodel.xml</submodel-path>
   </submodel>
 
   <submodel>
     <name>fire rocket - station 4</name>
-    <model>Aircraft/A-29B/Models/Stores/7x70mmPod/rocket.xml</model>
+    <model>Aircraft/DavePack/Stores/FFAR/rocket.xml</model>
     <trigger>controls/armament/trigger5</trigger>
     <trigger-once>false</trigger-once>
     <speed>3000.0</speed>
     <repeat>true</repeat>
     <delay>0.10</delay>
-    <count>7</count>
-    <x-offset>3.0</x-offset>
-    <y-offset>3.0</y-offset>
-    <z-offset>-2.8</z-offset>
+    <count>50</count>
+    <x-offset>1.0</x-offset>
+    <y-offset>4.0</y-offset>
+    <z-offset>-1.0</z-offset>
     <yaw-offset>0.0</yaw-offset>
     <pitch-offset>0.0</pitch-offset>
     <eda>0.0001</eda>
@@ -172,21 +172,20 @@
     <collision-report>sim/ai/aircraft/collision/cannon</collision-report>
     <impact>true</impact>
     <impact-report>sim/ai/aircraft/impact/droptank</impact-report>
- <submodel-path>Aircraft/A-29B/Models/Stores/7x70mmPod/rocket-submodel.xml</submodel-path>
+    <submodel-path>Aircraft/DavePack/Stores/FFAR/rocket-submodel.xml</submodel-path>
   </submodel>
-
 
   <submodel>
     <name>smoke generator</name>
     <model>Models/Geometry/smoke_trail.ac</model>
     <trigger>controls/armament/smoke</trigger>
-    <speed>0.0</speed>
+    <speed>2840.0</speed>
     <repeat>true</repeat>
     <delay>0.05</delay>
     <count>-1</count>
-    <x-offset>4.0</x-offset>
-    <y-offset>-1.0</y-offset>
-    <z-offset>-1.0</z-offset>
+    <x-offset>0.0</x-offset>
+    <y-offset>1.05</y-offset>
+    <z-offset>-1.38</z-offset>
     <yaw-offset>180.0</yaw-offset>
     <pitch-offset>0.0</pitch-offset>
     <eda>0.01</eda>
@@ -199,13 +198,13 @@
     <name>smoke generator2</name>
     <model>Models/Geometry/smoke_trail.ac</model>
     <trigger>controls/armament/smoke</trigger>
-    <speed>0.0</speed>
+    <speed>2840.0</speed>
     <repeat>true</repeat>
     <delay>0.05</delay>
     <count>-1</count>
-    <x-offset>2.0</x-offset>
-    <y-offset>-1.0</y-offset>
-    <z-offset>-1.0</z-offset>
+    <x-offset>0.0</x-offset>
+    <y-offset>1.05</y-offset>
+    <z-offset>-1.38</z-offset>
     <yaw-offset>180.0</yaw-offset>
     <pitch-offset>0.0</pitch-offset>
     <eda>0.01</eda>
@@ -218,13 +217,13 @@
     <name>smoke generator3</name>
     <model>Models/Geometry/smoke_trail.ac</model>
     <trigger>controls/armament/smoke</trigger>
-    <speed>0.0</speed>
+    <speed>2840.0</speed>
     <repeat>true</repeat>
     <delay>0.05</delay>
     <count>-1</count>
-    <x-offset>-2.0</x-offset>
-    <y-offset>-1.0</y-offset>
-    <z-offset>-1.0</z-offset>
+    <x-offset>-0.0</x-offset>
+    <y-offset>-1.05</y-offset>
+    <z-offset>-1.38</z-offset>
     <yaw-offset>180.0</yaw-offset>
     <pitch-offset>0.0</pitch-offset>
     <eda>0.01</eda>
@@ -237,13 +236,13 @@
     <name>smoke generator4</name>
     <model>Models/Geometry/smoke_trail.ac</model>
     <trigger>controls/armament/smoke</trigger>
-    <speed>0.0</speed>
+    <speed>2840.0</speed>
     <repeat>true</repeat>
     <delay>0.05</delay>
     <count>-1</count>
-    <x-offset>-4.0</x-offset>
-    <y-offset>-1.0</y-offset>
-    <z-offset>-1.0</z-offset>
+    <x-offset>0.0</x-offset>
+    <y-offset>-1.05</y-offset>
+    <z-offset>-1.38</z-offset>
     <yaw-offset>180.0</yaw-offset>
     <pitch-offset>0.0</pitch-offset>
     <eda>0.01</eda>

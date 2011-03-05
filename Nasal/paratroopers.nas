@@ -24,11 +24,21 @@ rm_paratroopers_weight = func() {
 
 	if ( para )
 	{
-		settimer(func {setprop("/consumables/fuel/tank[9]/level-gal_us[0]",128) }, 0);
-		settimer(func {setprop("/consumables/fuel/tank[9]/level-gal_us[0]",96) }, 1);
-		settimer(func {setprop("/consumables/fuel/tank[9]/level-gal_us[0]",64) }, 2);
-		settimer(func {setprop("/consumables/fuel/tank[9]/level-gal_us[0]",32) }, 3);
-		settimer(func {setprop("/consumables/fuel/tank[9]/level-gal_us[0]",0) }, 4);
+		settimer(func {setprop("/consumables/fuel/tank[9]/level-gal_us[0]",14) }, 0);
+		settimer(func {setprop("/consumables/fuel/tank[9]/level-gal_us[0]",13) }, 1);
+		settimer(func {setprop("/consumables/fuel/tank[9]/level-gal_us[0]",12) }, 2);
+		settimer(func {setprop("/consumables/fuel/tank[9]/level-gal_us[0]",11) }, 3);
+		settimer(func {setprop("/consumables/fuel/tank[9]/level-gal_us[0]",10) }, 4);
+		settimer(func {setprop("/consumables/fuel/tank[9]/level-gal_us[0]",9) }, 5);
+		settimer(func {setprop("/consumables/fuel/tank[9]/level-gal_us[0]",8) }, 6);
+		settimer(func {setprop("/consumables/fuel/tank[9]/level-gal_us[0]",7) }, 7);
+		settimer(func {setprop("/consumables/fuel/tank[9]/level-gal_us[0]",6) }, 8);
+		settimer(func {setprop("/consumables/fuel/tank[9]/level-gal_us[0]",5) }, 9);
+		settimer(func {setprop("/consumables/fuel/tank[9]/level-gal_us[0]",4) }, 10);
+		settimer(func {setprop("/consumables/fuel/tank[9]/level-gal_us[0]",3) }, 11);
+		settimer(func {setprop("/consumables/fuel/tank[9]/level-gal_us[0]",2) }, 12);
+		settimer(func {setprop("/consumables/fuel/tank[9]/level-gal_us[0]",1) }, 13);
+		settimer(func {setprop("/consumables/fuel/tank[9]/level-gal_us[0]",0) }, 14);
 	}
 }
 

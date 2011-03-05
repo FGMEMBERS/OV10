@@ -16,7 +16,7 @@
           <time>     2 </time>
        </setting>
      </traverse>
-     <output>systems/canopy/position</output>
+     <output>/canopy/position-norm</output>
    </kinematic>
 
   </channel>
