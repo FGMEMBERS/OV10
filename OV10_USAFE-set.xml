@@ -822,8 +822,8 @@ Some unusual features of the OV-10 are that the cockpit is entered from the righ
      <script>Eject.eject();</script>
     </binding>
    </key>
-   <key n="9">
-    <name>Tab</name>
+   <key n="61">
+    <name>=</name>
     <desc>Menu Dialog</desc>
     <binding>
      <command>nasal</command>
