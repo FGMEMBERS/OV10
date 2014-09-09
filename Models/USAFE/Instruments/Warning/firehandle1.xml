@@ -1,0 +1,16 @@
+<?xml version="1.0"?>
+
+<!-- OV-10 Fire Handle (engine 1), by Dave Culp -->
+
+<PropertyList>
+
+ <path>firehandle.ac</path>
+
+ <!-- *** LoD *** -->
+ <animation>
+  <type>range</type>
+  <min-m>0</min-m>
+  <max-m>5</max-m>
+ </animation>
+
+</PropertyList>

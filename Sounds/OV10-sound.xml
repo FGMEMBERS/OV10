@@ -1,0 +1,371 @@
+<?xml version="1.0"?>
+ 
+<PropertyList>
+ <fx>
+
+   <engine>
+      <name>engine #1 starting</name>
+      <mode>looped</mode>
+      <path>Aircraft/OV10/Sounds/turboprop1.wav</path>
+      <condition>
+        <property>/engines/engine[0]/starter</property>
+	</condition>
+      <volume>
+        <property>/engines/engine[0]/n2</property>
+        <type>log</type>
+        <factor>0.7</factor>
+        <offset>0.5</offset>
+      </volume>
+      <pitch>
+        <property>/engines/engine[0]/n2</property>
+        <type>log</type>
+        <factor>0.20</factor>
+        <offset>0.10</offset>
+      </pitch>
+    </engine>
+
+    <engine>
+      <name>engine #1 running</name>
+      <mode>looped</mode>
+      <path>Aircraft/OV10/Sounds/turboprop1.wav</path>
+      <condition>
+       <or>
+         <greater-than>
+           <property>/engines/engine[0]/n2</property>
+           <value type="double">19.9</value>
+         </greater-than>
+         <and>
+	  <not>
+            <property>/engines/engine[0]/starter</property>
+          </not>
+            <greater-than>
+              <property>/engines/engine[0]/n2</property>
+              <value type="double">1</value>
+            </greater-than>
+         </and>
+       </or>
+      </condition>
+      <volume>
+        <property>/engines/engine[0]/n2</property>
+        <type>log</type>
+        <factor>0.2</factor>
+	<offset>0.2</offset>
+      </volume>
+        <pitch>
+         <property>/engines/engine[0]/n2</property>
+         <factor>0.004</factor>
+         <offset>0.8</offset>
+        </pitch>
+    </engine>
+
+    <engine>
+      <name>engine #2 starting</name>
+      <mode>looped</mode>
+      <path>Aircraft/OV10/Sounds/turboprop1.wav</path>
+      <condition>
+        <property>/engines/engine[1]/starter</property>
+      </condition>
+      <volume>
+        <property>/engines/engine[1]/n2</property>
+        <type>log</type>
+        <factor>0.7</factor>
+        <offset>0.5</offset>
+      </volume>
+      <pitch>
+        <property>/engines/engine[1]/n2</property>
+        <type>log</type>
+        <factor>0.20</factor>
+        <offset>0.10</offset>
+      </pitch>
+    </engine>
+
+    <engine>
+      <name>engine #2 running</name>
+      <mode>looped</mode>
+      <path>Aircraft/OV10/Sounds/turboprop1.wav</path>
+      <condition>
+        <or>
+         <greater-than>
+           <property>/engines/engine[1]/n2</property>
+           <value type="double">19.9</value>
+         </greater-than>
+          <and>
+            <not>
+              <property>/engines/engine[1]/starter</property>
+            </not>
+            <greater-than>
+              <property>/engines/engine[1]/n2</property>
+              <value type="double">1.0</value>
+            </greater-than>
+          </and>
+        </or>
+      </condition>
+      <volume>
+        <property>/engines/engine[1]/n2</property>
+        <type>log</type>
+        <factor>0.2</factor>
+        <offset>0.2</offset>
+      </volume>
+      <pitch>
+        <property>/engines/engine[1]/n2</property>
+	<factor>0.004</factor>
+	<offset>0.8</offset>
+      </pitch>
+    </engine>
+
+    <tire-rumble>
+      <name>tire-rumble</name>
+      <mode>looped</mode>
+      <path>Sounds/rumble.wav</path>
+      <condition>
+        <or>
+          <property>/gear/gear[0]/wow</property>
+          <property>/gear/gear[1]/wow</property>
+          <property>/gear/gear[2]/wow</property>
+        </or>
+      </condition>
+      <volume>
+        <property>/velocities/airspeed-kt</property>
+        <factor>0.004</factor>
+        <max>0.3</max>
+      </volume>
+    </tire-rumble>
+
+    <gear-wind>
+      <name>gear-wind</name>
+      <mode>looped</mode>
+      <path>Sounds/rumble.wav</path>
+      <condition>
+        <greater-than>
+          <property>/gear/gear[1]/position-norm[0]</property>
+          <value>0.01</value>
+        </greater-than>
+      </condition>
+      <volume>
+        <property>/velocities/airspeed-kt</property>
+        <factor>0.008</factor>
+        <max>1.0</max>
+      </volume>
+    </gear-wind>
+
+    <gear-lock>
+      <name>gear-lock</name>
+      <path>Sounds/gear-lck.wav</path>
+      <condition>
+        <equals>
+          <property>/gear/gear[0]/position-norm</property>
+          <value>0</value>
+        </equals>
+      </condition>
+    </gear-lock>
+
+    <squeal>
+      <name>squeal</name>
+      <path>Sounds/squeal.wav</path>
+      <condition>
+        <or>
+          <property>/gear/gear[0]/wow</property>
+          <property>/gear/gear[1]/wow</property>
+          <property>/gear/gear[2]/wow</property>
+        </or>
+      </condition>
+      <volume>
+        <property>/velocities/speed-down-fps</property>
+        <factor>0.05</factor>
+      </volume>
+      <volume>
+        <property>/velocities/airspeed-kt</property>
+        <factor>0.01</factor>
+      </volume>
+      <volume>
+        <internal>dt_stop</internal>
+        <factor>0.05</factor>
+        <max>1.0</max>
+      </volume>
+      <pitch>
+        <property>/velocities/airspeed-kt</property>
+        <factor>0.0025</factor>
+        <offset>1.2</offset>
+      </pitch>
+    </squeal>
+
+    <wind>
+      <name>wind</name>
+      <mode>looped</mode>
+      <path>Sounds/wind.wav</path>
+      <property>/velocities/airspeed-kt</property>
+      <volume>
+        <property>/position/altitude-ft</property>
+        <factor>-0.000015</factor>
+        <offset>1.0</offset>
+        <min>0.1</min>
+        <max>0.8</max>
+      </volume>
+      <volume>
+        <property>/velocities/airspeed-kt</property>
+        <factor>0.0006</factor>
+        <min>0.03</min>
+        <max>0.16</max>
+      </volume>
+      <pitch>
+        <property>/velocities/airspeed-kt</property>
+        <factor>0.01</factor>
+        <offset>1.25</offset>
+      </pitch>
+    </wind>
+
+    <!--<buffet>
+      <name>alpha-buffet</name>
+      <mode>looped</mode>
+      <path>Sounds/rumble.wav</path>
+      <condition>
+        <greater-than>
+          <property>/fdm/jsbsim/aero/alpha-rad[0]</property>
+          <value>0.2</value>
+        </greater-than>
+      </condition>
+      <volume>
+        <property>/fdm/jsbsim/aero/alpha-rad[0]</property>
+        <factor>15.0</factor>
+        <max>1.0</max>
+      </volume>
+      <pitch>
+        <property>/fdm/jsbsim/aero/alpha-rad[0]</property>
+        <factor>0.1</factor>
+      </pitch>
+    </buffet>-->
+
+    <flap>
+      <name>flaps</name>
+      <mode>in-transit</mode>
+      <path>Sounds/flaps.wav</path>
+      <property>/surface-positions/flap-pos-norm</property>
+      <volume>
+        <factor>0.35</factor>
+      </volume>
+      <reference-dist>10.0</reference-dist>
+      <max-dist>20.0</max-dist>
+    </flap>
+
+    <guns>
+     <name>gunfire</name>
+     <mode>looped</mode>
+     <condition>
+      <or>
+      <and>
+       <property>controls/armament/trigger</property>
+       <greater-than>
+         <property>ai/submodels/submodel[0]/count</property>
+         <value>0</value>
+       </greater-than>
+       <equals>
+         <property>controls/armament/master-arm</property>
+         <value>true</value>
+       </equals>
+       <equals>
+         <property>controls/armament/charging</property>
+         <value>false</value>
+       </equals>
+       <equals>
+         <property>controls/armament/gun-charged</property>
+         <value>true</value>
+       </equals>
+       <equals>
+         <property>controls/armament/g_ready</property>
+         <value>true</value>
+       </equals>
+       <equals>
+         <property>controls/level/easy</property>
+         <value>false</value>
+       </equals>
+      </and>
+      <and>
+       <property>controls/armament/trigger</property>
+       <greater-than>
+         <property>ai/submodels/submodel[0]/count</property>
+         <value>0</value>
+       </greater-than>
+       <equals>
+         <property>controls/armament/master-arm</property>
+         <value>true</value>
+       </equals>
+       <equals>
+         <property>controls/level/easy</property>
+         <value>true</value>
+       </equals>
+      </and>
+      </or>
+     </condition>
+   <path>Aircraft/OV10/Sounds/gunfire_1.wav</path>
+  </guns>
+
+    <williepl>
+     <name>wpfirel</name>
+     <condition>
+	<or>
+       <property>controls/armament/trigger1</property>
+       <property>controls/armament/trigger5</property>
+	</or>
+     </condition>
+   <path>Aircraft/OV10/Sounds/rockets.wav</path>
+  </williepl>
+
+    <williepr>
+     <name>wpfirer</name>
+     <condition>
+       <and>
+	<or>
+       <property>controls/armament/trigger5</property>
+	<property>controls/armament/trigger1</property>
+	</or>
+       <greater-than>
+         <property>ai/submodels/submodel[6]/count</property>
+         <value>0</value>
+       </greater-than>
+       </and>
+     </condition>
+   <path>Aircraft/OV10/Sounds/rockets_ripple.wav</path>
+  </williepr>
+
+    <drop1>
+     <name>drop1 sound</name>
+     <condition>
+       <property>controls/armament/station1</property>
+     </condition>
+   <path>Sounds/gear-lck.wav</path>
+  </drop1>
+
+    <drop2>
+     <name>drop2 sound</name>
+     <condition>
+       <property>controls/armament/station2</property>
+     </condition>
+   <path>Sounds/gear-lck.wav</path>
+  </drop2>
+
+    <drop3>
+     <name>drop3 sound</name>
+     <condition>
+       <property>controls/armament/station3</property>
+     </condition>
+   <path>Sounds/gear-lck.wav</path>
+  </drop3>
+
+    <drop4>
+     <name>drop4 sound</name>
+     <condition>
+       <property>controls/armament/station4</property>
+     </condition>
+   <path>Sounds/gear-lck.wav</path>
+  </drop4>
+
+    <drop5>
+     <name>drop5 sound</name>
+     <condition>
+       <property>controls/armament/station5</property>
+     </condition>
+   <path>Sounds/gear-lck.wav</path>
+  </drop5>
+
+ </fx>
+</PropertyList>

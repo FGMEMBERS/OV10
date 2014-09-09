@@ -1,0 +1,22 @@
+<?xml version="1.0"?>
+
+<!DOCTYPE PropertyList SYSTEM "panel.dtd">
+
+<PropertyList>
+
+ <name>B1900D Panel</name>
+ <background>Aircraft/OV10/Models/USAFE/transparent.rgb</background>
+ <w>256</w>
+ <h>256</h>
+
+<instruments>
+    <instrument include="EHSI.xml">
+      <name>radar</name>
+      <x>0</x>
+      <y>0</y>
+      <w>256</w>
+      <h>256</h>
+    </instrument>
+</instruments>
+
+</PropertyList>

@@ -1,0 +1,84 @@
+<?xml version="1.0"?>
+
+<!-- OV10 fuel panel, by Julien Pierru -->
+
+<PropertyList>
+
+ <path>top_right_panel.ac</path> 
+
+ <animation>
+  <type>material</type>
+   <object-name>Bulb</object-name>
+   <property-base>sim/model/extfuelwarning/material/light-on</property-base>
+		<diffuse>
+			<red-prop>diffuse/red</red-prop>
+			<green-prop>diffuse/green</green-prop>
+			<blue-prop>diffuse/blue</blue-prop>
+		</diffuse>
+		<ambient>
+			<red-prop>ambient/red</red-prop>
+			<green-prop>ambient/green</green-prop>
+			<blue-prop>ambient/blue</blue-prop>
+		</ambient>
+		<specular>
+			<red-prop>specular/red</red-prop>
+			<green-prop>specular/green</green-prop>
+			<blue-prop>specular/blue</blue-prop>
+		</specular>
+		<emission>
+			<red-prop>emission/red</red-prop>
+			<green-prop>emission/green</green-prop>
+			<blue-prop>emission/blue</blue-prop>
+		</emission>
+		<transparency>
+			<alpha-prop>transparency/alpha</alpha-prop>
+		</transparency>
+		<shininess-prop>shininess</shininess-prop>
+  <!--condition>
+   <property>controls/external-tank/is-servicing</property>
+  </condition-->
+ </animation>
+
+ <!--animation>
+  <type>material</type>
+   <object-name>Bulb</object-name>
+   <property-base>sim/model/extfuelwarning/material/light-off</property-base>
+		<diffuse>
+			<red-prop>diffuse/red</red-prop>
+			<green-prop>diffuse/green</green-prop>
+			<blue-prop>diffuse/blue</blue-prop>
+		</diffuse>
+		<ambient>
+			<red-prop>ambient/red</red-prop>
+			<green-prop>ambient/green</green-prop>
+			<blue-prop>ambient/blue</blue-prop>
+		</ambient>
+		<specular>
+			<red-prop>specular/red</red-prop>
+			<green-prop>specular/green</green-prop>
+			<blue-prop>specular/blue</blue-prop>
+		</specular>
+		<emission>
+			<red-prop>emission/red</red-prop>
+			<green-prop>emission/green</green-prop>
+			<blue-prop>emission/blue</blue-prop>
+		</emission>
+		<transparency>
+			<alpha-prop>transparency/alpha</alpha-prop>
+		</transparency>
+		<shininess-prop>shininess</shininess-prop>
+  <condition>
+   <not>
+    <property>controls/external-tank/is-servicing</property>
+   </not>
+  </condition>
+ </animation-->
+
+ <!-- *** LoD *** -->
+ <animation>
+  <type>range</type>
+  <min-m>0</min-m>
+  <max-m>5</max-m>
+ </animation>
+
+</PropertyList>
