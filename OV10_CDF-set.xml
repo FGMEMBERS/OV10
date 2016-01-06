@@ -13,10 +13,11 @@ David Culp,  davidculp2@comcast.net
   <description>North American OV-10A CDF Bronco</description>
   <author>David Culp (FDM), Jens Thoms Toerring/Capt. Slug/David Culp (3D)</author>
   <status>beta</status>
- 
+    <variant-of>OV10_USAFE</variant-of>
+    
   <flight-model>jsb</flight-model>
   <aero>OV10</aero>
- 
+
   <startup>
    <splash-texture>Aircraft/OV10/CDF_splash.rgb</splash-texture>
   </startup>
@@ -50,7 +51,7 @@ David Culp,  davidculp2@comcast.net
   <sound>
    <path>Aircraft/OV10/Sounds/OV10-sound.xml</path>
   </sound>
-  <submodels> 
+  <submodels>
     <serviceable type="bool">true</serviceable>
     <path>Aircraft/OV10/submodels.xml</path>
   </submodels>
@@ -645,7 +646,7 @@ Some unusual features of the OV-10 are that the cockpit is entered from the righ
     <reverser>
       <command type="double">0</command>
     </reverser>
-   </systems> 
+   </systems>
   </jsbsim>
  </fdm>
 
@@ -738,7 +739,7 @@ Some unusual features of the OV-10 are that the cockpit is entered from the righ
   <power>
    <lgen-reset type="bool">false</lgen-reset>
    <lgen-on type="bool">true</lgen-on>
-   <lgen-off type="bool">false</lgen-off> 
+   <lgen-off type="bool">false</lgen-off>
    <rgen-reset type="bool">false</rgen-reset>
    <rgen-on type="bool">true</rgen-on>
    <rgen-off type="bool">false</rgen-off>
@@ -773,7 +774,7 @@ Some unusual features of the OV-10 are that the cockpit is entered from the righ
        <command>property-toggle</command>
        <property>fdm/jsbsim/systems/canopy/command</property>
      </binding>
-    </key> 
+    </key>
 
   <key n="32">
    <name>SPACE</name>
@@ -821,13 +822,13 @@ Some unusual features of the OV-10 are that the cockpit is entered from the righ
       <decision-height>300</decision-height>
     </radar-altimeter>
     <gps>
-     <serviceable>true</serviceable> 
+     <serviceable>true</serviceable>
     </gps>
     <radar>
       <minimized type="bool" archive="y">false</minimized>
       <switch type="string" archive="y">ON</switch>
       <mode-control type="int" archive="y">1</mode-control>
-      <display-controls> 
+      <display-controls>
         <WX type="bool" archive="y">true</WX>
         <data type="bool" archive="y">false</data>
         <pos type="bool" archive="y">false</pos>
