@@ -17,6 +17,21 @@ David Culp,  davidculp2@comcast.net
   
   <flight-model>jsb</flight-model>
   <aero>OV10</aero>
+  <tags>
+   <tag>rockwell</tag>
+   <tag>high-wing</tag>
+   <tag>tricycle</tag>
+   <tag>retractable-gear</tag>
+   <tag>twin-engine</tag>
+   <tag>turboprop</tag>
+   <tag>variable-pitch</tag>
+   <tag>reconnaissance</tag>
+   <tag>ifr</tag>
+   <tag>1960s</tag>
+   <tag>1970s</tag>
+   <tag>1980s</tag>
+   <tag>1990s</tag>
+  </tags>
 
   <startup>
    <splash-texture>Aircraft/OV10/ponysplash.jpg</splash-texture>
